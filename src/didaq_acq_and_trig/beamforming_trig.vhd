@@ -359,9 +359,9 @@ begin
 		end if;
 		------------------------
 		for i in 0 to num_beams-1 loop
-			
+			------------------------
 			trig_beam_pattern(i) <= beam_trigs_to_output(i) and internal_beam_mask(i);
-		
+			------------------------
 			case beam_trig_state_reg(i) is
 				when "00" => 
 					beam_trigs_to_output(i) <= '0';
@@ -409,5 +409,8 @@ begin
 		end loop;
 	end if;
 end process;
+
+beamtrigs_o	 <= beam_trigs_to_output;
+beamservos_o <= beam_servos_to_output;
 
 end rtl;

@@ -132,43 +132,6 @@ component ring_buffer
 		q				: out	std_logic_vector(31 downto 0));
 end component;
 ---------------------
-component coinc_trig
-	port(
-		arstn        : in   std_logic; 
-      clk			 : in   std_logic;  --clock for trig stuff		
-		data0			 : in	  std_logic_Vector(63 downto 0);	--8 samples of 8 bit data
-		data1			 : in	  std_logic_Vector(63 downto 0);					
-		data2			 : in	  std_logic_Vector(63 downto 0);
-		data3			 : in	  std_logic_Vector(63 downto 0);	
-		data4			 : in	  std_logic_Vector(63 downto 0);					
-		data5			 : in	  std_logic_Vector(63 downto 0);	
-		data6			 : in	  std_logic_Vector(63 downto 0);	
-		data7			 : in	  std_logic_Vector(63 downto 0);					
-		data8			 : in	  std_logic_Vector(63 downto 0);
-		data9			 : in	  std_logic_Vector(63 downto 0);	
-		data10		 : in	  std_logic_Vector(63 downto 0);
-		data11		 : in	  std_logic_Vector(63 downto 0);	
-		trig_en		 : in	  std_logic_vector(1 downto 0);
-		trig_mask	 : in	  std_logic_vector(11 downto 0);
-		trig_hit_rq	 : in	  std_logic_vector(2 downto 0);
-		trig_window	 : in	  std_logic_vector(3 downto 0);
-		thresh0	 	 : in	  std_logic_vector(7 downto 0);
-		thresh1	 	 : in	  std_logic_vector(7 downto 0);
-		thresh2	 	 : in	  std_logic_vector(7 downto 0);
-		thresh3	 	 : in	  std_logic_vector(7 downto 0);
-		thresh4	 	 : in	  std_logic_vector(7 downto 0);
-		thresh5	 	 : in	  std_logic_vector(7 downto 0);
-		thresh6	 	 : in	  std_logic_vector(7 downto 0);
-		thresh7	 	 : in	  std_logic_vector(7 downto 0);
-		thresh8	 	 : in	  std_logic_vector(7 downto 0);
-		thresh9	 	 : in	  std_logic_vector(7 downto 0);
-		thresh10	 	 : in	  std_logic_vector(7 downto 0);
-		thresh11	 	 : in	  std_logic_vector(7 downto 0);
-		last_trigger_hit_pattern_o : out std_logic_Vector(11 downto 0);
-		singles_o	 : out  std_logic_Vector(11 downto 0); --for scalers, single-shot pulses on clk
-		trig_o		 : out  std_logic);
-end component;
----------------------
 component scalers_top is
 	port(
 		arst_i			:		in		std_logic;
@@ -786,7 +749,7 @@ begin
 	end if;
 end process;
 --------------------------------------
-inst_coinc_trig0 : coinc_trig
+inst_coinc_trig0 : entity work.coinc_trig
 	port map(
 		arstn        => arstn,
       clk			 => clk_trig,
@@ -822,7 +785,7 @@ inst_coinc_trig0 : coinc_trig
 		singles_o	 => coinc_trig0_hit_singles, --//for scalers. Note that singles are still active even if channel masked from trig
 		trig_o		 => internal_coinc_trig_mf(0));
 --------------------------------------
-inst_coinc_trig1 : coinc_trig
+inst_coinc_trig1 : entity work.coinc_trig
 	port map(
 		arstn        => arstn,
       clk			 => clk_trig,
