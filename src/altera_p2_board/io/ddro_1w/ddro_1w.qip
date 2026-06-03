@@ -1,0 +1,65 @@
+set_global_assignment -entity "ddro_1w" -library "ddro_1w" -name IP_TOOL_NAME "QsysPrimePro"
+set_global_assignment -entity "ddro_1w" -library "ddro_1w" -name IP_TOOL_VERSION "25.1.1"
+set_global_assignment -entity "ddro_1w" -library "ddro_1w" -name IP_TOOL_ENV "QsysPrimePro"
+set_global_assignment -entity "ddro_1w" -library "ddro_1w" -name IP_TOOL_VENDOR_NAME "Altera"
+set_global_assignment -entity "ddro_1w" -library "ddro_1w" -name IP_TOP_LEVEL_COMPONENT_NAME "altera_gpio"
+set_global_assignment -entity "ddro_1w" -library "ddro_1w" -name PRE_COMPILED_MODULE "ON"
+set_global_assignment -entity "ddro_1w" -library "ddro_1w" -name OCS_IP_FILE [file join $::quartus(qip_path) "../ddro_1w.ip"]
+set_global_assignment -entity "ddro_1w" -library "ddro_1w" -name OCS_IP_TYPE "altera_gpio"
+set_global_assignment -entity "ddro_1w" -library "ddro_1w" -name OCS_IP_VERSION "23.0.0"
+set_global_assignment -entity "ddro_1w" -library "ddro_1w" -name OCS_IP_HASH "revfsqy"
+set_global_assignment -library "ddro_1w" -name SOPCINFO_FILE [file join $::quartus(qip_path) "ddro_1w.sopcinfo"]
+set_global_assignment -entity "ddro_1w" -library "ddro_1w" -name SLD_INFO "QSYS_NAME ddro_1w HAS_SOPCINFO 1 GENERATION_ID 0"
+set_global_assignment -library "ddro_1w" -name MISC_FILE [file join $::quartus(qip_path) "ddro_1w.cmp"]
+set_global_assignment -entity "ddro_1w" -library "ddro_1w" -name IP_TARGETED_DEVICE_FAMILY "Agilex 5"
+set_global_assignment -entity "ddro_1w" -library "ddro_1w" -name IP_TARGETED_PART_TRAIT "part.DEVICE_IOBANK_REVISION::IO96B"
+set_global_assignment -entity "ddro_1w" -library "ddro_1w" -name IP_GENERATED_DEVICE_FAMILY "{Agilex 5}"
+set_global_assignment -entity "ddro_1w" -library "ddro_1w" -name IP_QSYS_MODE "STANDALONE"
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "ddro_1w" -name MISC_FILE [file join $::quartus(qip_path) "../ddro_1w.ip"]
+
+set_global_assignment -entity "altera_gpio" -library "altera_gpio_core10_ph2_2210" -name IP_COMPONENT_NAME "YWx0ZXJhX2dwaW8="
+set_global_assignment -entity "altera_gpio" -library "altera_gpio_core10_ph2_2210" -name IP_COMPONENT_DISPLAY_NAME "R1BJTyBDb3JlIEZQR0EgSVA="
+set_global_assignment -entity "altera_gpio" -library "altera_gpio_core10_ph2_2210" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "altera_gpio" -library "altera_gpio_core10_ph2_2210" -name IP_COMPONENT_INTERNAL "On"
+set_global_assignment -entity "altera_gpio" -library "altera_gpio_core10_ph2_2210" -name IP_COMPONENT_AUTHOR "QWx0ZXJh"
+set_global_assignment -entity "altera_gpio" -library "altera_gpio_core10_ph2_2210" -name IP_COMPONENT_VERSION "MjIuMS4w"
+set_global_assignment -entity "altera_gpio" -library "altera_gpio_core10_ph2_2210" -name IP_COMPONENT_DESCRIPTION "RlBHQSBHUElPIENvcmU="
+set_global_assignment -entity "altera_gpio" -library "altera_gpio_core10_ph2_2210" -name IP_COMPONENT_GROUP "SS9P"
+set_global_assignment -entity "ddro_1w_altera_gpio_2300_revfsqy" -library "altera_gpio_2300" -name IP_COMPONENT_NAME "ZGRyb18xd19hbHRlcmFfZ3Bpb18yMzAwX3JldmZzcXk="
+set_global_assignment -entity "ddro_1w_altera_gpio_2300_revfsqy" -library "altera_gpio_2300" -name IP_COMPONENT_DISPLAY_NAME "R1BJTyBGUEdBIElQ"
+set_global_assignment -entity "ddro_1w_altera_gpio_2300_revfsqy" -library "altera_gpio_2300" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "ddro_1w_altera_gpio_2300_revfsqy" -library "altera_gpio_2300" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "ddro_1w_altera_gpio_2300_revfsqy" -library "altera_gpio_2300" -name IP_COMPONENT_AUTHOR "QWx0ZXJh"
+set_global_assignment -entity "ddro_1w_altera_gpio_2300_revfsqy" -library "altera_gpio_2300" -name IP_COMPONENT_VERSION "MjMuMC4w"
+set_global_assignment -entity "ddro_1w_altera_gpio_2300_revfsqy" -library "altera_gpio_2300" -name IP_COMPONENT_DESCRIPTION "VGhlIEdQSU8gRlBHQSBJUCBwcm92aWRlcyBmZWF0dXJlcyB0byBzdXBwb3J0IHRoZSBkZXZpY2UgSS9PIGJsb2Nrcy4gWW91IGNhbiB1c2UgR1BJT3MgaW4gZ2VuZXJhbCBhcHBsaWNhdGlvbnMgdGhhdCBhcmUgbm90IHNwZWNpZmljIHRvIHRyYW5zY2VpdmVycywgbWVtb3J5IGludGVyZmFjZXMsIG9yIExWRFMuIFlvdSBjYW4gdXNlIHRoZSBRdWFydHVzIFByaW1lIHBhcmFtZXRlciBlZGl0b3IgdG8gY29uZmlndXJlIHRoZSBHUElPIEZQR0EgSVAu"
+set_global_assignment -entity "ddro_1w_altera_gpio_2300_revfsqy" -library "altera_gpio_2300" -name IP_COMPONENT_GROUP "QmFzaWMgRnVuY3Rpb25zL0kvTw=="
+set_global_assignment -entity "ddro_1w_altera_gpio_2300_revfsqy" -library "altera_gpio_2300" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL2RvY3MvcHJvZ3JhbW1hYmxlLzY4MzEzNi5odG1s"
+set_global_assignment -entity "ddro_1w_altera_gpio_2300_revfsqy" -library "altera_gpio_2300" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL2RvY3MvcHJvZ3JhbW1hYmxlLzY4Mzc4MC5odG1s"
+set_global_assignment -entity "ddro_1w_altera_gpio_2300_revfsqy" -library "altera_gpio_2300" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL2RvY3MvcHJvZ3JhbW1hYmxlLzc3MjEzOC5odG1s"
+set_global_assignment -entity "ddro_1w_altera_gpio_2300_revfsqy" -library "altera_gpio_2300" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL2RvY3MvcHJvZ3JhbW1hYmxlLzgxMzkzNC5odG1s"
+set_global_assignment -entity "ddro_1w_altera_gpio_2300_revfsqy" -library "altera_gpio_2300" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL2RvY3MvcHJvZ3JhbW1hYmxlLzY4MzUxOC5odG1s"
+set_global_assignment -entity "ddro_1w_altera_gpio_2300_revfsqy" -library "altera_gpio_2300" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL2RvY3MvcHJvZ3JhbW1hYmxlLzY4MzQ3OS5odG1s"
+set_global_assignment -entity "ddro_1w" -library "ddro_1w" -name IP_COMPONENT_NAME "ZGRyb18xdw=="
+set_global_assignment -entity "ddro_1w" -library "ddro_1w" -name IP_COMPONENT_DISPLAY_NAME "c3lzdGVt"
+set_global_assignment -entity "ddro_1w" -library "ddro_1w" -name IP_COMPONENT_REPORT_HIERARCHY "On"
+set_global_assignment -entity "ddro_1w" -library "ddro_1w" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "ddro_1w" -library "ddro_1w" -name IP_COMPONENT_AUTHOR "QWx0ZXJh"
+set_global_assignment -entity "ddro_1w" -library "ddro_1w" -name IP_COMPONENT_VERSION "MS4w"
+
+set_instance_assignment -entity "altera_gpio" -library "altera_gpio_core10_ph2_2210" -name MESSAGE_DISABLE 10034
+set_instance_assignment -entity "altera_gpio" -library "altera_gpio_core10_ph2_2210" -name MESSAGE_DISABLE 10230
+set_instance_assignment -entity "altera_gpio" -library "altera_gpio_core10_ph2_2210" -name MESSAGE_DISABLE 10036
+
+set_global_assignment -library "altera_gpio_core10_ph2_2210" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "altera_gpio_core10_ph2_2210/synth/altera_gpio.sv"]
+set_global_assignment -library "altera_gpio_2300" -name VERILOG_FILE [file join $::quartus(qip_path) "altera_gpio_2300/synth/ddro_1w_altera_gpio_2300_revfsqy.v"]
+set_global_assignment -library "ddro_1w" -name VERILOG_FILE [file join $::quartus(qip_path) "synth/ddro_1w.v"]
+
+
+set_global_assignment -entity "ddro_1w_altera_gpio_2300_revfsqy" -library "altera_gpio_2300" -name IP_TOOL_NAME "altera_gpio"
+set_global_assignment -entity "ddro_1w_altera_gpio_2300_revfsqy" -library "altera_gpio_2300" -name IP_TOOL_VERSION "23.0.0"
+set_global_assignment -entity "ddro_1w_altera_gpio_2300_revfsqy" -library "altera_gpio_2300" -name IP_TOOL_ENV "QsysPrimePro"
+set_global_assignment -entity "altera_gpio" -library "altera_gpio_core10_ph2_2210" -name IP_TOOL_NAME "altera_gpio_core10_ph2"
+set_global_assignment -entity "altera_gpio" -library "altera_gpio_core10_ph2_2210" -name IP_TOOL_VERSION "22.1.0"
+set_global_assignment -entity "altera_gpio" -library "altera_gpio_core10_ph2_2210" -name IP_TOOL_ENV "QsysPrimePro"
+

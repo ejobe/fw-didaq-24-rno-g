@@ -1,0 +1,494 @@
+<?xml version="1.0"?>
+<device xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.0" xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_0.xsd">
+<name>niosv_pd</name>
+<peripherals>
+<peripheral>
+      <name>niosv_pd_timer_0_s1_altera_avalon_timer</name><baseAddress>0x00000000</baseAddress> 
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>16</size>
+        <usage>registers</usage>
+      </addressBlock>
+       <registers>
+         <register>     
+          <name>status</name>  
+          <displayName>Status</displayName>
+          <description>The status register has two defined bits. TO (timeout), RUN</description>
+          <addressOffset>0x0</addressOffset>
+          <size>16</size>
+          <access>read-write</access>
+          <resetValue>0x0</resetValue>
+          <resetMask>0xffff</resetMask>
+          <fields>
+            <field><name>TO</name>
+            <description>The TO (timeout) bit is set to 1 when the internal counter reaches zero. Once set by a timeout event, the TO bit stays set until explicitly cleared by a master peripheral. Write zero to the status register to clear the TO bit.</description>
+             <bitOffset>0x0</bitOffset>
+             <bitWidth>1</bitWidth>
+             <access>read-only</access>
+             <readAction>clear</readAction>
+            </field>
+            <field><name>RUN</name>
+            <description>The RUN bit reads as 1 when the internal counter is running; otherwise this bit reads as 0. The RUN bit is not changed by
+ a write operation to the status register.</description>
+             <bitOffset>1</bitOffset>
+             <bitWidth>1</bitWidth>
+             <access>read-only</access>
+            </field>
+            <field>
+             <name>Reserved</name>
+             <description>Reserved</description>
+             <bitOffset>2</bitOffset>
+             <bitWidth>14</bitWidth>
+             <access>read-write</access>
+             <parameters>
+                 <parameter>
+                 <name>Reserved</name>
+                 <value>true</value>
+                 </parameter>
+             </parameters>
+            </field>
+          </fields>
+        </register> 
+        <register>
+            <name>control</name>
+            <description>The control register has four defined bits. ITO (Timeout Interrupt), CONT (continue), START, STOP</description>
+            <addressOffset>0x1</addressOffset>
+            <size>16</size>
+            <access>read-write</access>
+            <reset>
+                <value>0x0</value>
+            </reset>
+            <field>
+                <name>ITO</name>
+                <description>If the ITO bit is 1, the interval timer core generates an IRQ when the status register's TO bit is 1. When the ITO bit is 0, the timer does not generate IRQs.</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>1</bitWidth>
+                <access>read-write</access>
+            </field>
+            <field>
+                <name>CONT</name>
+                <description>The CONT (continuous) bit determines how the internal counter behaves when it reaches zero. If the CONT bit is 1, the counter runs continuously until it is stopped by the STOP bit. If CONT is 0, the counter stops after it reaches zero. When the counter reaches zero, it reloads with the value stored in the period registers, regardless of the CONT bit.</description>
+                <bitOffset>1</bitOffset>
+                <bitWidth>1</bitWidth>
+                <access>read-write</access>
+            </field>
+            <field>
+                <name>START</name>
+                <description>Writing a 1 to the START bit starts the internal counter running (counting down). The START bit is an event bit that enables the counter when a write operation is performed. If the timer is stopped, writing a 1 to the START bit causes the timer to restart counting from the number currently stored in its counter. If the timer is already running, writing a 1 to START has no effect. Writing 0 to the START bit has no effect.</description>
+                <bitOffset>2</bitOffset>
+                <bitWidth>1</bitWidth>
+                <access>write-only</access>
+            </field>
+            <field>
+                <name>STOP</name>
+                <description>Writing a 1 to the STOP bit stops the internal counter. The STOP bit is an event bit that causes the counter to stop when a write operation is performed. If the timer is already stopped, writing a 1 to STOP has no effect. Writing a 0 to the stop bit has no effect. If the timer hardware is configured with Start/Stop control bits off, writing the STOP bit has no effect.</description>
+                <bitOffset>3</bitOffset>
+                <bitWidth>1</bitWidth>
+                <access>write-only</access>
+            </field>
+            <field>
+                <name>Reserved</name>
+                <description>Reserved</description>
+                <bitOffset>4</bitOffset>
+                <bitWidth>12</bitWidth>
+                <access>read-write</access>
+                <parameters>
+                    <parameter>
+                    <name>Reserved</name>
+                    <value>true</value>
+                    </parameter>
+                </parameters>
+            </field>
+        </register>
+        <register>
+            <name>${period_name_0}</name>
+            <description>The period_n registers together store the timeout period value when a write operation to one of the period_n register or the internal counter reaches 0. The timer's actual period is one cycle greater than the value stored in the period_n registers because the counter assumes the value zero for one clock cycle. Writing to one of the period_n registers stops the internal counter, except when the hardware is configured with Start/Stop control bits off. If Start/Stop control bits is off, writing either register does not stop the counter. When the hardware is configured with Writeable period disabled, writing to one of the period_n registers causes the counter to reset to the fixed Timeout Period specified at system generation time.</description>
+            <addressOffset>0x2</addressOffset>
+            <size>16</size>
+            <access>read-write</access>
+            <resetValue>${period_name_0_reset_value}</resetValue>
+            <resetMask>0xffff</resetMask>
+        </register>
+        <register>
+            <name>${period_name_1}</name>
+            <description></description>
+            <addressOffset>0x3</addressOffset>
+            <size>16</size>
+            <access>read-write</access>
+            <resetValue>${period_name_1_reset_value}</resetValue>
+            <resetMask>0xffff</resetMask>
+        </register>
+        <register>
+            <name>${period_snap_0}</name>
+            <description></description>
+            <addressOffset>0x4</addressOffset>
+            <size>16</size>
+            <access>read-write</access>
+            <resetValue>${period_snap_0_reset_value}</resetValue>
+            <resetMask>0xffff</resetMask>
+        </register>
+        <register>
+            <name>${period_snap_1}</name>
+            <description></description>
+            <addressOffset>0x5</addressOffset>
+            <size>16</size>
+            <access>read-write</access>
+            <resetValue>${period_snap_1_reset_value}</resetValue>
+            <resetMask>0xffff</resetMask>
+        </register>
+        <register>
+            <name>${snap_0}</name>
+            <description>A master peripheral may request a coherent snapshot of the current internal counter by performing a write operation (write-data ignored) to one of the snap_n registers. When a write occurs, the value of the counter is copied to snap_n registers. The snapshot occurs whether or not the counter is running. Requesting a snapshot does not change the internal counter's operation.</description>
+            <addressOffset>0x6</addressOffset>
+            <size>16</size>
+            <access>read-write</access>
+            <resetValue>0x0</resetValue>
+            <resetMask>0xffff</resetMask>
+        </register>
+        <register>
+            <name>${snap_1}</name>
+            <description></description>
+            <addressOffset>0x7</addressOffset>
+            <size>16</size>
+            <access>read-write</access>
+            <resetValue>0x0</resetValue>
+            <resetMask>0xffff</resetMask>
+        </register>
+        <register>
+            <name>${snap_2}</name>
+            <description></description>
+            <addressOffset>0x8</addressOffset>
+            <size>16</size>
+            <access>read-write</access>
+            <resetValue>0x0</resetValue>
+            <resetMask>0xffff</resetMask>
+        </register>
+        <register>
+            <name>${snap_3}</name>
+            <description></description>
+            <addressOffset>0x9</addressOffset>
+            <size>16</size>
+            <access>read-write</access>
+            <resetValue>0x0</resetValue>
+            <resetMask>0xffff</resetMask>
+        </register>
+    </registers>
+   </peripheral>
+  <peripheral>
+      <baseAddress>0x00000000</baseAddress>
+      <name>niosv_pd_pd_uart_s1_intel_lw_uart</name>
+      <registers>
+        <register>
+          <access>read-only</access>
+          <addressOffset>0x0</addressOffset>
+          <displayName>rxdata</displayName>
+          <name>rxdata</name>
+          <resetValue>0xffffffff</resetValue>
+          <size>16</size>
+          <fields>
+            <field>
+              <access>read-only</access>
+              <bitRange>[8:0]</bitRange>
+              <description>The rxdata register holds data received via the RXD input.</description>
+              <name>rxdata</name>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <access>write-only</access>
+          <addressOffset>0x1</addressOffset>
+          <displayName>txdata</displayName>
+          <name>txdata</name>
+          <resetValue>0xffffffff</resetValue>
+          <size>16</size>
+          <fields>
+            <field>
+              <access>write-only</access>
+              <bitRange>[8:0]</bitRange>
+              <description>The txdata register holds data from AVMM writedata before it is being shifted by shift register.</description>
+              <name>txdata</name>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <access>read-write</access>
+          <addressOffset>0x2</addressOffset>
+          <displayName>status</displayName>
+          <name>status</name>
+          <resetValue>0xffffffff</resetValue>
+          <size>16</size>
+          <fields>
+            <field>
+              <access>read-write</access>
+              <bitRange>[0:0]</bitRange>
+              <description>Parity error</description>
+              <modifiedWriteValues>writeToClear</modifiedWriteValues>
+              <name>pe</name>
+            </field>
+            <field>
+              <access>read-write</access>
+              <bitRange>[1:1]</bitRange>
+              <description>Framing error</description>
+              <modifiedWriteValues>writeToClear</modifiedWriteValues>
+              <name>fe</name>
+            </field>
+            <field>
+              <access>read-write</access>
+              <bitRange>[2:2]</bitRange>
+              <description>Break detect</description>
+              <modifiedWriteValues>writeToClear</modifiedWriteValues>
+              <name>brk</name>
+            </field>
+            <field>
+              <access>read-write</access>
+              <bitRange>[3:3]</bitRange>
+              <description>RXFIFO overrun error</description>
+              <modifiedWriteValues>writeToClear</modifiedWriteValues>
+              <name>roe</name>
+            </field>
+            <field>
+              <access>read-write</access>
+              <bitRange>[4:4]</bitRange>
+              <description>TXFIFO overrun error</description>
+              <modifiedWriteValues>writeToClear</modifiedWriteValues>
+              <name>toe</name>
+            </field>
+            <field>
+              <access>read-only</access>
+              <bitRange>[5:5]</bitRange>
+              <description>Transmit data empty</description>
+              <name>tmt</name>
+            </field>
+            <field>
+              <access>read-only</access>
+              <bitRange>[6:6]</bitRange>
+              <description>Transmit ready</description>
+              <name>trdy</name>
+            </field>
+            <field>
+              <access>read-only</access>
+              <bitRange>[7:7]</bitRange>
+              <description>Receive character ready</description>
+              <name>rrdy</name>
+            </field>
+            <field>
+              <access>read-only</access>
+              <bitRange>[8:8]</bitRange>
+              <description>Exception</description>
+              <name>e</name>
+            </field>
+            <field>
+              <access>read-write</access>
+              <bitRange>[10:10]</bitRange>
+              <description>Change in clear to send (CTS) signal</description>
+              <modifiedWriteValues>writeToClear</modifiedWriteValues>
+              <name>dcts</name>
+            </field>
+            <field>
+              <access>read-only</access>
+              <bitRange>[11:11]</bitRange>
+              <description>Clear-to-send (CTS) signal</description>
+              <name>cts</name>
+            </field>
+            <field>
+              <access>read-write</access>
+              <bitRange>[12:12]</bitRange>
+              <description>End of packet encountered</description>
+              <modifiedWriteValues>writeToClear</modifiedWriteValues>
+              <name>eop</name>
+            </field>
+            <field>
+              <access>read-write</access>
+              <bitRange>[13:13]</bitRange>
+              <description>RXFIFO underrun error</description>
+              <modifiedWriteValues>writeToClear</modifiedWriteValues>
+              <name>rue</name>
+            </field>
+            <field>
+              <access>read-only</access>
+              <bitRange>[14:14]</bitRange>
+              <description>RXFIFO full</description>
+              <name>rfull</name>
+            </field>
+            <field>
+              <access>read-only</access>
+              <bitRange>[15:15]</bitRange>
+              <description>RXFIFO almost full</description>
+              <name>rafull</name>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <access>read-write</access>
+          <addressOffset>0x3</addressOffset>
+          <displayName>control</displayName>
+          <name>control</name>
+          <resetValue>0xffffffff</resetValue>
+          <size>16</size>
+          <fields>
+            <field>
+              <access>read-write</access>
+              <bitRange>[0:0]</bitRange>
+              <description>Enable interrupt for a parity error</description>
+              <name>ipe</name>
+            </field>
+            <field>
+              <access>read-write</access>
+              <bitRange>[1:1]</bitRange>
+              <description>Enable interrupt for a framing error</description>
+              <name>ife</name>
+            </field>
+            <field>
+              <access>read-write</access>
+              <bitRange>[2:2]</bitRange>
+              <description>Enable interrupt for a break detect</description>
+              <name>ibrk</name>
+            </field>
+            <field>
+              <access>read-write</access>
+              <bitRange>[3:3]</bitRange>
+              <description>Enable interrupt for a RXFIFO overrun error</description>
+              <name>iroe</name>
+            </field>
+            <field>
+              <access>read-write</access>
+              <bitRange>[4:4]</bitRange>
+              <description>Enable interrupt for a TXFIFO overrun error</description>
+              <name>itoe</name>
+            </field>
+            <field>
+              <access>read-write</access>
+              <bitRange>[5:5]</bitRange>
+              <description>Enable interrupt for a transmit data empty</description>
+              <name>itmt</name>
+            </field>
+            <field>
+              <access>read-write</access>
+              <bitRange>[6:6]</bitRange>
+              <description>Enable interrupt for a transmission ready</description>
+              <name>itrdy</name>
+            </field>
+            <field>
+              <access>read-write</access>
+              <bitRange>[7:7]</bitRange>
+              <description>Enable interrupt for a receive character ready</description>
+              <name>irrdy</name>
+            </field>
+            <field>
+              <access>read-write</access>
+              <bitRange>[8:8]</bitRange>
+              <description>Enable interrupt for an exception</description>
+              <name>ie</name>
+            </field>
+            <field>
+              <access>read-write</access>
+              <bitRange>[9:9]</bitRange>
+              <description>Transmit break</description>
+              <name>trbk</name>
+            </field>
+            <field>
+              <access>read-write</access>
+              <bitRange>[10:10]</bitRange>
+              <description>Enable interrupt for a change in CTS signal</description>
+              <name>idcts</name>
+            </field>
+            <field>
+              <access>read-write</access>
+              <bitRange>[11:11]</bitRange>
+              <description>Request to send (RTS) signal</description>
+              <name>rts</name>
+            </field>
+            <field>
+              <access>read-write</access>
+              <bitRange>[12:12]</bitRange>
+              <description>Enable interrupt for end-of-packet condition</description>
+              <name>ieop</name>
+            </field>
+            <field>
+              <access>read-write</access>
+              <bitRange>[13:13]</bitRange>
+              <description>Enable interrupt for RXFIFO underrun error</description>
+              <name>ieop</name>
+            </field>
+            <field>
+              <access>read-write</access>
+              <bitRange>[14:14]</bitRange>
+              <description>Enable interrupt for RXFIFO full</description>
+              <name>irfull</name>
+            </field>
+            <field>
+              <access>read-write</access>
+              <bitRange>[15:15]</bitRange>
+              <description>Enable interrupt for RXFIFO almost full</description>
+              <name>irafull</name>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <access>read-write</access>
+          <addressOffset>0x4</addressOffset>
+          <displayName>divisor</displayName>
+          <name>divisor</name>
+          <resetValue>0xffffffff</resetValue>
+          <size>16</size>
+          <fields>
+            <field>
+              <access>read-write</access>
+              <bitRange>[15:0]</bitRange>
+              <description>The value in the divisor register is used to generate the baud rate clock</description>
+              <name>baud_rate_divisor</name>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <access>read-write</access>
+          <addressOffset>0x5</addressOffset>
+          <displayName>endofpacket</displayName>
+          <name>endofpacket</name>
+          <resetValue>0xffffffff</resetValue>
+          <size>16</size>
+          <fields>
+            <field>
+              <access>read-write</access>
+              <bitRange>[8:0]</bitRange>
+              <description>The value in the endofpacket register determines the end-of-packet character for variable-length DMA transactions</description>
+              <name>end_of_packet_value</name>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <access>read-only</access>
+          <addressOffset>0x6</addressOffset>
+          <displayName>rxfifo_lvl</displayName>
+          <name>rxfifo_lvl</name>
+          <resetValue>0xffffffff</resetValue>
+          <size>16</size>
+          <fields>
+            <field>
+              <access>read-only</access>
+              <bitRange>[10:0]</bitRange>
+              <description>Shows the current number of words stored in RXFIFO.</description>
+              <name>rxfifo_lvl</name>
+            </field>
+          </fields>
+        </register>
+       <register>
+          <access>read-only</access>
+          <addressOffset>0x7</addressOffset>
+          <displayName>txfifo_lvl</displayName>
+          <name>txfifo_lvl</name>
+          <resetValue>0xffffffff</resetValue>
+          <size>16</size>
+          <fields>
+            <field>
+              <access>read-only</access>
+              <bitRange>[10:0]</bitRange>
+              <description>Shows the current number of words stored in TXFIFO.</description>
+              <name>txfifo_lvl</name>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+  </peripherals>
+</device>

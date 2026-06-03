@@ -1,0 +1,546 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2024  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the Intel FPGA Software License Subscription Agreements 
+# on the Quartus Prime software download page.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 24.2.0 Build 40 06/27/2024 SC Pro Edition
+# Date created = 16:17:29  October 08, 2024
+#
+#
+#  Date        Author           Description
+#  --------    ------           -----------
+#  2025-Q1     Logic Tectonics  Inital pinout just for test build
+#  20251112    Same             Pinout for the rev 1 board with only 12 channels
+#
+#
+#
+#
+#
+# -------------------------------------------------------------------------- #
+set_global_assignment -name TOP_LEVEL_ENTITY artic_daq_fpga_top
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 24.2.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:17:28  OCTOBER 08, 2024"
+set_global_assignment -name LAST_QUARTUS_VERSION "25.1.1 Pro Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 100
+set_global_assignment -name DEVICE A5ED065BB32AE4SR0
+set_global_assignment -name FAMILY "Agilex 5"
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name EDA_SIMULATION_TOOL "QuestaSim (VHDL)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_global_assignment -name PWRMGT_VOLTAGE_OUTPUT_FORMAT "LINEAR FORMAT"
+set_global_assignment -name PWRMGT_LINEAR_FORMAT_N "-12"
+set_global_assignment -name ACTIVE_SERIAL_CLOCK AS_FREQ_115MHZ_IOSC
+set_global_assignment -name ON_CHIP_BITSTREAM_DECOMPRESSION OFF
+set_global_assignment -name POWER_APPLY_THERMAL_MARGIN ADDITIONAL
+set_global_assignment -name FLOW_ENABLE_POWER_ANALYZER OFF
+set_global_assignment -name GENERATE_PROGRAMMING_FILES ON
+
+
+
+# Altera IP cores
+#set_global_assignment -name IP_FILE ../src/altera_p2_board/pll/core_pll.ip
+
+
+
+
+# Normal HDL source files
+
+
+
+############################################
+# Pin and standard assignements
+############################################
+
+set_location_assignment PIN_Y44 -to clk_fpga0_100m  
+set_instance_assignment -name IO_STANDARD "1.3-V TRUE DIFFERENTIAL SIGNALING" -to clk_fpga0_100m -entity artic_daq_fpga_top
+set_instance_assignment -name INPUT_TERMINATION "OCT 100 OHMS" -to clk_fpga0_100m -entity artic_daq_fpga_top
+
+set_location_assignment PIN_P55 -to clk_fpga1_100m
+set_instance_assignment -name IO_STANDARD "1.3-V TRUE DIFFERENTIAL SIGNALING" -to clk_fpga1_100m -entity artic_daq_fpga_top
+set_instance_assignment -name INPUT_TERMINATION "OCT 100 OHMS" -to clk_fpga1_100m -entity artic_daq_fpga_top
+
+set_location_assignment PIN_AC68 -to clk_fpga2_100m
+set_instance_assignment -name IO_STANDARD "1.3-V TRUE DIFFERENTIAL SIGNALING" -to clk_fpga2_100m -entity artic_daq_fpga_top
+set_instance_assignment -name INPUT_TERMINATION "OCT 100 OHMS" -to clk_fpga2_100m -entity artic_daq_fpga_top
+
+
+set_location_assignment PIN_A39 -to pll_int
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to pll_int -entity artic_daq_fpga_top
+
+# Just let the tool assign at first for now. Put a pullup in the assignments
+set_location_assignment PIN_B35 -to i2c_clk
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to i2c_clk -entity artic_daq_fpga_top
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to i2c_clk -entity artic_daq_fpga_top
+set_location_assignment PIN_D34 -to i2c_data
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to i2c_data -entity artic_daq_fpga_top
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to i2c_data -entity artic_daq_fpga_top
+
+set_location_assignment PIN_A35 -to clk_in_sel
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to clk_in_sel -entity artic_daq_fpga_top
+
+#######   set_location_assignment PIN_B51 -to adc_sysref_p[0]
+#######   set_location_assignment PIN_A45 -to adc_sysref_p[1]
+#######   set_location_assignment PIN_D44 -to adc_sysref_p[2]
+#######   set_location_assignment PIN_A63 -to adc_sysref_p[3]
+#######   set_location_assignment PIN_B56 -to adc_sysref_p[4]
+#######   set_location_assignment PIN_A54 -to adc_sysref_p[5]
+#######   
+#######   set_location_assignment PIN_A51 -to adc_sysref_n[0]
+#######   set_location_assignment PIN_B42 -to adc_sysref_n[1]
+#######   set_location_assignment PIN_F44 -to adc_sysref_n[2]
+#######   set_location_assignment PIN_B60 -to adc_sysref_n[3]
+#######   set_location_assignment PIN_A60 -to adc_sysref_n[4]
+#######   set_location_assignment PIN_B54 -to adc_sysref_n[5]
+#######   
+#######   
+#######   set_instance_assignment -name IO_STANDARD "1.3-V TRUE DIFFERENTIAL SIGNALING" -to adc_sysref_p[*] -entity artic_daq_fpga_top
+#######   set_instance_assignment -name IO_STANDARD "1.3-V TRUE DIFFERENTIAL SIGNALING" -to adc_sysref_n[*] -entity artic_daq_fpga_top
+#######   set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to adc_sysref_p[*] -entity artic_daq_fpga_top
+#######   set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to adc_sysref_n[*] -entity artic_daq_fpga_top
+
+set_location_assignment PIN_A63 -to sysref_from_fpga_p
+set_location_assignment PIN_B60 -to sysref_from_fpga_n
+set_instance_assignment -name IO_STANDARD "1.3-V TRUE DIFFERENTIAL SIGNALING" -to sysref_from_fpga_p -entity artic_daq_fpga_top
+set_instance_assignment -name IO_STANDARD "1.3-V TRUE DIFFERENTIAL SIGNALING" -to sysref_from_fpga_n -entity artic_daq_fpga_top
+
+
+set_location_assignment PIN_B30 -to debug_gpio[0]
+set_location_assignment PIN_A30 -to debug_gpio[1]
+set_location_assignment PIN_F27 -to debug_gpio[2]
+set_location_assignment PIN_F24 -to debug_gpio[3]
+#set_location_assignment PIN_M58 -to debug_gpio[4]
+#set_location_assignment PIN_F58 -to debug_gpio[5]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to debug_gpio[*] -entity artic_daq_fpga_top
+
+
+set_location_assignment PIN_BW19 -to sbc_spi_sclk
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to sbc_spi_sclk -entity artic_daq_fpga_top
+set_location_assignment PIN_BH28 -to sbc_spi_ss_n
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to sbc_spi_ss_n -entity artic_daq_fpga_top
+set_location_assignment PIN_BP22 -to sbc_spi_mosi
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to sbc_spi_mosi -entity artic_daq_fpga_top
+set_location_assignment PIN_CH12 -to sbc_spi_miso
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to sbc_spi_miso -entity artic_daq_fpga_top
+
+set_location_assignment PIN_BU22 -to sbc_uart_txd
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to sbc_uart_txd -entity artic_daq_fpga_top
+set_location_assignment PIN_BR22 -to sbc_uart_rxd
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to sbc_uart_rxd -entity artic_daq_fpga_top
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to sbc_uart_rxd -entity artic_daq_fpga_top
+
+set_location_assignment PIN_BK31 -to sbc_io_b_irq
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to sbc_io_b_irq -entity artic_daq_fpga_top
+set_location_assignment PIN_BK28 -to sbc_io_a
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to sbc_io_a -entity artic_daq_fpga_top
+
+set_location_assignment PIN_BM31 -to sbc_one_pps
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to sbc_one_pps -entity artic_daq_fpga_top
+
+set_location_assignment PIN_A33 -to fpga_aux_out
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to fpga_aux_out -entity artic_daq_fpga_top
+ 
+set_location_assignment PIN_B39 -to fpga_aux_in
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to fpga_aux_in -entity artic_daq_fpga_top
+
+
+set_location_assignment PIN_H18 -to cal_switch_adc[0]
+set_location_assignment PIN_D24 -to cal_switch_adc[1]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to cal_switch_adc[*] -entity artic_daq_fpga_top
+
+set_location_assignment PIN_H27 -to cal_pulse_pwr_en
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to cal_pulse_pwr_en -entity artic_daq_fpga_top
+
+set_location_assignment PIN_BM28 -to adc_regulator_en[0]
+set_location_assignment PIN_BW28 -to adc_regulator_en[1]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_regulator_en[*] -entity artic_daq_fpga_top
+
+#Active high green. LED1:0 in schematic 
+#Active high red.   LED3:2 in schematic  
+set_location_assignment PIN_BR31 -to led_green[0]
+set_location_assignment PIN_BR28 -to led_green[1]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to led_green[*] -entity artic_daq_fpga_top
+
+set_location_assignment PIN_BP31 -to led_red[0]
+set_location_assignment PIN_BU28 -to led_red[1]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to led_red[*] -entity artic_daq_fpga_top
+
+set_location_assignment PIN_BM22 -to usb_uart_ser_out
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to usb_uart_ser_out -entity artic_daq_fpga_top
+set_location_assignment PIN_CF12 -to usb_uart_ser_in
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to usb_uart_ser_in -entity artic_daq_fpga_top
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to usb_uart_ser_in -entity artic_daq_fpga_top
+
+set_location_assignment PIN_CF9 -to usb_uart_rts_n_in
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to usb_uart_rts_n_in -entity artic_daq_fpga_top
+set_location_assignment PIN_BK19 -to usb_uart_cts_n_out
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to usb_uart_cts_n_out -entity artic_daq_fpga_top
+
+set_location_assignment PIN_F15 -to pb_arst_n
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to pb_arst_n -entity artic_daq_fpga_top
+
+
+set_location_assignment PIN_A23 -to aux_spi_clk
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to aux_spi_clk -entity artic_daq_fpga_top
+set_location_assignment PIN_B20 -to aux_spi_mosi
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to aux_spi_mosi -entity artic_daq_fpga_top
+set_location_assignment PIN_B23 -to aux_spi_miso
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to aux_spi_miso -entity artic_daq_fpga_top
+set_location_assignment PIN_B26 -to aux_spi_cs_n
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to aux_spi_cs_n -entity artic_daq_fpga_top
+
+
+# ADC SPI, stat and powerdown Interfaces
+set_location_assignment PIN_B14 -to adc_spi_master_ss_n[0]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_spi_master_ss_n[0] -entity artic_daq_fpga_top
+set_location_assignment PIN_A8 -to adc_spi_master_mosi[0]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_spi_master_mosi[0] -entity artic_daq_fpga_top
+set_location_assignment PIN_B11 -to adc_spi_master_miso[0]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_spi_master_miso[0] -entity artic_daq_fpga_top
+set_location_assignment PIN_A11 -to adc_spi_master_sclk[0]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_spi_master_sclk[0] -entity artic_daq_fpga_top
+set_location_assignment PIN_B4 -to adc_pdwn_stby[0]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_pdwn_stby[0] -entity artic_daq_fpga_top
+set_location_assignment PIN_A17 -to adc_cal_stat[0]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_cal_stat[0] -entity artic_daq_fpga_top
+
+set_location_assignment PIN_D8 -to adc_spi_master_ss_n[1]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_spi_master_ss_n[1] -entity artic_daq_fpga_top
+set_location_assignment PIN_F4 -to adc_spi_master_mosi[1]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_spi_master_mosi[1] -entity artic_daq_fpga_top
+set_location_assignment PIN_F8 -to adc_spi_master_miso[1]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_spi_master_miso[1] -entity artic_daq_fpga_top
+set_location_assignment PIN_D4 -to adc_spi_master_sclk[1]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_spi_master_sclk[1] -entity artic_daq_fpga_top
+set_location_assignment PIN_H8 -to adc_pdwn_stby[1]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_pdwn_stby[1] -entity artic_daq_fpga_top
+set_location_assignment PIN_C2 -to adc_cal_stat[1]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_cal_stat[1] -entity artic_daq_fpga_top
+
+
+set_location_assignment PIN_J1 -to adc_spi_master_ss_n[2]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_spi_master_ss_n[2] -entity artic_daq_fpga_top
+set_location_assignment PIN_K4 -to adc_spi_master_mosi[2]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_spi_master_mosi[2] -entity artic_daq_fpga_top
+set_location_assignment PIN_J2 -to adc_spi_master_miso[2]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_spi_master_miso[2] -entity artic_daq_fpga_top
+set_location_assignment PIN_G2 -to adc_spi_master_sclk[2]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_spi_master_sclk[2] -entity artic_daq_fpga_top
+set_location_assignment PIN_K8 -to adc_pdwn_stby[2]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_pdwn_stby[2] -entity artic_daq_fpga_top
+set_location_assignment PIN_G1 -to adc_cal_stat[2]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_cal_stat[2] -entity artic_daq_fpga_top
+
+set_location_assignment PIN_CL130 -to adc_spi_master_ss_n[3]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_spi_master_ss_n[3] -entity artic_daq_fpga_top
+set_location_assignment PIN_CF121 -to adc_spi_master_mosi[3]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_spi_master_mosi[3] -entity artic_daq_fpga_top
+set_location_assignment PIN_CA118 -to adc_spi_master_miso[3]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_spi_master_miso[3] -entity artic_daq_fpga_top
+set_location_assignment PIN_CF118 -to adc_spi_master_sclk[3]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_spi_master_sclk[3] -entity artic_daq_fpga_top
+set_location_assignment PIN_CK125 -to adc_pdwn_stby[3]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_pdwn_stby[3] -entity artic_daq_fpga_top
+set_location_assignment PIN_CL125 -to adc_cal_stat[3]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_cal_stat[3] -entity artic_daq_fpga_top
+
+set_location_assignment PIN_CK134 -to adc_spi_master_ss_n[4]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_spi_master_ss_n[4] -entity artic_daq_fpga_top
+set_location_assignment PIN_CG135 -to adc_spi_master_mosi[4]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_spi_master_mosi[4] -entity artic_daq_fpga_top
+set_location_assignment PIN_CD135 -to adc_spi_master_miso[4]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_spi_master_miso[4] -entity artic_daq_fpga_top
+set_location_assignment PIN_CD134 -to adc_spi_master_sclk[4]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_spi_master_sclk[4] -entity artic_daq_fpga_top
+set_location_assignment PIN_CH128 -to adc_pdwn_stby[4]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_pdwn_stby[4] -entity artic_daq_fpga_top
+set_location_assignment PIN_CF128 -to adc_cal_stat[4]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_cal_stat[4] -entity artic_daq_fpga_top
+
+set_location_assignment PIN_CF132 -to adc_spi_master_ss_n[5]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_spi_master_ss_n[5] -entity artic_daq_fpga_top
+set_location_assignment PIN_BU118 -to adc_spi_master_mosi[5]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_spi_master_mosi[5] -entity artic_daq_fpga_top
+set_location_assignment PIN_BW118 -to adc_spi_master_miso[5]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_spi_master_miso[5] -entity artic_daq_fpga_top
+set_location_assignment PIN_CG134 -to adc_spi_master_sclk[5]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_spi_master_sclk[5] -entity artic_daq_fpga_top
+set_location_assignment PIN_BR118 -to adc_pdwn_stby[5]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_pdwn_stby[5] -entity artic_daq_fpga_top
+set_location_assignment PIN_CH132 -to adc_cal_stat[5]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_cal_stat[5] -entity artic_daq_fpga_top
+
+
+set_location_assignment PIN_D15 -to adc_cal_trig[0]
+set_location_assignment PIN_BU31 -to adc_cal_trig[1]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_cal_trig[*] -entity artic_daq_fpga_top
+  
+set_location_assignment PIN_A14 -to adc_pll_en[0]
+set_location_assignment PIN_CL128 -to adc_pll_en[1]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_pll_en[*] -entity artic_daq_fpga_top
+ 
+set_location_assignment PIN_A20 -to adc_syncse_n[0]
+set_location_assignment PIN_CK128 -to adc_syncse_n[1]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to adc_syncse_n[*] -entity artic_daq_fpga_top
+
+# JESD INterfaces 0-11
+set_location_assignment PIN_AV1 -to rx_adc_ser_data_p[0]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_p[0] -entity artic_daq_fpga_top
+set_location_assignment PIN_AV3 -to rx_adc_ser_data_n[0]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_n[0] -entity artic_daq_fpga_top
+
+set_location_assignment PIN_AT1 -to rx_adc_ser_data_p[1]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_p[1] -entity artic_daq_fpga_top
+set_location_assignment PIN_AT3 -to rx_adc_ser_data_n[1]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_n[1] -entity artic_daq_fpga_top
+
+set_location_assignment PIN_AP1 -to rx_adc_ser_data_p[2]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_p[2] -entity artic_daq_fpga_top
+set_location_assignment PIN_AP3 -to rx_adc_ser_data_n[2]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_n[2] -entity artic_daq_fpga_top
+
+set_location_assignment PIN_AM1 -to rx_adc_ser_data_p[3]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_p[3] -entity artic_daq_fpga_top
+set_location_assignment PIN_AM3 -to rx_adc_ser_data_n[3]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_n[3] -entity artic_daq_fpga_top
+
+
+#------------
+
+set_location_assignment PIN_BF1 -to rx_adc_ser_data_p[4]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_p[4] -entity artic_daq_fpga_top
+set_location_assignment PIN_BF3 -to rx_adc_ser_data_n[4]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_n[4] -entity artic_daq_fpga_top
+
+
+set_location_assignment PIN_BD1 -to rx_adc_ser_data_p[5]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_p[5] -entity artic_daq_fpga_top
+set_location_assignment PIN_BD3 -to rx_adc_ser_data_n[5]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_n[5] -entity artic_daq_fpga_top
+
+
+set_location_assignment PIN_BB1 -to rx_adc_ser_data_p[6]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_p[6] -entity artic_daq_fpga_top
+set_location_assignment PIN_BB3 -to rx_adc_ser_data_n[6]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_n[6] -entity artic_daq_fpga_top
+
+
+set_location_assignment PIN_AY1 -to rx_adc_ser_data_p[7]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_p[7] -entity artic_daq_fpga_top
+set_location_assignment PIN_AY3 -to rx_adc_ser_data_n[7]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_n[7] -entity artic_daq_fpga_top
+
+#--------------------------------------
+
+
+set_location_assignment PIN_CB1 -to rx_adc_ser_data_p[8]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_p[8] -entity artic_daq_fpga_top
+set_location_assignment PIN_CB3 -to rx_adc_ser_data_n[8]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_n[8] -entity artic_daq_fpga_top
+
+
+set_location_assignment PIN_BV1 -to rx_adc_ser_data_p[9]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_p[9] -entity artic_daq_fpga_top
+set_location_assignment PIN_BV3 -to rx_adc_ser_data_n[9]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_n[9] -entity artic_daq_fpga_top
+
+
+set_location_assignment PIN_BN1 -to rx_adc_ser_data_p[10]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_p[10] -entity artic_daq_fpga_top
+set_location_assignment PIN_BN3 -to rx_adc_ser_data_n[10]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_n[10] -entity artic_daq_fpga_top
+
+
+set_location_assignment PIN_BJ1 -to rx_adc_ser_data_p[11]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_p[11] -entity artic_daq_fpga_top
+set_location_assignment PIN_BJ3 -to rx_adc_ser_data_n[11]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_n[11] -entity artic_daq_fpga_top
+
+
+# JESD INterfaces 12-23
+set_location_assignment PIN_BF135 -to rx_adc_ser_data_p[12]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_p[12] -entity artic_daq_fpga_top
+set_location_assignment PIN_BF133 -to rx_adc_ser_data_n[12]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_n[12] -entity artic_daq_fpga_top
+
+set_location_assignment PIN_BJ135 -to rx_adc_ser_data_p[13]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_p[13] -entity artic_daq_fpga_top
+set_location_assignment PIN_BJ133 -to rx_adc_ser_data_n[13]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_n[13] -entity artic_daq_fpga_top
+
+set_location_assignment PIN_BN135 -to rx_adc_ser_data_p[14]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_p[14] -entity artic_daq_fpga_top
+set_location_assignment PIN_BN133 -to rx_adc_ser_data_n[14]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_n[14] -entity artic_daq_fpga_top
+
+set_location_assignment PIN_BV135 -to rx_adc_ser_data_p[15]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_p[15] -entity artic_daq_fpga_top
+set_location_assignment PIN_BV133 -to rx_adc_ser_data_n[15]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_n[15] -entity artic_daq_fpga_top
+
+
+#------------
+
+set_location_assignment PIN_AV135 -to rx_adc_ser_data_p[16]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_p[16] -entity artic_daq_fpga_top
+set_location_assignment PIN_AV133 -to rx_adc_ser_data_n[16]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_n[16] -entity artic_daq_fpga_top
+
+
+set_location_assignment PIN_AY135 -to rx_adc_ser_data_p[17]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_p[17] -entity artic_daq_fpga_top
+set_location_assignment PIN_AY133 -to rx_adc_ser_data_n[17]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_n[17] -entity artic_daq_fpga_top
+
+
+set_location_assignment PIN_BB135 -to rx_adc_ser_data_p[18]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_p[18] -entity artic_daq_fpga_top
+set_location_assignment PIN_BB133 -to rx_adc_ser_data_n[18]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_n[18] -entity artic_daq_fpga_top
+
+
+set_location_assignment PIN_BD135 -to rx_adc_ser_data_p[19]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_p[19] -entity artic_daq_fpga_top
+set_location_assignment PIN_BD133 -to rx_adc_ser_data_n[19]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_n[19] -entity artic_daq_fpga_top
+
+#--------------------------------------
+
+
+set_location_assignment PIN_AK135 -to rx_adc_ser_data_p[20]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_p[20] -entity artic_daq_fpga_top
+set_location_assignment PIN_AK133 -to rx_adc_ser_data_n[20]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_n[20] -entity artic_daq_fpga_top
+
+
+set_location_assignment PIN_AM135 -to rx_adc_ser_data_p[21]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_p[21] -entity artic_daq_fpga_top
+set_location_assignment PIN_AM133 -to rx_adc_ser_data_n[21]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_n[21] -entity artic_daq_fpga_top
+
+
+set_location_assignment PIN_AP135 -to rx_adc_ser_data_p[22]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_p[22] -entity artic_daq_fpga_top
+set_location_assignment PIN_AP133 -to rx_adc_ser_data_n[22]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_n[22] -entity artic_daq_fpga_top
+
+
+set_location_assignment PIN_AT135 -to rx_adc_ser_data_p[23]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_p[23] -entity artic_daq_fpga_top
+set_location_assignment PIN_AT133 -to rx_adc_ser_data_n[23]
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to rx_adc_ser_data_n[23] -entity artic_daq_fpga_top
+
+
+
+set_location_assignment PIN_AT16 -to clk_gts_pll_ref[0]
+set_location_assignment PIN_AT120 -to clk_gts_pll_ref[1] -comment IOBANK_1C
+set_location_assignment PIN_BC29 -to clk_gts_pll_ref[2] -disable
+set_location_assignment PIN_BC111 -to clk_gts_pll_ref[3] -disable
+set_location_assignment PIN_AY120 -to clk_gts_pll_ref[4] -disable
+set_location_assignment PIN_AT120 -to clk_gts_pll_ref[5] -disable
+
+
+
+############################################
+# This must be after all the files
+############################################
+
+
+set_global_assignment -name ENABLE_SIGNALTAP OFF
+set_global_assignment -name USE_SIGNALTAP_FILE tap_spiSlave.stp
+
+set_global_assignment -name OPTIMIZATION_MODE "HIGH PERFORMANCE EFFORT WITH MAXIMUM PLACEMENT EFFORT"
+set_global_assignment -name QSYS_FILE ../src/altera_p2_board/niosv/niosv_pd.qsys
+set_global_assignment -name SDC_FILE artic_daq.sdc
+set_global_assignment -name IP_FILE ../src/altera_p2_board/niosv/ip/niosv_pd/niosv_pd_intel_generic_serial_flash_interface_top_0.ip
+set_global_assignment -name IP_FILE ../src/altera_p2_board/niosv/ip/niosv_pd/niosv_pd_tectonics_ser_debug_0.ip
+set_global_assignment -name IP_FILE ../src/altera_p2_board/niosv/ip/niosv_pd/niosv_pd_jesd_12_chan_interface_1.ip
+set_global_assignment -name IP_FILE ../src/altera_p2_board/niosv/ip/niosv_pd/niosv_pd_jesd_12_chan_interface_0.ip
+set_global_assignment -name IP_FILE ../src/altera_p2_board/jesd/jesd204b_core.ip
+set_global_assignment -name IP_FILE ../src/altera_p2_board/niosv/ip/niosv_pd/niosv_pd_timer_0.ip
+set_global_assignment -name IP_FILE ../src/altera_p2_board/niosv/ip/niosv_pd/niosv_pd_reset_in.ip
+set_global_assignment -name IP_FILE ../src/altera_p2_board/niosv/ip/niosv_pd/niosv_pd_intel_onchip_memory_1.ip
+set_global_assignment -name IP_FILE ../src/altera_p2_board/niosv/ip/niosv_pd/niosv_pd_intel_onchip_memory_0.ip
+set_global_assignment -name IP_FILE ../src/altera_p2_board/niosv/ip/niosv_pd/niosv_pd_intel_niosv_g_0.ip
+set_global_assignment -name IP_FILE ../src/altera_p2_board/niosv/ip/niosv_pd/niosv_pd_clock_in.ip
+set_global_assignment -name IP_FILE ../src/altera_p2_board/niosv/ip/niosv_pd/niosv_pd_avl_spi_master_0.ip
+set_global_assignment -name IP_FILE ../src/altera_p2_board/niosv/ip/niosv_pd/niosv_pd_avl_i2c_master_0.ip
+set_global_assignment -name IP_FILE ../src/altera_p2_board/niosv/ip/niosv_pd/niosv_pd_intel_lw_uart_0.ip
+set_global_assignment -name IP_FILE ../src/altera_p2_board/fifo/alt_sync_fifo_wr8_rd8_1024_deep_la.ip
+set_global_assignment -name IP_FILE ../src/altera_p2_board/niosv/ip/niosv_pd/niosv_pd_avl_mst_sbc_0.ip
+set_global_assignment -name IP_FILE ../src/altera_p2_board/jesd/jesd_gts_reset_sequencer.ip
+set_global_assignment -name IP_FILE ../src/altera_p2_board/pll/io_pll_sysref.ip
+set_global_assignment -name IP_FILE ../src/altera_p2_board/pll/pll_sysref_fabric.ip
+set_global_assignment -name IP_FILE ../src/altera_p2_board/niosv/ip/niosv_pd/niosv_pd_avalon_spi_slave_0.ip
+set_global_assignment -name IP_FILE ../src/altera_p2_board/fifo/alt_async_fifo_wr64_rd64_16_deep_dr_la.ip
+set_global_assignment -name IP_FILE ../src/altera_p2_board/fifo/alt_async_fifo_wr32_rd32_32_deep_dr_la.ip
+set_global_assignment -name IP_FILE ../src/altera_p2_board/fifo/alt_sync_fifo_wr32_rd32_1024_deep_la.ip
+set_global_assignment -name IP_FILE ../src/altera_p2_board/reset/reset_release.ip
+set_global_assignment -name IP_FILE ../src/altera_p2_board/fifo/alt_async_fifo_wr64_rd64_256_deep_la.ip
+set_global_assignment -name IP_FILE ../src/altera_p2_board/pll/main_pll.ip
+set_global_assignment -name IP_FILE ../src/tectonics_com_intfc/rtl/fifos/tic_uart_sync_tx_la_fifo_1k.ip
+set_global_assignment -name IP_FILE ../src/tectonics_com_intfc/rtl/fifos/tic_uart_sync_rx_la_fifo_1k.ip
+set_global_assignment -name VHDL_FILE ../src/spi_slave_reg_intfc/rtl/spi_slave_reg_intfc_pkg.vhd
+set_global_assignment -name VHDL_FILE ../src/spi_slave_reg_intfc/rtl/spi_slave_reg_intfc.vhd
+set_global_assignment -name VHDL_FILE ../src/ser_debug/rtl/tectonics_ser_debug.vhd
+set_global_assignment -name VHDL_FILE ../src/jesd_12_chan_if/rtl/jesd_12_chan_if_for_pass2_board.vhd
+set_global_assignment -name VHDL_FILE ../src/generic_fifo_shell/rtl/generic_fifo_shell.vhd
+set_global_assignment -name VHDL_FILE ../src/tectonics_com_intfc/rtl/uart_generic_fifo_shell.vhd
+set_global_assignment -name VHDL_FILE ../src/adc_data_buffer/rtl/adc_data_buffer.vhd
+set_global_assignment -name VHDL_FILE ../src/tectonics_com_intfc/rtl/tectonics_com_intfc_core_obs.vhd
+set_global_assignment -name VHDL_FILE ../src/tectonics_spi_master_avl_intfc/rtl/tectonics_spi_master_core.vhd
+set_global_assignment -name VHDL_FILE ../src/tectonics_spi_master_avl_intfc/rtl/tectonics_spi_master_avl_intfc_pkg.vhd
+set_global_assignment -name VHDL_FILE ../src/tectonics_spi_master_avl_intfc/rtl/tectonics_spi_master_avl_intfc.vhd
+set_global_assignment -name VHDL_FILE ../src/tectonics_i2c_master_avl_intfc/rtl/tectonics_i2c_master_avl_intfc_pkg.vhd
+set_global_assignment -name VHDL_FILE ../src/tectonics_i2c_master_avl_intfc/rtl/tectonics_i2c_master_core.vhd
+set_global_assignment -name VHDL_FILE ../src/tectonics_i2c_master_avl_intfc/rtl/tectonics_i2c_master_avl_intfc.vhd
+set_global_assignment -name VHDL_FILE ../src/timing_gen/rtl/timing_gen.vhd
+set_global_assignment -name VHDL_FILE ../src/reference_gen/rtl/reference_gen.vhd
+set_global_assignment -name IP_FILE ../src/altera_p2_board/io/ddro_6w.ip
+set_global_assignment -name IP_FILE ../src/altera_p2_board/io/ddro_1w.ip
+set_global_assignment -name VHDL_FILE ../src/artic_daq_fpga_top/rtl/artic_daq_fpga_p2_board_top.vhd
+set_global_assignment -name SDC_FILE artic_daq_late_timing_constraints.sdc
+set_global_assignment -name SIGNALTAP_FILE stp1.stp
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_WEAK_PULLUP "AS INPUT TRI-STATED WITHOUT WEAK PULL-UP"
+set_global_assignment -name BOARD default
+set_global_assignment -name SIGNALTAP_FILE stp2.stp
+set_global_assignment -name SIGNALTAP_FILE tap_jesd.stp
+set_global_assignment -name IP_FILE ../src/altera_p2_board/pll/sysref_pll.ip
+set_instance_assignment -name INPUT_TERMINATION "OCT 100 OHMS" -to clk_gts_ref[*]
+set_global_assignment -name IP_FILE GTS_system_PLL.ip
+set_global_assignment -name IP_FILE ../src/altera_p2_board/pll/GTS_system_PLL.ip
+set_instance_assignment -name XCVR_S10_REFCLK_TERM_TRISTATE TRISTATE_ON -to clk_gts_pll_ref[0]
+set_instance_assignment -name XCVR_S10_REFCLK_TERM_TRISTATE TRISTATE_ON -to clk_gts_pll_ref[1]
+set_instance_assignment -name IO_STANDARD HCSL -to clk_gts_pll_ref[*]
+set_location_assignment PIN_K44 -to cal_pulse_p
+set_instance_assignment -name IO_STANDARD "1.3-V TRUE DIFFERENTIAL SIGNALING" -to cal_pulse_p
+set_location_assignment PIN_M44 -to cal_pulse_n -comment IOBANK_3B_T
+set_instance_assignment -name IO_STANDARD "1.3-V TRUE DIFFERENTIAL SIGNALING" -to cal_pulse_n
+set_global_assignment -name VHDL_FILE ../src/didaq_acq_and_trig/didaq_acq_and_trig.vhd
+set_global_assignment -name IP_FILE ../src/altera_p2_board/ram/ring_buffer.ip
+set_global_assignment -name VHDL_FILE ../src/didaq_acq_and_trig/coinc_trig.vhd
+set_global_assignment -name VERILOG_FILE ../src/didaq_acq_and_trig/scaler.v
+set_global_assignment -name VHDL_FILE ../src/didaq_acq_and_trig/scalers_top.vhd
+set_global_assignment -name VHDL_FILE ../src/didaq_acq_and_trig/beamforming_trig.vhd
+set_global_assignment -name VHDL_FILE ../src/didaq_acq_and_trig/pow_lut.vhd
+set_global_assignment -name IP_FILE ../src/altera_p2_board/niosv/ip/niosv_pd/niosv_pd_intel_mailbox_client_0.ip
+set_global_assignment -name SIGNALTAP_FILE tap_spiSlave.stp
+set_global_assignment -name SEARCH_PATH ../src
+set_global_assignment -name SEARCH_PATH ../src/didaq_acq_and_trig

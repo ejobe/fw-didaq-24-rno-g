@@ -1,0 +1,122 @@
+{
+  "inst_jesd_12_chan_if_high|gen_jesd_cores[0].inst_jesd204b_core|intel_jesd204b_gts_0|phy_inst|rx_0_phy_inst|inst_directphy_0|g1.n.sys[0].n_channel_superset_ip_inst|n_channel_superset_top_wrapper|hal_top_wrapper_inst|hal_top_ip|one_lane_inst_0|one_lane_hal_top_p0|gen_non_usb_mode.phy_hal_top_inst|phy_hal_top|phy_hal_coreip_inst|ch4_phy_inst|x_std_ipfluxtop_uxtop_wrap_0": {
+    "GLOBAL_REFCLK0": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK1": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK2": "GLOBAL_REFCLK0"
+  },
+  "inst_jesd_12_chan_if_high|gen_jesd_cores[0].inst_jesd204b_core|intel_jesd204b_gts_0|phy_inst|rx_1_phy_inst|inst_directphy_1|g1.n.sys[0].n_channel_superset_ip_inst|n_channel_superset_top_wrapper|hal_top_wrapper_inst|hal_top_ip|one_lane_inst_0|one_lane_hal_top_p0|gen_non_usb_mode.phy_hal_top_inst|phy_hal_top|phy_hal_coreip_inst|ch4_phy_inst|x_std_ipfluxtop_uxtop_wrap_0": {
+    "GLOBAL_REFCLK0": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK1": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK2": "GLOBAL_REFCLK0"
+  },
+  "inst_jesd_12_chan_if_high|gen_jesd_cores[1].inst_jesd204b_core|intel_jesd204b_gts_0|phy_inst|rx_0_phy_inst|inst_directphy_0|g1.n.sys[0].n_channel_superset_ip_inst|n_channel_superset_top_wrapper|hal_top_wrapper_inst|hal_top_ip|one_lane_inst_0|one_lane_hal_top_p0|gen_non_usb_mode.phy_hal_top_inst|phy_hal_top|phy_hal_coreip_inst|ch4_phy_inst|x_std_ipfluxtop_uxtop_wrap_0": {
+    "GLOBAL_REFCLK0": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK1": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK2": "GLOBAL_REFCLK0"
+  },
+  "inst_jesd_12_chan_if_high|gen_jesd_cores[1].inst_jesd204b_core|intel_jesd204b_gts_0|phy_inst|rx_1_phy_inst|inst_directphy_1|g1.n.sys[0].n_channel_superset_ip_inst|n_channel_superset_top_wrapper|hal_top_wrapper_inst|hal_top_ip|one_lane_inst_0|one_lane_hal_top_p0|gen_non_usb_mode.phy_hal_top_inst|phy_hal_top|phy_hal_coreip_inst|ch4_phy_inst|x_std_ipfluxtop_uxtop_wrap_0": {
+    "GLOBAL_REFCLK0": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK1": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK2": "GLOBAL_REFCLK0"
+  },
+  "inst_jesd_12_chan_if_high|gen_jesd_cores[2].inst_jesd204b_core|intel_jesd204b_gts_0|phy_inst|rx_0_phy_inst|inst_directphy_0|g1.n.sys[0].n_channel_superset_ip_inst|n_channel_superset_top_wrapper|hal_top_wrapper_inst|hal_top_ip|one_lane_inst_0|one_lane_hal_top_p0|gen_non_usb_mode.phy_hal_top_inst|phy_hal_top|phy_hal_coreip_inst|ch4_phy_inst|x_std_ipfluxtop_uxtop_wrap_0": {
+    "GLOBAL_REFCLK0": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK1": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK2": "GLOBAL_REFCLK0"
+  },
+  "inst_jesd_12_chan_if_high|gen_jesd_cores[2].inst_jesd204b_core|intel_jesd204b_gts_0|phy_inst|rx_1_phy_inst|inst_directphy_1|g1.n.sys[0].n_channel_superset_ip_inst|n_channel_superset_top_wrapper|hal_top_wrapper_inst|hal_top_ip|one_lane_inst_0|one_lane_hal_top_p0|gen_non_usb_mode.phy_hal_top_inst|phy_hal_top|phy_hal_coreip_inst|ch4_phy_inst|x_std_ipfluxtop_uxtop_wrap_0": {
+    "GLOBAL_REFCLK0": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK1": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK2": "GLOBAL_REFCLK0"
+  },
+  "inst_jesd_12_chan_if_high|gen_jesd_cores[3].inst_jesd204b_core|intel_jesd204b_gts_0|phy_inst|rx_0_phy_inst|inst_directphy_0|g1.n.sys[0].n_channel_superset_ip_inst|n_channel_superset_top_wrapper|hal_top_wrapper_inst|hal_top_ip|one_lane_inst_0|one_lane_hal_top_p0|gen_non_usb_mode.phy_hal_top_inst|phy_hal_top|phy_hal_coreip_inst|ch4_phy_inst|x_std_ipfluxtop_uxtop_wrap_0": {
+    "GLOBAL_REFCLK0": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK1": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK2": "GLOBAL_REFCLK0"
+  },
+  "inst_jesd_12_chan_if_high|gen_jesd_cores[3].inst_jesd204b_core|intel_jesd204b_gts_0|phy_inst|rx_1_phy_inst|inst_directphy_1|g1.n.sys[0].n_channel_superset_ip_inst|n_channel_superset_top_wrapper|hal_top_wrapper_inst|hal_top_ip|one_lane_inst_0|one_lane_hal_top_p0|gen_non_usb_mode.phy_hal_top_inst|phy_hal_top|phy_hal_coreip_inst|ch4_phy_inst|x_std_ipfluxtop_uxtop_wrap_0": {
+    "GLOBAL_REFCLK0": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK1": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK2": "GLOBAL_REFCLK0"
+  },
+  "inst_jesd_12_chan_if_high|gen_jesd_cores[4].inst_jesd204b_core|intel_jesd204b_gts_0|phy_inst|rx_0_phy_inst|inst_directphy_0|g1.n.sys[0].n_channel_superset_ip_inst|n_channel_superset_top_wrapper|hal_top_wrapper_inst|hal_top_ip|one_lane_inst_0|one_lane_hal_top_p0|gen_non_usb_mode.phy_hal_top_inst|phy_hal_top|phy_hal_coreip_inst|ch4_phy_inst|x_std_ipfluxtop_uxtop_wrap_0": {
+    "GLOBAL_REFCLK0": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK1": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK2": "GLOBAL_REFCLK0"
+  },
+  "inst_jesd_12_chan_if_high|gen_jesd_cores[4].inst_jesd204b_core|intel_jesd204b_gts_0|phy_inst|rx_1_phy_inst|inst_directphy_1|g1.n.sys[0].n_channel_superset_ip_inst|n_channel_superset_top_wrapper|hal_top_wrapper_inst|hal_top_ip|one_lane_inst_0|one_lane_hal_top_p0|gen_non_usb_mode.phy_hal_top_inst|phy_hal_top|phy_hal_coreip_inst|ch4_phy_inst|x_std_ipfluxtop_uxtop_wrap_0": {
+    "GLOBAL_REFCLK0": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK1": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK2": "GLOBAL_REFCLK0"
+  },
+  "inst_jesd_12_chan_if_high|gen_jesd_cores[5].inst_jesd204b_core|intel_jesd204b_gts_0|phy_inst|rx_0_phy_inst|inst_directphy_0|g1.n.sys[0].n_channel_superset_ip_inst|n_channel_superset_top_wrapper|hal_top_wrapper_inst|hal_top_ip|one_lane_inst_0|one_lane_hal_top_p0|gen_non_usb_mode.phy_hal_top_inst|phy_hal_top|phy_hal_coreip_inst|ch4_phy_inst|x_std_ipfluxtop_uxtop_wrap_0": {
+    "GLOBAL_REFCLK0": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK1": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK2": "GLOBAL_REFCLK0"
+  },
+  "inst_jesd_12_chan_if_high|gen_jesd_cores[5].inst_jesd204b_core|intel_jesd204b_gts_0|phy_inst|rx_1_phy_inst|inst_directphy_1|g1.n.sys[0].n_channel_superset_ip_inst|n_channel_superset_top_wrapper|hal_top_wrapper_inst|hal_top_ip|one_lane_inst_0|one_lane_hal_top_p0|gen_non_usb_mode.phy_hal_top_inst|phy_hal_top|phy_hal_coreip_inst|ch4_phy_inst|x_std_ipfluxtop_uxtop_wrap_0": {
+    "GLOBAL_REFCLK0": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK1": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK2": "GLOBAL_REFCLK0"
+  },
+  "inst_jesd_12_chan_if_low|gen_jesd_cores[0].inst_jesd204b_core|intel_jesd204b_gts_0|phy_inst|rx_0_phy_inst|inst_directphy_0|g1.n.sys[0].n_channel_superset_ip_inst|n_channel_superset_top_wrapper|hal_top_wrapper_inst|hal_top_ip|one_lane_inst_0|one_lane_hal_top_p0|gen_non_usb_mode.phy_hal_top_inst|phy_hal_top|phy_hal_coreip_inst|ch4_phy_inst|x_std_ipfluxtop_uxtop_wrap_0": {
+    "GLOBAL_REFCLK0": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK1": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK2": "GLOBAL_REFCLK0"
+  },
+  "inst_jesd_12_chan_if_low|gen_jesd_cores[0].inst_jesd204b_core|intel_jesd204b_gts_0|phy_inst|rx_1_phy_inst|inst_directphy_1|g1.n.sys[0].n_channel_superset_ip_inst|n_channel_superset_top_wrapper|hal_top_wrapper_inst|hal_top_ip|one_lane_inst_0|one_lane_hal_top_p0|gen_non_usb_mode.phy_hal_top_inst|phy_hal_top|phy_hal_coreip_inst|ch4_phy_inst|x_std_ipfluxtop_uxtop_wrap_0": {
+    "GLOBAL_REFCLK0": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK1": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK2": "GLOBAL_REFCLK0"
+  },
+  "inst_jesd_12_chan_if_low|gen_jesd_cores[1].inst_jesd204b_core|intel_jesd204b_gts_0|phy_inst|rx_0_phy_inst|inst_directphy_0|g1.n.sys[0].n_channel_superset_ip_inst|n_channel_superset_top_wrapper|hal_top_wrapper_inst|hal_top_ip|one_lane_inst_0|one_lane_hal_top_p0|gen_non_usb_mode.phy_hal_top_inst|phy_hal_top|phy_hal_coreip_inst|ch4_phy_inst|x_std_ipfluxtop_uxtop_wrap_0": {
+    "GLOBAL_REFCLK0": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK1": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK2": "GLOBAL_REFCLK0"
+  },
+  "inst_jesd_12_chan_if_low|gen_jesd_cores[1].inst_jesd204b_core|intel_jesd204b_gts_0|phy_inst|rx_1_phy_inst|inst_directphy_1|g1.n.sys[0].n_channel_superset_ip_inst|n_channel_superset_top_wrapper|hal_top_wrapper_inst|hal_top_ip|one_lane_inst_0|one_lane_hal_top_p0|gen_non_usb_mode.phy_hal_top_inst|phy_hal_top|phy_hal_coreip_inst|ch4_phy_inst|x_std_ipfluxtop_uxtop_wrap_0": {
+    "GLOBAL_REFCLK0": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK1": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK2": "GLOBAL_REFCLK0"
+  },
+  "inst_jesd_12_chan_if_low|gen_jesd_cores[2].inst_jesd204b_core|intel_jesd204b_gts_0|phy_inst|rx_0_phy_inst|inst_directphy_0|g1.n.sys[0].n_channel_superset_ip_inst|n_channel_superset_top_wrapper|hal_top_wrapper_inst|hal_top_ip|one_lane_inst_0|one_lane_hal_top_p0|gen_non_usb_mode.phy_hal_top_inst|phy_hal_top|phy_hal_coreip_inst|ch4_phy_inst|x_std_ipfluxtop_uxtop_wrap_0": {
+    "GLOBAL_REFCLK0": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK1": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK2": "GLOBAL_REFCLK0"
+  },
+  "inst_jesd_12_chan_if_low|gen_jesd_cores[2].inst_jesd204b_core|intel_jesd204b_gts_0|phy_inst|rx_1_phy_inst|inst_directphy_1|g1.n.sys[0].n_channel_superset_ip_inst|n_channel_superset_top_wrapper|hal_top_wrapper_inst|hal_top_ip|one_lane_inst_0|one_lane_hal_top_p0|gen_non_usb_mode.phy_hal_top_inst|phy_hal_top|phy_hal_coreip_inst|ch4_phy_inst|x_std_ipfluxtop_uxtop_wrap_0": {
+    "GLOBAL_REFCLK0": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK1": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK2": "GLOBAL_REFCLK0"
+  },
+  "inst_jesd_12_chan_if_low|gen_jesd_cores[3].inst_jesd204b_core|intel_jesd204b_gts_0|phy_inst|rx_0_phy_inst|inst_directphy_0|g1.n.sys[0].n_channel_superset_ip_inst|n_channel_superset_top_wrapper|hal_top_wrapper_inst|hal_top_ip|one_lane_inst_0|one_lane_hal_top_p0|gen_non_usb_mode.phy_hal_top_inst|phy_hal_top|phy_hal_coreip_inst|ch4_phy_inst|x_std_ipfluxtop_uxtop_wrap_0": {
+    "GLOBAL_REFCLK0": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK1": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK2": "GLOBAL_REFCLK0"
+  },
+  "inst_jesd_12_chan_if_low|gen_jesd_cores[3].inst_jesd204b_core|intel_jesd204b_gts_0|phy_inst|rx_1_phy_inst|inst_directphy_1|g1.n.sys[0].n_channel_superset_ip_inst|n_channel_superset_top_wrapper|hal_top_wrapper_inst|hal_top_ip|one_lane_inst_0|one_lane_hal_top_p0|gen_non_usb_mode.phy_hal_top_inst|phy_hal_top|phy_hal_coreip_inst|ch4_phy_inst|x_std_ipfluxtop_uxtop_wrap_0": {
+    "GLOBAL_REFCLK0": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK1": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK2": "GLOBAL_REFCLK0"
+  },
+  "inst_jesd_12_chan_if_low|gen_jesd_cores[4].inst_jesd204b_core|intel_jesd204b_gts_0|phy_inst|rx_0_phy_inst|inst_directphy_0|g1.n.sys[0].n_channel_superset_ip_inst|n_channel_superset_top_wrapper|hal_top_wrapper_inst|hal_top_ip|one_lane_inst_0|one_lane_hal_top_p0|gen_non_usb_mode.phy_hal_top_inst|phy_hal_top|phy_hal_coreip_inst|ch4_phy_inst|x_std_ipfluxtop_uxtop_wrap_0": {
+    "GLOBAL_REFCLK0": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK1": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK2": "GLOBAL_REFCLK0"
+  },
+  "inst_jesd_12_chan_if_low|gen_jesd_cores[4].inst_jesd204b_core|intel_jesd204b_gts_0|phy_inst|rx_1_phy_inst|inst_directphy_1|g1.n.sys[0].n_channel_superset_ip_inst|n_channel_superset_top_wrapper|hal_top_wrapper_inst|hal_top_ip|one_lane_inst_0|one_lane_hal_top_p0|gen_non_usb_mode.phy_hal_top_inst|phy_hal_top|phy_hal_coreip_inst|ch4_phy_inst|x_std_ipfluxtop_uxtop_wrap_0": {
+    "GLOBAL_REFCLK0": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK1": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK2": "GLOBAL_REFCLK0"
+  },
+  "inst_jesd_12_chan_if_low|gen_jesd_cores[5].inst_jesd204b_core|intel_jesd204b_gts_0|phy_inst|rx_0_phy_inst|inst_directphy_0|g1.n.sys[0].n_channel_superset_ip_inst|n_channel_superset_top_wrapper|hal_top_wrapper_inst|hal_top_ip|one_lane_inst_0|one_lane_hal_top_p0|gen_non_usb_mode.phy_hal_top_inst|phy_hal_top|phy_hal_coreip_inst|ch4_phy_inst|x_std_ipfluxtop_uxtop_wrap_0": {
+    "GLOBAL_REFCLK0": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK1": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK2": "GLOBAL_REFCLK0"
+  },
+  "inst_jesd_12_chan_if_low|gen_jesd_cores[5].inst_jesd204b_core|intel_jesd204b_gts_0|phy_inst|rx_1_phy_inst|inst_directphy_1|g1.n.sys[0].n_channel_superset_ip_inst|n_channel_superset_top_wrapper|hal_top_wrapper_inst|hal_top_ip|one_lane_inst_0|one_lane_hal_top_p0|gen_non_usb_mode.phy_hal_top_inst|phy_hal_top|phy_hal_coreip_inst|ch4_phy_inst|x_std_ipfluxtop_uxtop_wrap_0": {
+    "GLOBAL_REFCLK0": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK1": "GLOBAL_REFCLK2",
+    "GLOBAL_REFCLK2": "GLOBAL_REFCLK0"
+  }
+}

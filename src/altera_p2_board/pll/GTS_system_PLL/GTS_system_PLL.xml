@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2026.03.31.12:57:43"
+ outputDirectory="C:/Users/erico/Desktop/projects/terra_terra/didaq_test_subclass0/src/altera_p2_board/pll/GTS_system_PLL/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Agilex 5"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="A5ED065BB32AE4SR0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="4"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_BOARD"
+     type="String"
+     defaultValue="default"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_REFCLK_XCVR_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_REFCLK_XCVR_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_REFCLK_XCVR_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="o_pll_lock" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <property name="prSafe" value="false" />
+   <port name="o_pll_lock" direction="output" role="o_pll_lock" width="1" />
+  </interface>
+  <interface name="o_syspll_c0" kind="clock" start="1">
+   <property name="associatedDirectClock" value="" />
+   <property name="clockRate" value="0" />
+   <property name="clockRateKnown" value="false" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="o_syspll_c0" direction="output" role="clk" width="1" />
+  </interface>
+  <interface name="refclk_xcvr" kind="clock" start="0">
+   <property name="clockRate" value="100000000" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="i_refclk" direction="input" role="clk" width="1" />
+  </interface>
+  <interface name="i_refclk_rdy" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <property name="prSafe" value="false" />
+   <port name="i_refclk_ready" direction="input" role="data" width="1" />
+  </interface>
+ </perimeter>
+ <entity kind="GTS_system_PLL" version="1.0" name="GTS_system_PLL">
+  <parameter name="AUTO_REFCLK_XCVR_CLOCK_DOMAIN" value="-1" />
+  <parameter name="AUTO_REFCLK_XCVR_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_GENERATION_ID" value="0" />
+  <parameter name="AUTO_DEVICE" value="A5ED065BB32AE4SR0" />
+  <parameter name="AUTO_REFCLK_XCVR_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Agilex 5" />
+  <parameter name="AUTO_BOARD" value="default" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="4" />
+  <generatedFiles>
+   <file
+       path="C:\Users\erico\Desktop\projects\terra_terra\didaq_test_subclass0\src\altera_p2_board\pll\GTS_system_PLL\synth\GTS_system_PLL.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="C:\Users\erico\Desktop\projects\terra_terra\didaq_test_subclass0\src\altera_p2_board\pll\GTS_system_PLL\synth\GTS_system_PLL.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="C:/Users/erico/Desktop/projects/terra_terra/didaq_test_subclass0/src/altera_p2_board/pll/GTS_system_PLL.ip" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="C:/altera_pro/25.1.1/ip/altera/alt_xcvr/intel_monolithic/systemclock/intel_systemclk_gts/tcl/intel_systemclk_gts_hw.tcl" />
+   <file
+       path="C:/altera_pro/25.1.1/ip/altera/alt_xcvr/intel_monolithic/hal/ml1/spll_hal/tcl/spll_hal_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Info" culprit="GTS_system_PLL">"Generating: GTS_system_PLL"</message>
+   <message level="Info" culprit="GTS_system_PLL">"Generating: GTS_system_PLL_intel_systemclk_gts_510_q56bxpa"</message>
+   <message level="Info" culprit="spll_hal_top">"Generating: spll_hal_top"</message>
+   <message level="Info" culprit="GTS_system_PLL">"Generating: GTS_system_PLL_intel_systemclk_gts_spll_hal_510_4qpunya"</message>
+   <message level="Info" culprit="GTS_system_PLL">"Generating: GTS_system_PLL_spll_hal_2100_qol5lrq"</message>
+  </messages>
+ </entity>
+ <entity
+   kind="intel_systemclk_gts"
+   version="5.1.0"
+   name="GTS_system_PLL_intel_systemclk_gts_510_q56bxpa">
+  <parameter name="syspll_func_0" value="User Configuration" />
+  <parameter name="refclk_xcvr_freq_mhz_0" value="100.000000" />
+  <parameter name="syspll_freq_mhz_0_default" value="322.265625" />
+  <parameter name="systempll_c1_output_enable_0" value="DISABLE" />
+  <parameter name="enables_flux_clk" value="true" />
+  <parameter name="systempll_f_pfd_hz_0" value="100000000" />
+  <parameter name="syspll_availpor_0" value="true" />
+  <parameter name="systempll_c2_counter_0" value="0" />
+  <parameter name="systempll_output_enable_0" value="0" />
+  <parameter name="syspll_use_case" value="TRANSCEIVER_USE_CASE" />
+  <parameter name="systempll_m_counter_0" value="15" />
+  <parameter name="systempll_preset" value="FREQ_OTHER" />
+  <parameter name="systempll_f_out_c0_hz_0" value="250000000" />
+  <parameter name="systempll_c0_counter_0" value="6" />
+  <parameter name="systempll_pcie_preset_0" value="PCIE_UNUSED" />
+  <parameter name="silicon_revision" value="10nm6awhra" />
+  <parameter name="syspll_freq_mhz_0" value="250" />
+  <parameter name="systempll_f_ref_hz_0" value="100000000" />
+  <parameter name="syspll_freq_mhz_2" value="322.265625" />
+  <parameter name="syspll_freq_mhz_1" value="322.265625" />
+  <parameter name="enables_c2" value="false" />
+  <parameter name="device_revision" value="10nm6awhra" />
+  <parameter name="syspll_freq_mhz_enable_1" value="false" />
+  <parameter name="enables_lock" value="true" />
+  <parameter name="enables_c0" value="true" />
+  <parameter name="syspll_freq_mhz_enable_2" value="false" />
+  <parameter name="enables_c1" value="false" />
+  <parameter name="systempll_f_out_c1_hz_0" value="0" />
+  <parameter name="systempll_f_out_c2_hz_0" value="0" />
+  <parameter name="vco_test" value="1500.000000" />
+  <parameter name="systempll_c2_output_enable_0" value="DISABLE" />
+  <parameter name="syspll_freq_mhz_enable_0" value="true" />
+  <parameter name="refclk_xcvr_usedby_0" value="None" />
+  <parameter name="refclk_xcvr_freq_0" value="0" />
+  <parameter name="systempll_n_counter_0" value="1" />
+  <parameter name="systempll_ethernet_preset_0" value="ETHERNET_FREQ_OTHER" />
+  <parameter name="default_value" value="false" />
+  <parameter name="systempll_c0_output_enable_0" value="ENABLE" />
+  <parameter name="systempll_f_vco_hz_0" value="1500000000" />
+  <parameter name="syspll_mod_0" value="User Configuration" />
+  <parameter name="systempll_c1_counter_0" value="0" />
+  <parameter name="enable_freq_port" value="true" />
+  <parameter name="fabric_pll_feature_ini" value="0" />
+  <parameter name="systempll_fractional_enable_0" value="DISABLE" />
+  <parameter name="systempll_primary_use_0" value="ETHERNET" />
+  <parameter name="c_counter" value="8" />
+  <parameter name="enables_refclk" value="true" />
+  <generatedFiles>
+   <file
+       path="C:\Users\erico\Desktop\projects\terra_terra\didaq_test_subclass0\src\altera_p2_board\pll\GTS_system_PLL\intel_systemclk_gts_510\synth\GTS_system_PLL_intel_systemclk_gts_510_q56bxpa.sv"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="C:\Users\erico\Desktop\projects\terra_terra\didaq_test_subclass0\src\altera_p2_board\pll\GTS_system_PLL\intel_systemclk_gts_510\synth\GTS_system_PLL_intel_systemclk_gts_510_q56bxpa.sv"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="C:/altera_pro/25.1.1/ip/altera/alt_xcvr/intel_monolithic/systemclock/intel_systemclk_gts/tcl/intel_systemclk_gts_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="C:/altera_pro/25.1.1/ip/altera/alt_xcvr/intel_monolithic/hal/ml1/spll_hal/tcl/spll_hal_hw.tcl" />
+  </childSourceFiles>
+  <instantiator instantiator="GTS_system_PLL" as="intel_systemclk_gts_0" />
+  <messages>
+   <message level="Info" culprit="GTS_system_PLL">"Generating: GTS_system_PLL_intel_systemclk_gts_510_q56bxpa"</message>
+   <message level="Info" culprit="spll_hal_top">"Generating: spll_hal_top"</message>
+   <message level="Info" culprit="GTS_system_PLL">"Generating: GTS_system_PLL_intel_systemclk_gts_spll_hal_510_4qpunya"</message>
+   <message level="Info" culprit="GTS_system_PLL">"Generating: GTS_system_PLL_spll_hal_2100_qol5lrq"</message>
+  </messages>
+ </entity>
+ <entity
+   kind="intel_systemclk_gts_spll_hal"
+   version="5.1.0"
+   name="GTS_system_PLL_intel_systemclk_gts_spll_hal_510_4qpunya">
+  <parameter name="syspll_func_0" value="User Configuration" />
+  <parameter name="refclk_xcvr_freq_mhz_0" value="100.000000" />
+  <parameter name="syspll_l_sys_pll_f_out_c3_hz" value="0" />
+  <parameter name="syspll_l_sys_pll_preset" value="FREQ_OTHER" />
+  <parameter name="sys_pll_f_pfd_hz_atom" value="100000000" />
+  <parameter name="sys_pll_n_counter_atom" value="1" />
+  <parameter name="systempll_output_enable_0" value="0" />
+  <parameter name="syspll_l_sys_pll_c2_output_enable" value="DISABLE" />
+  <parameter name="syspll_l_sys_pll_c3_counter" value="0" />
+  <parameter name="sys_pll_c0_counter_atom" value="6" />
+  <parameter name="syspll_l_sys_pll_m_counter" value="15" />
+  <parameter name="sys_pll_f_out_c3_hz_atom" value="0" />
+  <parameter name="syspll_l_sys_pll_c1_counter" value="0" />
+  <parameter name="sys_pll_c2_counter_atom" value="0" />
+  <parameter name="syspll_freq_mhz_0" value="250" />
+  <parameter name="syspll_freq_mhz_2" value="322.265625" />
+  <parameter name="syspll_freq_mhz_1" value="322.265625" />
+  <parameter name="device_revision" value="10nm6awhra" />
+  <parameter name="syspll_l_sys_pll_k_counter" value="0" />
+  <parameter name="sys_pll_f_out_c1_hz_atom" value="0" />
+  <parameter
+     name="sys_pll_c3_output_enable_atom"
+     value="SYS_PLL_C3_OUTPUT_ENABLE_DISABLE" />
+  <parameter
+     name="sys_pll_fractional_enable_atom"
+     value="SYS_PLL_FRACTIONAL_ENABLE_DISABLE" />
+  <parameter name="syspll_l_pll_always_on" value="ALWAYS_ON_ENABLED" />
+  <parameter
+     name="sys_pll_c1_output_enable_atom"
+     value="SYS_PLL_C1_OUTPUT_ENABLE_DISABLE" />
+  <parameter name="syspll_l_sup_mode" value="USER_MODE" />
+  <parameter name="syspll_l_sys_pll_c0_output_enable" value="ENABLE" />
+  <parameter name="syspll_l_pll_primary_use" value="ETHERNET" />
+  <parameter name="syspll_l_sys_pll_c3_output_enable" value="DISABLE" />
+  <parameter name="syspll_l_sys_pll_f_out_c0_hz" value="250000000" />
+  <parameter name="syspll_l_sys_pll_fractional_enable" value="DISABLE" />
+  <parameter name="syspll_mod_0" value="User Configuration" />
+  <parameter name="sys_pll_preset_atom" value="SYS_PLL_PRESET_FREQ_OTHER" />
+  <parameter name="pll_always_on_atom" value="PLL_ALWAYS_ON_ALWAYS_ON_ENABLED" />
+  <parameter name="syspll_availpor_0" value="true" />
+  <parameter name="syspll_l_sys_pll_f_vco_hz" value="1500000000" />
+  <parameter name="syspll_use_case" value="TRANSCEIVER_USE_CASE" />
+  <parameter name="sys_pll_c3_counter_atom" value="0" />
+  <parameter name="syspll_l_sys_pll_f_out_c1_hz" value="0" />
+  <parameter name="sys_pll_f_vco_hz_atom" value="1500000000" />
+  <parameter name="syspll_l_sys_pll_f_ref_hz" value="100000000" />
+  <parameter name="syspll_l_sys_pll_c2_counter" value="0" />
+  <parameter name="silicon_revision" value="10nm6awhra" />
+  <parameter name="syspll_l_sys_pll_n_counter" value="1" />
+  <parameter name="sys_pll_m_counter_atom" value="15" />
+  <parameter name="sys_pll_c1_counter_atom" value="0" />
+  <parameter name="sys_pll_f_ref_hz_atom" value="100000000" />
+  <parameter
+     name="sys_pll_c2_output_enable_atom"
+     value="SYS_PLL_C2_OUTPUT_ENABLE_DISABLE" />
+  <parameter name="syspll_freq_mhz_enable_1" value="false" />
+  <parameter name="syspll_freq_mhz_enable_2" value="false" />
+  <parameter name="sys_pll_k_counter_atom" value="0" />
+  <parameter name="syspll_l_sys_pll_c0_counter" value="6" />
+  <parameter name="sys_pll_f_out_c2_hz_atom" value="0" />
+  <parameter
+     name="sys_pll_c0_output_enable_atom"
+     value="SYS_PLL_C0_OUTPUT_ENABLE_ENABLE" />
+  <parameter name="refclk_xcvr_freq_0" value="0" />
+  <parameter name="syspll_freq_mhz_enable_0" value="true" />
+  <parameter name="refclk_xcvr_usedby_0" value="None" />
+  <parameter name="sys_pll_f_out_c0_hz_atom" value="250000000" />
+  <parameter name="default_value" value="false" />
+  <parameter name="syspll_l_sys_pll_f_out_c2_hz" value="0" />
+  <parameter name="sup_mode_atom" value="SUP_MODE_USER_MODE" />
+  <parameter name="pll_primary_use_atom" value="PLL_PRIMARY_USE_ETHERNET" />
+  <parameter name="syspll_l_sys_pll_c1_output_enable" value="DISABLE" />
+  <parameter name="syspll_l_sys_pll_f_pfd_hz" value="100000000" />
+  <generatedFiles>
+   <file
+       path="C:\Users\erico\Desktop\projects\terra_terra\didaq_test_subclass0\src\altera_p2_board\pll\GTS_system_PLL\intel_systemclk_gts_510\synth\GTS_system_PLL_intel_systemclk_gts_spll_hal_510_4qpunya.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="C:\Users\erico\Desktop\projects\terra_terra\didaq_test_subclass0\src\altera_p2_board\pll\GTS_system_PLL\intel_systemclk_gts_510\synth\GTS_system_PLL_intel_systemclk_gts_spll_hal_510_4qpunya.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </childGeneratedFiles>
+  <sourceFiles/>
+  <childSourceFiles>
+   <file
+       path="C:/altera_pro/25.1.1/ip/altera/alt_xcvr/intel_monolithic/hal/ml1/spll_hal/tcl/spll_hal_hw.tcl" />
+  </childSourceFiles>
+  <instantiator
+     instantiator="GTS_system_PLL_intel_systemclk_gts_510_q56bxpa"
+     as="spll_hal_top" />
+  <messages>
+   <message level="Info" culprit="GTS_system_PLL">"Generating: GTS_system_PLL_intel_systemclk_gts_spll_hal_510_4qpunya"</message>
+   <message level="Info" culprit="GTS_system_PLL">"Generating: GTS_system_PLL_spll_hal_2100_qol5lrq"</message>
+  </messages>
+ </entity>
+ <entity
+   kind="spll_hal"
+   version="21.0.0"
+   name="GTS_system_PLL_spll_hal_2100_qol5lrq">
+  <parameter name="syspll_func_0" value="User Configuration" />
+  <parameter name="refclk_xcvr_freq_mhz_0" value="100.000000" />
+  <parameter name="syspll_l_sys_pll_f_out_c3_hz" value="0" />
+  <parameter name="syspll_l_sys_pll_preset" value="FREQ_OTHER" />
+  <parameter name="sys_pll_f_pfd_hz_atom" value="100000000" />
+  <parameter name="sys_pll_n_counter_atom" value="1" />
+  <parameter name="systempll_output_enable_0" value="0" />
+  <parameter name="syspll_l_sys_pll_c2_output_enable" value="DISABLE" />
+  <parameter name="syspll_l_sys_pll_c3_counter" value="0" />
+  <parameter name="sys_pll_c0_counter_atom" value="6" />
+  <parameter name="syspll_l_sys_pll_m_counter" value="15" />
+  <parameter name="sys_pll_f_out_c3_hz_atom" value="0" />
+  <parameter name="syspll_l_sys_pll_c1_counter" value="0" />
+  <parameter name="sys_pll_c2_counter_atom" value="0" />
+  <parameter name="syspll_freq_mhz_0" value="250" />
+  <parameter name="syspll_freq_mhz_2" value="322.265625" />
+  <parameter name="syspll_freq_mhz_1" value="322.265625" />
+  <parameter name="device_revision" value="10nm6awhra" />
+  <parameter name="syspll_l_sys_pll_k_counter" value="0" />
+  <parameter name="sys_pll_f_out_c1_hz_atom" value="0" />
+  <parameter
+     name="sys_pll_c3_output_enable_atom"
+     value="SYS_PLL_C3_OUTPUT_ENABLE_DISABLE" />
+  <parameter
+     name="sys_pll_fractional_enable_atom"
+     value="SYS_PLL_FRACTIONAL_ENABLE_DISABLE" />
+  <parameter name="syspll_l_pll_always_on" value="ALWAYS_ON_ENABLED" />
+  <parameter
+     name="sys_pll_c1_output_enable_atom"
+     value="SYS_PLL_C1_OUTPUT_ENABLE_DISABLE" />
+  <parameter name="syspll_l_sup_mode" value="USER_MODE" />
+  <parameter name="syspll_l_sys_pll_c0_output_enable" value="ENABLE" />
+  <parameter name="syspll_l_pll_primary_use" value="ETHERNET" />
+  <parameter name="syspll_l_sys_pll_c3_output_enable" value="DISABLE" />
+  <parameter name="syspll_l_sys_pll_f_out_c0_hz" value="250000000" />
+  <parameter name="syspll_l_sys_pll_fractional_enable" value="DISABLE" />
+  <parameter name="syspll_mod_0" value="User Configuration" />
+  <parameter name="sys_pll_preset_atom" value="SYS_PLL_PRESET_FREQ_OTHER" />
+  <parameter name="pll_always_on_atom" value="PLL_ALWAYS_ON_ALWAYS_ON_ENABLED" />
+  <parameter name="syspll_availpor_0" value="true" />
+  <parameter name="syspll_l_sys_pll_f_vco_hz" value="1500000000" />
+  <parameter name="syspll_use_case" value="TRANSCEIVER_USE_CASE" />
+  <parameter name="sys_pll_c3_counter_atom" value="0" />
+  <parameter name="syspll_l_sys_pll_f_out_c1_hz" value="0" />
+  <parameter name="sys_pll_f_vco_hz_atom" value="1500000000" />
+  <parameter name="syspll_l_sys_pll_f_ref_hz" value="100000000" />
+  <parameter name="syspll_l_sys_pll_c2_counter" value="0" />
+  <parameter name="silicon_revision" value="10nm6awhra" />
+  <parameter name="syspll_l_sys_pll_n_counter" value="1" />
+  <parameter name="sys_pll_m_counter_atom" value="15" />
+  <parameter name="sys_pll_c1_counter_atom" value="0" />
+  <parameter name="sys_pll_f_ref_hz_atom" value="100000000" />
+  <parameter
+     name="sys_pll_c2_output_enable_atom"
+     value="SYS_PLL_C2_OUTPUT_ENABLE_DISABLE" />
+  <parameter name="syspll_freq_mhz_enable_1" value="false" />
+  <parameter name="syspll_freq_mhz_enable_2" value="false" />
+  <parameter name="sys_pll_k_counter_atom" value="0" />
+  <parameter name="syspll_l_sys_pll_c0_counter" value="6" />
+  <parameter name="sys_pll_f_out_c2_hz_atom" value="0" />
+  <parameter
+     name="sys_pll_c0_output_enable_atom"
+     value="SYS_PLL_C0_OUTPUT_ENABLE_ENABLE" />
+  <parameter name="refclk_xcvr_freq_0" value="0" />
+  <parameter name="syspll_freq_mhz_enable_0" value="true" />
+  <parameter name="refclk_xcvr_usedby_0" value="None" />
+  <parameter name="sys_pll_f_out_c0_hz_atom" value="250000000" />
+  <parameter name="default_value" value="false" />
+  <parameter name="syspll_l_sys_pll_f_out_c2_hz" value="0" />
+  <parameter name="sup_mode_atom" value="SUP_MODE_USER_MODE" />
+  <parameter name="pll_primary_use_atom" value="PLL_PRIMARY_USE_ETHERNET" />
+  <parameter name="syspll_l_sys_pll_c1_output_enable" value="DISABLE" />
+  <parameter name="syspll_l_sys_pll_f_pfd_hz" value="100000000" />
+  <generatedFiles>
+   <file
+       path="C:\Users\erico\Desktop\projects\terra_terra\didaq_test_subclass0\src\altera_p2_board\pll\GTS_system_PLL\spll_hal_2100\synth\spll_hal_top.sv"
+       attributes="" />
+   <file
+       path="C:\Users\erico\Desktop\projects\terra_terra\didaq_test_subclass0\src\altera_p2_board\pll\GTS_system_PLL\spll_hal_2100\synth\GTS_system_PLL_spll_hal_2100_qol5lrq.sv"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="C:\Users\erico\Desktop\projects\terra_terra\didaq_test_subclass0\src\altera_p2_board\pll\GTS_system_PLL\spll_hal_2100\synth\spll_hal_top.sv"
+       attributes="" />
+   <file
+       path="C:\Users\erico\Desktop\projects\terra_terra\didaq_test_subclass0\src\altera_p2_board\pll\GTS_system_PLL\spll_hal_2100\synth\GTS_system_PLL_spll_hal_2100_qol5lrq.sv"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="C:/altera_pro/25.1.1/ip/altera/alt_xcvr/intel_monolithic/hal/ml1/spll_hal/tcl/spll_hal_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator
+     instantiator="GTS_system_PLL_intel_systemclk_gts_spll_hal_510_4qpunya"
+     as="spll_hal_top" />
+  <messages>
+   <message level="Info" culprit="GTS_system_PLL">"Generating: GTS_system_PLL_spll_hal_2100_qol5lrq"</message>
+  </messages>
+ </entity>
+</deploy>

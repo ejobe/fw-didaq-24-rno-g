@@ -1,0 +1,68 @@
+set_global_assignment -entity "sdm_mailbox" -library "sdm_mailbox" -name IP_TOOL_NAME "QsysPrimePro"
+set_global_assignment -entity "sdm_mailbox" -library "sdm_mailbox" -name IP_TOOL_VERSION "25.1.1"
+set_global_assignment -entity "sdm_mailbox" -library "sdm_mailbox" -name IP_TOOL_ENV "QsysPrimePro"
+set_global_assignment -entity "sdm_mailbox" -library "sdm_mailbox" -name IP_TOOL_VENDOR_NAME "Altera"
+set_global_assignment -entity "sdm_mailbox" -library "sdm_mailbox" -name IP_TOP_LEVEL_COMPONENT_NAME "intel_mailbox_client"
+set_global_assignment -entity "sdm_mailbox" -library "sdm_mailbox" -name PRE_COMPILED_MODULE "ON"
+set_global_assignment -entity "sdm_mailbox" -library "sdm_mailbox" -name OCS_IP_FILE [file join $::quartus(qip_path) "../sdm_mailbox.ip"]
+set_global_assignment -entity "sdm_mailbox" -library "sdm_mailbox" -name OCS_IP_TYPE "intel_mailbox_client"
+set_global_assignment -entity "sdm_mailbox" -library "sdm_mailbox" -name OCS_IP_VERSION "2.0.0"
+set_global_assignment -entity "sdm_mailbox" -library "sdm_mailbox" -name OCS_IP_HASH "4gr47gy"
+set_global_assignment -library "sdm_mailbox" -name SOPCINFO_FILE [file join $::quartus(qip_path) "sdm_mailbox.sopcinfo"]
+set_global_assignment -entity "sdm_mailbox" -library "sdm_mailbox" -name SLD_INFO "QSYS_NAME sdm_mailbox HAS_SOPCINFO 1 GENERATION_ID 0"
+set_global_assignment -library "sdm_mailbox" -name MISC_FILE [file join $::quartus(qip_path) "sdm_mailbox.cmp"]
+set_global_assignment -entity "sdm_mailbox" -library "sdm_mailbox" -name IP_TARGETED_DEVICE_FAMILY "Agilex 5"
+set_global_assignment -entity "sdm_mailbox" -library "sdm_mailbox" -name IP_GENERATED_DEVICE_FAMILY "{Agilex 5}"
+set_global_assignment -entity "sdm_mailbox" -library "sdm_mailbox" -name IP_QSYS_MODE "STANDALONE"
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "sdm_mailbox" -name MISC_FILE [file join $::quartus(qip_path) "../sdm_mailbox.ip"]
+
+set_global_assignment -entity "altera_s10_mailbox_client_core" -library "altera_s10_mailbox_client_core_2100" -name IP_COMPONENT_NAME "YWx0ZXJhX3MxMF9tYWlsYm94X2NsaWVudF9jb3Jl"
+set_global_assignment -entity "altera_s10_mailbox_client_core" -library "altera_s10_mailbox_client_core_2100" -name IP_COMPONENT_DISPLAY_NAME "TWFpbGJveCBDbGllbnQgQ29yZQ=="
+set_global_assignment -entity "altera_s10_mailbox_client_core" -library "altera_s10_mailbox_client_core_2100" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "altera_s10_mailbox_client_core" -library "altera_s10_mailbox_client_core_2100" -name IP_COMPONENT_INTERNAL "On"
+set_global_assignment -entity "altera_s10_mailbox_client_core" -library "altera_s10_mailbox_client_core_2100" -name IP_COMPONENT_AUTHOR "QWx0ZXJh"
+set_global_assignment -entity "altera_s10_mailbox_client_core" -library "altera_s10_mailbox_client_core_2100" -name IP_COMPONENT_VERSION "MjEuMC4w"
+set_global_assignment -entity "altera_s10_mailbox_client_core" -library "altera_s10_mailbox_client_core_2100" -name IP_COMPONENT_GROUP "QmFzaWMgRnVuY3Rpb25zL0NvbmZpZ3VyYXRpb24gYW5kIFByb2dyYW1taW5n"
+set_global_assignment -entity "altera_config_stream_endpoint_wrapper" -library "altera_config_stream_endpoint_1920" -name IP_COMPONENT_NAME "YWx0ZXJhX2NvbmZpZ19zdHJlYW1fZW5kcG9pbnRfd3JhcHBlcg=="
+set_global_assignment -entity "altera_config_stream_endpoint_wrapper" -library "altera_config_stream_endpoint_1920" -name IP_COMPONENT_DISPLAY_NAME "QWx0ZXJhIEZQR0EgQ29uZmlnIFN0cmVhbSBFbmRwb2ludA=="
+set_global_assignment -entity "altera_config_stream_endpoint_wrapper" -library "altera_config_stream_endpoint_1920" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "altera_config_stream_endpoint_wrapper" -library "altera_config_stream_endpoint_1920" -name IP_COMPONENT_INTERNAL "On"
+set_global_assignment -entity "altera_config_stream_endpoint_wrapper" -library "altera_config_stream_endpoint_1920" -name IP_COMPONENT_AUTHOR "QWx0ZXJh"
+set_global_assignment -entity "altera_config_stream_endpoint_wrapper" -library "altera_config_stream_endpoint_1920" -name IP_COMPONENT_VERSION "MTkuMi4w"
+set_global_assignment -entity "altera_config_stream_endpoint_wrapper" -library "altera_config_stream_endpoint_1920" -name IP_COMPONENT_GROUP "VmVyaWZpY2F0aW9uL0RlYnVnICYgUGVyZm9ybWFuY2U="
+set_global_assignment -entity "sdm_mailbox_intel_mailbox_client_200_4gr47gy" -library "intel_mailbox_client_200" -name IP_COMPONENT_NAME "c2RtX21haWxib3hfaW50ZWxfbWFpbGJveF9jbGllbnRfMjAwXzRncjQ3Z3k="
+set_global_assignment -entity "sdm_mailbox_intel_mailbox_client_200_4gr47gy" -library "intel_mailbox_client_200" -name IP_COMPONENT_DISPLAY_NAME "TWFpbGJveCBDbGllbnQgSVA="
+set_global_assignment -entity "sdm_mailbox_intel_mailbox_client_200_4gr47gy" -library "intel_mailbox_client_200" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "sdm_mailbox_intel_mailbox_client_200_4gr47gy" -library "intel_mailbox_client_200" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "sdm_mailbox_intel_mailbox_client_200_4gr47gy" -library "intel_mailbox_client_200" -name IP_COMPONENT_AUTHOR "QWx0ZXJh"
+set_global_assignment -entity "sdm_mailbox_intel_mailbox_client_200_4gr47gy" -library "intel_mailbox_client_200" -name IP_COMPONENT_VERSION "Mi4wLjA="
+set_global_assignment -entity "sdm_mailbox_intel_mailbox_client_200_4gr47gy" -library "intel_mailbox_client_200" -name IP_COMPONENT_DESCRIPTION "VGhlIE1haWxib3ggQ2xpZW50IElQIGFsbG93cyBGUEdBIGNvcmUgdG8gc2VuZCBjb21tYW5kIHRvIFNETSBhbmQgcmVjZWl2ZSByZXNwb25zZSBmcm9tIFNETQ=="
+set_global_assignment -entity "sdm_mailbox_intel_mailbox_client_200_4gr47gy" -library "intel_mailbox_client_200" -name IP_COMPONENT_GROUP "QmFzaWMgRnVuY3Rpb25zL0NvbmZpZ3VyYXRpb24gYW5kIFByb2dyYW1taW5n"
+set_global_assignment -entity "sdm_mailbox_intel_mailbox_client_200_4gr47gy" -library "intel_mailbox_client_200" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL2RvY3MvcHJvZ3JhbW1hYmxlLzY4MzI5MC8="
+set_global_assignment -entity "sdm_mailbox_intel_mailbox_client_200_4gr47gy" -library "intel_mailbox_client_200" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL2RvY3MvcHJvZ3JhbW1hYmxlLzY4Mzc1NC8="
+set_global_assignment -entity "sdm_mailbox" -library "sdm_mailbox" -name IP_COMPONENT_NAME "c2RtX21haWxib3g="
+set_global_assignment -entity "sdm_mailbox" -library "sdm_mailbox" -name IP_COMPONENT_DISPLAY_NAME "c3lzdGVt"
+set_global_assignment -entity "sdm_mailbox" -library "sdm_mailbox" -name IP_COMPONENT_REPORT_HIERARCHY "On"
+set_global_assignment -entity "sdm_mailbox" -library "sdm_mailbox" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "sdm_mailbox" -library "sdm_mailbox" -name IP_COMPONENT_AUTHOR "QWx0ZXJh"
+set_global_assignment -entity "sdm_mailbox" -library "sdm_mailbox" -name IP_COMPONENT_VERSION "MS4w"
+
+
+set_global_assignment -library "altera_s10_mailbox_client_core_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "altera_s10_mailbox_client_core_2100/synth/intel_avst_dp_scfifo.sv"]
+set_global_assignment -library "altera_s10_mailbox_client_core_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "altera_s10_mailbox_client_core_2100/synth/altera_s10_mailbox_client_core.sv"]
+set_global_assignment -library "altera_config_stream_endpoint_1920" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "altera_config_stream_endpoint_1920/synth/altera_config_stream_endpoint_wrapper.sv"]
+set_global_assignment -library "intel_mailbox_client_200" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_mailbox_client_200/synth/sdm_mailbox_intel_mailbox_client_200_4gr47gy.v"]
+set_global_assignment -library "sdm_mailbox" -name VERILOG_FILE [file join $::quartus(qip_path) "synth/sdm_mailbox.v"]
+
+
+set_global_assignment -entity "sdm_mailbox_intel_mailbox_client_200_4gr47gy" -library "intel_mailbox_client_200" -name IP_TOOL_NAME "intel_mailbox_client"
+set_global_assignment -entity "sdm_mailbox_intel_mailbox_client_200_4gr47gy" -library "intel_mailbox_client_200" -name IP_TOOL_VERSION "2.0.0"
+set_global_assignment -entity "sdm_mailbox_intel_mailbox_client_200_4gr47gy" -library "intel_mailbox_client_200" -name IP_TOOL_ENV "QsysPrimePro"
+set_global_assignment -entity "altera_config_stream_endpoint_wrapper" -library "altera_config_stream_endpoint_1920" -name IP_TOOL_NAME "altera_config_stream_endpoint"
+set_global_assignment -entity "altera_config_stream_endpoint_wrapper" -library "altera_config_stream_endpoint_1920" -name IP_TOOL_VERSION "19.2.0"
+set_global_assignment -entity "altera_config_stream_endpoint_wrapper" -library "altera_config_stream_endpoint_1920" -name IP_TOOL_ENV "QsysPrimePro"
+set_global_assignment -entity "altera_s10_mailbox_client_core" -library "altera_s10_mailbox_client_core_2100" -name IP_TOOL_NAME "altera_s10_mailbox_client_core"
+set_global_assignment -entity "altera_s10_mailbox_client_core" -library "altera_s10_mailbox_client_core_2100" -name IP_TOOL_VERSION "21.0.0"
+set_global_assignment -entity "altera_s10_mailbox_client_core" -library "altera_s10_mailbox_client_core_2100" -name IP_TOOL_ENV "QsysPrimePro"
+

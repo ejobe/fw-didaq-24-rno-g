@@ -1,0 +1,49 @@
+set_global_assignment -entity "jesd_gts_reset_sequencer" -library "jesd_gts_reset_sequencer" -name IP_TOOL_NAME "QsysPrimePro"
+set_global_assignment -entity "jesd_gts_reset_sequencer" -library "jesd_gts_reset_sequencer" -name IP_TOOL_VERSION "25.1.1"
+set_global_assignment -entity "jesd_gts_reset_sequencer" -library "jesd_gts_reset_sequencer" -name IP_TOOL_ENV "QsysPrimePro"
+set_global_assignment -entity "jesd_gts_reset_sequencer" -library "jesd_gts_reset_sequencer" -name IP_TOOL_VENDOR_NAME "Altera Corporation"
+set_global_assignment -entity "jesd_gts_reset_sequencer" -library "jesd_gts_reset_sequencer" -name IP_TOP_LEVEL_COMPONENT_NAME "intel_srcss_gts"
+set_global_assignment -entity "jesd_gts_reset_sequencer" -library "jesd_gts_reset_sequencer" -name PRE_COMPILED_MODULE "ON"
+set_global_assignment -entity "jesd_gts_reset_sequencer" -library "jesd_gts_reset_sequencer" -name OCS_IP_FILE [file join $::quartus(qip_path) "../jesd_gts_reset_sequencer.ip"]
+set_global_assignment -entity "jesd_gts_reset_sequencer" -library "jesd_gts_reset_sequencer" -name OCS_IP_TYPE "intel_srcss_gts"
+set_global_assignment -entity "jesd_gts_reset_sequencer" -library "jesd_gts_reset_sequencer" -name OCS_IP_VERSION "4.0.1"
+set_global_assignment -entity "jesd_gts_reset_sequencer" -library "jesd_gts_reset_sequencer" -name OCS_IP_HASH "467auiy"
+set_global_assignment -library "jesd_gts_reset_sequencer" -name SOPCINFO_FILE [file join $::quartus(qip_path) "jesd_gts_reset_sequencer.sopcinfo"]
+set_global_assignment -entity "jesd_gts_reset_sequencer" -library "jesd_gts_reset_sequencer" -name SLD_INFO "QSYS_NAME jesd_gts_reset_sequencer HAS_SOPCINFO 1 GENERATION_ID 0"
+set_global_assignment -library "jesd_gts_reset_sequencer" -name MISC_FILE [file join $::quartus(qip_path) "jesd_gts_reset_sequencer.cmp"]
+set_global_assignment -entity "jesd_gts_reset_sequencer" -library "jesd_gts_reset_sequencer" -name IP_TARGETED_DEVICE_FAMILY "Agilex 5"
+set_global_assignment -entity "jesd_gts_reset_sequencer" -library "jesd_gts_reset_sequencer" -name IP_GENERATED_DEVICE_FAMILY "{Agilex 5}"
+set_global_assignment -entity "jesd_gts_reset_sequencer" -library "jesd_gts_reset_sequencer" -name IP_QSYS_MODE "STANDALONE"
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "jesd_gts_reset_sequencer" -name MISC_FILE [file join $::quartus(qip_path) "../jesd_gts_reset_sequencer.ip"]
+
+set_global_assignment -entity "jesd_gts_reset_sequencer_intel_srcss_gts_401_467auiy" -library "intel_srcss_gts_401" -name IP_COMPONENT_NAME "amVzZF9ndHNfcmVzZXRfc2VxdWVuY2VyX2ludGVsX3NyY3NzX2d0c180MDFfNDY3YXVpeQ=="
+set_global_assignment -entity "jesd_gts_reset_sequencer_intel_srcss_gts_401_467auiy" -library "intel_srcss_gts_401" -name IP_COMPONENT_DISPLAY_NAME "R1RTIFJlc2V0IFNlcXVlbmNlciBJUA=="
+set_global_assignment -entity "jesd_gts_reset_sequencer_intel_srcss_gts_401_467auiy" -library "intel_srcss_gts_401" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "jesd_gts_reset_sequencer_intel_srcss_gts_401_467auiy" -library "intel_srcss_gts_401" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "jesd_gts_reset_sequencer_intel_srcss_gts_401_467auiy" -library "intel_srcss_gts_401" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIENvcnBvcmF0aW9u"
+set_global_assignment -entity "jesd_gts_reset_sequencer_intel_srcss_gts_401_467auiy" -library "intel_srcss_gts_401" -name IP_COMPONENT_VERSION "NC4wLjE="
+set_global_assignment -entity "jesd_gts_reset_sequencer_intel_srcss_gts_401_467auiy" -library "intel_srcss_gts_401" -name IP_COMPONENT_DESCRIPTION "R1RTIFJlc2V0IFNlcXVlbmNlciBJUCBlbnN1cmUgdGhhdCBvbmx5IG9uZSB0cmFuc21pdHRlciBvciByZWNlaXZlciBsYW5lIHVuZGVyZ29lcyByZXNldC1lbnRyeSBvciByZXNldC1leGl0IGF0IGEgdGltZSBwZXIgc2lkZSBvZiB0aGUgZGV2aWNlIHRvIGNvbXBseSB3aXRoIFNpUGkgKFNpZ25hbCBhbmQgUG93ZXIgSW50ZWdyaXR5KS4gVGhlIEdUUyBSZXNldCBTZXF1ZW5jZXIgSVAgZ2V0cyB0aGUgcmVxdWVzdHMgZnJvbSBhbGwgdGhlIFNvZnQgUmVzZXQgQ29udHJvbGxlcihTUkMpIExhbmVzIHBlciBzaWRlIG9mIHRoZSBkZXZpY2UgYW5kIHRoZXNlIHJlcXVlc3RzIHdpbGwgZ2V0IGdyYW50ZWQgb25lIGF0IGEgdGltZSBpbiByb3VuZCByb2Jpbi4="
+set_global_assignment -entity "jesd_gts_reset_sequencer_intel_srcss_gts_401_467auiy" -library "intel_srcss_gts_401" -name IP_COMPONENT_GROUP "SW50ZXJmYWNlIFByb3RvY29scy9UcmFuc2NlaXZlciBQSFk="
+set_global_assignment -entity "jesd_gts_reset_sequencer_intel_srcss_gts_401_467auiy" -library "intel_srcss_gts_401" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL2RvY3MvcHJvZ3JhbW1hYmxlLzgxNzY2MC9jdXJyZW50L2ltcGxlbWVudGluZy10aGUtZ3RzLXJlc2V0LXNlcXVlbmNlci1mcGdhLWlwLmh0bWw="
+set_global_assignment -entity "jesd_gts_reset_sequencer_intel_srcss_gts_401_467auiy" -library "intel_srcss_gts_401" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL2RvY3MvcHJvZ3JhbW1hYmxlLzgxNzc4Ny5odG1s"
+set_global_assignment -entity "jesd_gts_reset_sequencer" -library "jesd_gts_reset_sequencer" -name IP_COMPONENT_NAME "amVzZF9ndHNfcmVzZXRfc2VxdWVuY2Vy"
+set_global_assignment -entity "jesd_gts_reset_sequencer" -library "jesd_gts_reset_sequencer" -name IP_COMPONENT_DISPLAY_NAME "c3lzdGVt"
+set_global_assignment -entity "jesd_gts_reset_sequencer" -library "jesd_gts_reset_sequencer" -name IP_COMPONENT_REPORT_HIERARCHY "On"
+set_global_assignment -entity "jesd_gts_reset_sequencer" -library "jesd_gts_reset_sequencer" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "jesd_gts_reset_sequencer" -library "jesd_gts_reset_sequencer" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIENvcnBvcmF0aW9u"
+set_global_assignment -entity "jesd_gts_reset_sequencer" -library "jesd_gts_reset_sequencer" -name IP_COMPONENT_VERSION "MS4w"
+
+
+set_global_assignment -library "intel_srcss_gts_401" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_srcss_gts_401/synth/jesd_gts_reset_sequencer_intel_srcss_gts_401_467auiy.sv"]
+set_instance_assignment -entity "jesd_gts_reset_sequencer_intel_srcss_gts_401_467auiy" -library "intel_srcss_gts_401" -name SDC_ENTITY_FILE [file join $::quartus(qip_path) "intel_srcss_gts_401/synth/jesd_gts_reset_sequencer_intel_srcss_gts_401_467auiy.sdc"] -no_sdc_promotion 
+set_global_assignment -library "intel_srcss_gts_401" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_srcss_gts_401/synth/intel_srcss_gts.sv"]
+set_global_assignment -library "intel_srcss_gts_401" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_srcss_gts_401/synth/intel_ss_synchronizers.sv"]
+set_global_assignment -library "intel_srcss_gts_401" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_srcss_gts_401/synth/sopc_synchronizer.v"]
+set_global_assignment -library "jesd_gts_reset_sequencer" -name VHDL_FILE [file join $::quartus(qip_path) "synth/jesd_gts_reset_sequencer.vhd"]
+
+
+set_global_assignment -entity "jesd_gts_reset_sequencer_intel_srcss_gts_401_467auiy" -library "intel_srcss_gts_401" -name IP_TOOL_NAME "intel_srcss_gts"
+set_global_assignment -entity "jesd_gts_reset_sequencer_intel_srcss_gts_401_467auiy" -library "intel_srcss_gts_401" -name IP_TOOL_VERSION "4.0.1"
+set_global_assignment -entity "jesd_gts_reset_sequencer_intel_srcss_gts_401_467auiy" -library "intel_srcss_gts_401" -name IP_TOOL_ENV "QsysPrimePro"
+

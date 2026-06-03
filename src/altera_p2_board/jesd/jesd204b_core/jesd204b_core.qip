@@ -1,0 +1,437 @@
+set_global_assignment -entity "jesd204b_core" -library "jesd204b_core" -name IP_TOOL_NAME "QsysPrimePro"
+set_global_assignment -entity "jesd204b_core" -library "jesd204b_core" -name IP_TOOL_VERSION "25.1.1"
+set_global_assignment -entity "jesd204b_core" -library "jesd204b_core" -name IP_TOOL_ENV "QsysPrimePro"
+set_global_assignment -entity "jesd204b_core" -library "jesd204b_core" -name IP_TOOL_VENDOR_NAME "Altera Corporation"
+set_global_assignment -entity "jesd204b_core" -library "jesd204b_core" -name IP_TOP_LEVEL_COMPONENT_NAME "intel_jesd204b_gts"
+set_global_assignment -entity "jesd204b_core" -library "jesd204b_core" -name PRE_COMPILED_MODULE "ON"
+set_global_assignment -entity "jesd204b_core" -library "jesd204b_core" -name OCS_IP_FILE [file join $::quartus(qip_path) "../jesd204b_core.ip"]
+set_global_assignment -entity "jesd204b_core" -library "jesd204b_core" -name OCS_IP_TYPE "intel_jesd204b_gts"
+set_global_assignment -entity "jesd204b_core" -library "jesd204b_core" -name OCS_IP_VERSION "4.0.0"
+set_global_assignment -entity "jesd204b_core" -library "jesd204b_core" -name OCS_IP_HASH "4ahcqsa"
+set_global_assignment -library "jesd204b_core" -name SOPCINFO_FILE [file join $::quartus(qip_path) "jesd204b_core.sopcinfo"]
+set_global_assignment -entity "jesd204b_core" -library "jesd204b_core" -name SLD_INFO "QSYS_NAME jesd204b_core HAS_SOPCINFO 1 GENERATION_ID 0"
+set_global_assignment -library "jesd204b_core" -name MISC_FILE [file join $::quartus(qip_path) "jesd204b_core.cmp"]
+set_global_assignment -entity "jesd204b_core" -library "jesd204b_core" -name IP_TARGETED_DEVICE_FAMILY "Agilex 5"
+set_global_assignment -entity "jesd204b_core" -library "jesd204b_core" -name IP_TARGETED_PART_TRAIT "DEVICE::A5ED065BB32AE4SR0"
+set_global_assignment -entity "jesd204b_core" -library "jesd204b_core" -name IP_GENERATED_DEVICE_FAMILY "{Agilex 5}"
+set_global_assignment -entity "jesd204b_core" -library "jesd204b_core" -name IP_QSYS_MODE "STANDALONE"
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "jesd204b_core" -name MISC_FILE [file join $::quartus(qip_path) "../jesd204b_core.ip"]
+
+set_global_assignment -entity "jesd204b_core_intel_adme_gts_100_hlahszy" -library "intel_adme_gts_100" -name IP_COMPONENT_NAME "amVzZDIwNGJfY29yZV9pbnRlbF9hZG1lX2d0c18xMDBfaGxhaHN6eQ=="
+set_global_assignment -entity "jesd204b_core_intel_adme_gts_100_hlahszy" -library "intel_adme_gts_100" -name IP_COMPONENT_DISPLAY_NAME "U3lzdGVtIENvbnNvbGUgRGVidWcgYmxvY2sgZm9yIEdUUyBoYXJkd2FyZSB0ZXN0aW5n"
+set_global_assignment -entity "jesd204b_core_intel_adme_gts_100_hlahszy" -library "intel_adme_gts_100" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "jesd204b_core_intel_adme_gts_100_hlahszy" -library "intel_adme_gts_100" -name IP_COMPONENT_INTERNAL "On"
+set_global_assignment -entity "jesd204b_core_intel_adme_gts_100_hlahszy" -library "intel_adme_gts_100" -name IP_COMPONENT_AUTHOR "SW50ZWwgQ29ycG9yYXRpb24="
+set_global_assignment -entity "jesd204b_core_intel_adme_gts_100_hlahszy" -library "intel_adme_gts_100" -name IP_COMPONENT_VERSION "MS4wLjA="
+set_global_assignment -entity "jesd204b_core_intel_adme_gts_100_hlahszy" -library "intel_adme_gts_100" -name IP_COMPONENT_GROUP "SW50ZXJmYWNlIFByb3RvY29scy9UcmFuc2NlaXZlciBQSFk="
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_intel_adme_gts_900_5c56gqq" -library "intel_directphy_gts_900" -name IP_COMPONENT_NAME "amVzZDIwNGJfY29yZV9pbnRlbF9kaXJlY3RwaHlfZ3RzX2ludGVsX2FkbWVfZ3RzXzkwMF81YzU2Z3Fx"
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_intel_adme_gts_900_5c56gqq" -library "intel_directphy_gts_900" -name IP_COMPONENT_DISPLAY_NAME "amVzZDIwNGJfY29yZV9pbnRlbF9kaXJlY3RwaHlfZ3RzX2ludGVsX2FkbWVfZ3RzXzkwMF81YzU2Z3Fx"
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_intel_adme_gts_900_5c56gqq" -library "intel_directphy_gts_900" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_intel_adme_gts_900_5c56gqq" -library "intel_directphy_gts_900" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_intel_adme_gts_900_5c56gqq" -library "intel_directphy_gts_900" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIENvcnBvcmF0aW9u"
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_intel_adme_gts_900_5c56gqq" -library "intel_directphy_gts_900" -name IP_COMPONENT_VERSION "OS4wLjA="
+set_global_assignment -entity "jesd204b_core_pcs_hal_2100_i6srn2q" -library "pcs_hal_2100" -name IP_COMPONENT_NAME "amVzZDIwNGJfY29yZV9wY3NfaGFsXzIxMDBfaTZzcm4ycQ=="
+set_global_assignment -entity "jesd204b_core_pcs_hal_2100_i6srn2q" -library "pcs_hal_2100" -name IP_COMPONENT_DISPLAY_NAME "U00gRXRoZXJuZXQgUENTIEhBTCBJbnRlbCBGUEdBIElQ"
+set_global_assignment -entity "jesd204b_core_pcs_hal_2100_i6srn2q" -library "pcs_hal_2100" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "jesd204b_core_pcs_hal_2100_i6srn2q" -library "pcs_hal_2100" -name IP_COMPONENT_INTERNAL "On"
+set_global_assignment -entity "jesd204b_core_pcs_hal_2100_i6srn2q" -library "pcs_hal_2100" -name IP_COMPONENT_AUTHOR "SW50ZWwgQ29ycG9yYXRpb24="
+set_global_assignment -entity "jesd204b_core_pcs_hal_2100_i6srn2q" -library "pcs_hal_2100" -name IP_COMPONENT_VERSION "MjEuMC4w"
+set_global_assignment -entity "jesd204b_core_pcs_hal_2100_i6srn2q" -library "pcs_hal_2100" -name IP_COMPONENT_DESCRIPTION "SEFM"
+set_global_assignment -entity "jesd204b_core_pcs_hal_2100_i6srn2q" -library "pcs_hal_2100" -name IP_COMPONENT_GROUP "SW50ZXJmYWNlIFByb3RvY29scy9FdGhlcm5ldA=="
+set_global_assignment -entity "jesd204b_core_pcs_hal_2100_i6srn2q" -library "pcs_hal_2100" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL3Byb2dyYW1tYWJsZS9kb2N1bWVudGF0aW9uL3lrYjE1ODUyNDgxNDYzMTguaHRtbA=="
+set_global_assignment -entity "jesd204b_core_one_lane_hal_pcs_hal_2100_ij4zeoi" -library "one_lane_hal_2100" -name IP_COMPONENT_NAME "amVzZDIwNGJfY29yZV9vbmVfbGFuZV9oYWxfcGNzX2hhbF8yMTAwX2lqNHplb2k="
+set_global_assignment -entity "jesd204b_core_one_lane_hal_pcs_hal_2100_ij4zeoi" -library "one_lane_hal_2100" -name IP_COMPONENT_DISPLAY_NAME "amVzZDIwNGJfY29yZV9vbmVfbGFuZV9oYWxfcGNzX2hhbF8yMTAwX2lqNHplb2k="
+set_global_assignment -entity "jesd204b_core_one_lane_hal_pcs_hal_2100_ij4zeoi" -library "one_lane_hal_2100" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "jesd204b_core_one_lane_hal_pcs_hal_2100_ij4zeoi" -library "one_lane_hal_2100" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "jesd204b_core_one_lane_hal_pcs_hal_2100_ij4zeoi" -library "one_lane_hal_2100" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIENvcnBvcmF0aW9u"
+set_global_assignment -entity "jesd204b_core_one_lane_hal_pcs_hal_2100_ij4zeoi" -library "one_lane_hal_2100" -name IP_COMPONENT_VERSION "MjEuMC4w"
+set_global_assignment -entity "jesd204b_core_fec_hal_2100_lxszoea" -library "fec_hal_2100" -name IP_COMPONENT_NAME "amVzZDIwNGJfY29yZV9mZWNfaGFsXzIxMDBfbHhzem9lYQ=="
+set_global_assignment -entity "jesd204b_core_fec_hal_2100_lxszoea" -library "fec_hal_2100" -name IP_COMPONENT_DISPLAY_NAME "U00gRXRoZXJuZXQgRkVDIEhBTCBJbnRlbCBGUEdBIElQ"
+set_global_assignment -entity "jesd204b_core_fec_hal_2100_lxszoea" -library "fec_hal_2100" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "jesd204b_core_fec_hal_2100_lxszoea" -library "fec_hal_2100" -name IP_COMPONENT_INTERNAL "On"
+set_global_assignment -entity "jesd204b_core_fec_hal_2100_lxszoea" -library "fec_hal_2100" -name IP_COMPONENT_AUTHOR "SW50ZWwgQ29ycG9yYXRpb24="
+set_global_assignment -entity "jesd204b_core_fec_hal_2100_lxszoea" -library "fec_hal_2100" -name IP_COMPONENT_VERSION "MjEuMC4w"
+set_global_assignment -entity "jesd204b_core_fec_hal_2100_lxszoea" -library "fec_hal_2100" -name IP_COMPONENT_DESCRIPTION "SEFM"
+set_global_assignment -entity "jesd204b_core_fec_hal_2100_lxszoea" -library "fec_hal_2100" -name IP_COMPONENT_GROUP "SW50ZXJmYWNlIFByb3RvY29scy9FdGhlcm5ldA=="
+set_global_assignment -entity "jesd204b_core_fec_hal_2100_lxszoea" -library "fec_hal_2100" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL3Byb2dyYW1tYWJsZS9kb2N1bWVudGF0aW9uL3lrYjE1ODUyNDgxNDYzMTguaHRtbA=="
+set_global_assignment -entity "jesd204b_core_one_lane_hal_fec_hal_2100_hmiwnzy" -library "one_lane_hal_2100" -name IP_COMPONENT_NAME "amVzZDIwNGJfY29yZV9vbmVfbGFuZV9oYWxfZmVjX2hhbF8yMTAwX2htaXduenk="
+set_global_assignment -entity "jesd204b_core_one_lane_hal_fec_hal_2100_hmiwnzy" -library "one_lane_hal_2100" -name IP_COMPONENT_DISPLAY_NAME "amVzZDIwNGJfY29yZV9vbmVfbGFuZV9oYWxfZmVjX2hhbF8yMTAwX2htaXduenk="
+set_global_assignment -entity "jesd204b_core_one_lane_hal_fec_hal_2100_hmiwnzy" -library "one_lane_hal_2100" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "jesd204b_core_one_lane_hal_fec_hal_2100_hmiwnzy" -library "one_lane_hal_2100" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "jesd204b_core_one_lane_hal_fec_hal_2100_hmiwnzy" -library "one_lane_hal_2100" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIENvcnBvcmF0aW9u"
+set_global_assignment -entity "jesd204b_core_one_lane_hal_fec_hal_2100_hmiwnzy" -library "one_lane_hal_2100" -name IP_COMPONENT_VERSION "MjEuMC4w"
+set_global_assignment -entity "jesd204b_core_pldif_hal_2100_4b63owa" -library "pldif_hal_2100" -name IP_COMPONENT_NAME "amVzZDIwNGJfY29yZV9wbGRpZl9oYWxfMjEwMF80YjYzb3dh"
+set_global_assignment -entity "jesd204b_core_pldif_hal_2100_4b63owa" -library "pldif_hal_2100" -name IP_COMPONENT_DISPLAY_NAME "U00gRXRoZXJuZXQgUExESUYgSEFMIEludGVsIEZQR0EgSVA="
+set_global_assignment -entity "jesd204b_core_pldif_hal_2100_4b63owa" -library "pldif_hal_2100" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "jesd204b_core_pldif_hal_2100_4b63owa" -library "pldif_hal_2100" -name IP_COMPONENT_INTERNAL "On"
+set_global_assignment -entity "jesd204b_core_pldif_hal_2100_4b63owa" -library "pldif_hal_2100" -name IP_COMPONENT_AUTHOR "SW50ZWwgQ29ycG9yYXRpb24="
+set_global_assignment -entity "jesd204b_core_pldif_hal_2100_4b63owa" -library "pldif_hal_2100" -name IP_COMPONENT_VERSION "MjEuMC4w"
+set_global_assignment -entity "jesd204b_core_pldif_hal_2100_4b63owa" -library "pldif_hal_2100" -name IP_COMPONENT_DESCRIPTION "SEFM"
+set_global_assignment -entity "jesd204b_core_pldif_hal_2100_4b63owa" -library "pldif_hal_2100" -name IP_COMPONENT_GROUP "SW50ZXJmYWNlIFByb3RvY29scy9FdGhlcm5ldA=="
+set_global_assignment -entity "jesd204b_core_pldif_hal_2100_4b63owa" -library "pldif_hal_2100" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL3Byb2dyYW1tYWJsZS9kb2N1bWVudGF0aW9uL3lrYjE1ODUyNDgxNDYzMTguaHRtbA=="
+set_global_assignment -entity "jesd204b_core_one_lane_hal_pldif_hal_2100_kovldoi" -library "one_lane_hal_2100" -name IP_COMPONENT_NAME "amVzZDIwNGJfY29yZV9vbmVfbGFuZV9oYWxfcGxkaWZfaGFsXzIxMDBfa292bGRvaQ=="
+set_global_assignment -entity "jesd204b_core_one_lane_hal_pldif_hal_2100_kovldoi" -library "one_lane_hal_2100" -name IP_COMPONENT_DISPLAY_NAME "amVzZDIwNGJfY29yZV9vbmVfbGFuZV9oYWxfcGxkaWZfaGFsXzIxMDBfa292bGRvaQ=="
+set_global_assignment -entity "jesd204b_core_one_lane_hal_pldif_hal_2100_kovldoi" -library "one_lane_hal_2100" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "jesd204b_core_one_lane_hal_pldif_hal_2100_kovldoi" -library "one_lane_hal_2100" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "jesd204b_core_one_lane_hal_pldif_hal_2100_kovldoi" -library "one_lane_hal_2100" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIENvcnBvcmF0aW9u"
+set_global_assignment -entity "jesd204b_core_one_lane_hal_pldif_hal_2100_kovldoi" -library "one_lane_hal_2100" -name IP_COMPONENT_VERSION "MjEuMC4w"
+set_global_assignment -entity "jesd204b_core_phy_hal_2100_anjxnha" -library "phy_hal_2100" -name IP_COMPONENT_NAME "amVzZDIwNGJfY29yZV9waHlfaGFsXzIxMDBfYW5qeG5oYQ=="
+set_global_assignment -entity "jesd204b_core_phy_hal_2100_anjxnha" -library "phy_hal_2100" -name IP_COMPONENT_DISPLAY_NAME "U00gRXRoZXJuZXQgUEhZIEhBTCBJbnRlbCBGUEdBIElQ"
+set_global_assignment -entity "jesd204b_core_phy_hal_2100_anjxnha" -library "phy_hal_2100" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "jesd204b_core_phy_hal_2100_anjxnha" -library "phy_hal_2100" -name IP_COMPONENT_INTERNAL "On"
+set_global_assignment -entity "jesd204b_core_phy_hal_2100_anjxnha" -library "phy_hal_2100" -name IP_COMPONENT_AUTHOR "SW50ZWwgQ29ycG9yYXRpb24="
+set_global_assignment -entity "jesd204b_core_phy_hal_2100_anjxnha" -library "phy_hal_2100" -name IP_COMPONENT_VERSION "MjEuMC4w"
+set_global_assignment -entity "jesd204b_core_phy_hal_2100_anjxnha" -library "phy_hal_2100" -name IP_COMPONENT_DESCRIPTION "SEFM"
+set_global_assignment -entity "jesd204b_core_phy_hal_2100_anjxnha" -library "phy_hal_2100" -name IP_COMPONENT_GROUP "SW50ZXJmYWNlIFByb3RvY29scy9FdGhlcm5ldA=="
+set_global_assignment -entity "jesd204b_core_phy_hal_2100_anjxnha" -library "phy_hal_2100" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL3Byb2dyYW1tYWJsZS9kb2N1bWVudGF0aW9uL3lrYjE1ODUyNDgxNDYzMTguaHRtbA=="
+set_global_assignment -entity "jesd204b_core_one_lane_hal_phy_hal_2100_cqvqhza" -library "one_lane_hal_2100" -name IP_COMPONENT_NAME "amVzZDIwNGJfY29yZV9vbmVfbGFuZV9oYWxfcGh5X2hhbF8yMTAwX2NxdnFoemE="
+set_global_assignment -entity "jesd204b_core_one_lane_hal_phy_hal_2100_cqvqhza" -library "one_lane_hal_2100" -name IP_COMPONENT_DISPLAY_NAME "amVzZDIwNGJfY29yZV9vbmVfbGFuZV9oYWxfcGh5X2hhbF8yMTAwX2NxdnFoemE="
+set_global_assignment -entity "jesd204b_core_one_lane_hal_phy_hal_2100_cqvqhza" -library "one_lane_hal_2100" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "jesd204b_core_one_lane_hal_phy_hal_2100_cqvqhza" -library "one_lane_hal_2100" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "jesd204b_core_one_lane_hal_phy_hal_2100_cqvqhza" -library "one_lane_hal_2100" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIENvcnBvcmF0aW9u"
+set_global_assignment -entity "jesd204b_core_one_lane_hal_phy_hal_2100_cqvqhza" -library "one_lane_hal_2100" -name IP_COMPONENT_VERSION "MjEuMC4w"
+set_global_assignment -entity "jesd204b_core_one_lane_hal_2100_35gmzui" -library "one_lane_hal_2100" -name IP_COMPONENT_NAME "amVzZDIwNGJfY29yZV9vbmVfbGFuZV9oYWxfMjEwMF8zNWdtenVp"
+set_global_assignment -entity "jesd204b_core_one_lane_hal_2100_35gmzui" -library "one_lane_hal_2100" -name IP_COMPONENT_DISPLAY_NAME "U00gRXRoZXJuZXQgT25lIExhbmUgSEFMIFRvcCBJbnRlbCBGUEdBIElQ"
+set_global_assignment -entity "jesd204b_core_one_lane_hal_2100_35gmzui" -library "one_lane_hal_2100" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "jesd204b_core_one_lane_hal_2100_35gmzui" -library "one_lane_hal_2100" -name IP_COMPONENT_INTERNAL "On"
+set_global_assignment -entity "jesd204b_core_one_lane_hal_2100_35gmzui" -library "one_lane_hal_2100" -name IP_COMPONENT_AUTHOR "SW50ZWwgQ29ycG9yYXRpb24="
+set_global_assignment -entity "jesd204b_core_one_lane_hal_2100_35gmzui" -library "one_lane_hal_2100" -name IP_COMPONENT_VERSION "MjEuMC4w"
+set_global_assignment -entity "jesd204b_core_one_lane_hal_2100_35gmzui" -library "one_lane_hal_2100" -name IP_COMPONENT_DESCRIPTION "SEFM"
+set_global_assignment -entity "jesd204b_core_one_lane_hal_2100_35gmzui" -library "one_lane_hal_2100" -name IP_COMPONENT_GROUP "SW50ZXJmYWNlIFByb3RvY29scy9FdGhlcm5ldA=="
+set_global_assignment -entity "jesd204b_core_one_lane_hal_2100_35gmzui" -library "one_lane_hal_2100" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL3Byb2dyYW1tYWJsZS9kb2N1bWVudGF0aW9uL3lrYjE1ODUyNDgxNDYzMTguaHRtbA=="
+set_global_assignment -entity "jesd204b_core_hal_top_one_lane_hal_2100_c7tzbta" -library "hal_top_2100" -name IP_COMPONENT_NAME "amVzZDIwNGJfY29yZV9oYWxfdG9wX29uZV9sYW5lX2hhbF8yMTAwX2M3dHpidGE="
+set_global_assignment -entity "jesd204b_core_hal_top_one_lane_hal_2100_c7tzbta" -library "hal_top_2100" -name IP_COMPONENT_DISPLAY_NAME "amVzZDIwNGJfY29yZV9oYWxfdG9wX29uZV9sYW5lX2hhbF8yMTAwX2M3dHpidGE="
+set_global_assignment -entity "jesd204b_core_hal_top_one_lane_hal_2100_c7tzbta" -library "hal_top_2100" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "jesd204b_core_hal_top_one_lane_hal_2100_c7tzbta" -library "hal_top_2100" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "jesd204b_core_hal_top_one_lane_hal_2100_c7tzbta" -library "hal_top_2100" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIENvcnBvcmF0aW9u"
+set_global_assignment -entity "jesd204b_core_hal_top_one_lane_hal_2100_c7tzbta" -library "hal_top_2100" -name IP_COMPONENT_VERSION "MjEuMC4w"
+set_global_assignment -entity "jesd204b_core_hal_top_2100_p4w2ruq" -library "hal_top_2100" -name IP_COMPONENT_NAME "amVzZDIwNGJfY29yZV9oYWxfdG9wXzIxMDBfcDR3MnJ1cQ=="
+set_global_assignment -entity "jesd204b_core_hal_top_2100_p4w2ruq" -library "hal_top_2100" -name IP_COMPONENT_DISPLAY_NAME "U00gRXRoZXJuZXQgSEFMIFRvcCBJbnRlbCBGUEdBIElQ"
+set_global_assignment -entity "jesd204b_core_hal_top_2100_p4w2ruq" -library "hal_top_2100" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "jesd204b_core_hal_top_2100_p4w2ruq" -library "hal_top_2100" -name IP_COMPONENT_INTERNAL "On"
+set_global_assignment -entity "jesd204b_core_hal_top_2100_p4w2ruq" -library "hal_top_2100" -name IP_COMPONENT_AUTHOR "SW50ZWwgQ29ycG9yYXRpb24="
+set_global_assignment -entity "jesd204b_core_hal_top_2100_p4w2ruq" -library "hal_top_2100" -name IP_COMPONENT_VERSION "MjEuMC4w"
+set_global_assignment -entity "jesd204b_core_hal_top_2100_p4w2ruq" -library "hal_top_2100" -name IP_COMPONENT_DESCRIPTION "SEFM"
+set_global_assignment -entity "jesd204b_core_hal_top_2100_p4w2ruq" -library "hal_top_2100" -name IP_COMPONENT_GROUP "SW50ZXJmYWNlIFByb3RvY29scy9FdGhlcm5ldA=="
+set_global_assignment -entity "jesd204b_core_hal_top_2100_p4w2ruq" -library "hal_top_2100" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL3Byb2dyYW1tYWJsZS9kb2N1bWVudGF0aW9uL3lrYjE1ODUyNDgxNDYzMTguaHRtbA=="
+set_global_assignment -entity "jesd204b_core_n_channel_superset_hal_top_2100_mkorooy" -library "n_channel_superset_2100" -name IP_COMPONENT_NAME "amVzZDIwNGJfY29yZV9uX2NoYW5uZWxfc3VwZXJzZXRfaGFsX3RvcF8yMTAwX21rb3Jvb3k="
+set_global_assignment -entity "jesd204b_core_n_channel_superset_hal_top_2100_mkorooy" -library "n_channel_superset_2100" -name IP_COMPONENT_DISPLAY_NAME "amVzZDIwNGJfY29yZV9uX2NoYW5uZWxfc3VwZXJzZXRfaGFsX3RvcF8yMTAwX21rb3Jvb3k="
+set_global_assignment -entity "jesd204b_core_n_channel_superset_hal_top_2100_mkorooy" -library "n_channel_superset_2100" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "jesd204b_core_n_channel_superset_hal_top_2100_mkorooy" -library "n_channel_superset_2100" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "jesd204b_core_n_channel_superset_hal_top_2100_mkorooy" -library "n_channel_superset_2100" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIENvcnBvcmF0aW9u"
+set_global_assignment -entity "jesd204b_core_n_channel_superset_hal_top_2100_mkorooy" -library "n_channel_superset_2100" -name IP_COMPONENT_VERSION "MjEuMC4w"
+set_global_assignment -entity "jesd204b_core_n_channel_superset_2100_h2bmroi" -library "n_channel_superset_2100" -name IP_COMPONENT_NAME "amVzZDIwNGJfY29yZV9uX2NoYW5uZWxfc3VwZXJzZXRfMjEwMF9oMmJtcm9p"
+set_global_assignment -entity "jesd204b_core_n_channel_superset_2100_h2bmroi" -library "n_channel_superset_2100" -name IP_COMPONENT_DISPLAY_NAME "U00gTiBDaGFubmVsIFN1cGVyc2V0IEludGVsIEZQR0EgSVA="
+set_global_assignment -entity "jesd204b_core_n_channel_superset_2100_h2bmroi" -library "n_channel_superset_2100" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "jesd204b_core_n_channel_superset_2100_h2bmroi" -library "n_channel_superset_2100" -name IP_COMPONENT_INTERNAL "On"
+set_global_assignment -entity "jesd204b_core_n_channel_superset_2100_h2bmroi" -library "n_channel_superset_2100" -name IP_COMPONENT_AUTHOR "SW50ZWwgQ29ycG9yYXRpb24="
+set_global_assignment -entity "jesd204b_core_n_channel_superset_2100_h2bmroi" -library "n_channel_superset_2100" -name IP_COMPONENT_VERSION "MjEuMC4w"
+set_global_assignment -entity "jesd204b_core_n_channel_superset_2100_h2bmroi" -library "n_channel_superset_2100" -name IP_COMPONENT_DESCRIPTION "SEFM"
+set_global_assignment -entity "jesd204b_core_n_channel_superset_2100_h2bmroi" -library "n_channel_superset_2100" -name IP_COMPONENT_GROUP "SW50ZXJmYWNlIFByb3RvY29scy9FdGhlcm5ldA=="
+set_global_assignment -entity "jesd204b_core_n_channel_superset_2100_h2bmroi" -library "n_channel_superset_2100" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL3Byb2dyYW1tYWJsZS9kb2N1bWVudGF0aW9uL3lrYjE1ODUyNDgxNDYzMTguaHRtbA=="
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_n_channel_superset_900_qebg4di" -library "intel_directphy_gts_900" -name IP_COMPONENT_NAME "amVzZDIwNGJfY29yZV9pbnRlbF9kaXJlY3RwaHlfZ3RzX25fY2hhbm5lbF9zdXBlcnNldF85MDBfcWViZzRkaQ=="
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_n_channel_superset_900_qebg4di" -library "intel_directphy_gts_900" -name IP_COMPONENT_DISPLAY_NAME "amVzZDIwNGJfY29yZV9pbnRlbF9kaXJlY3RwaHlfZ3RzX25fY2hhbm5lbF9zdXBlcnNldF85MDBfcWViZzRkaQ=="
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_n_channel_superset_900_qebg4di" -library "intel_directphy_gts_900" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_n_channel_superset_900_qebg4di" -library "intel_directphy_gts_900" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_n_channel_superset_900_qebg4di" -library "intel_directphy_gts_900" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIENvcnBvcmF0aW9u"
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_n_channel_superset_900_qebg4di" -library "intel_directphy_gts_900" -name IP_COMPONENT_VERSION "OS4wLjA="
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_900_ccqah4q" -library "intel_directphy_gts_900" -name IP_COMPONENT_NAME "amVzZDIwNGJfY29yZV9pbnRlbF9kaXJlY3RwaHlfZ3RzXzkwMF9jY3FhaDRx"
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_900_ccqah4q" -library "intel_directphy_gts_900" -name IP_COMPONENT_DISPLAY_NAME "R1RTIFBNQS9GRUMgRGlyZWN0IFBIWSBJUA=="
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_900_ccqah4q" -library "intel_directphy_gts_900" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_900_ccqah4q" -library "intel_directphy_gts_900" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_900_ccqah4q" -library "intel_directphy_gts_900" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIENvcnBvcmF0aW9u"
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_900_ccqah4q" -library "intel_directphy_gts_900" -name IP_COMPONENT_VERSION "OS4wLjA="
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_900_ccqah4q" -library "intel_directphy_gts_900" -name IP_COMPONENT_DESCRIPTION "R1RTIFBNQS9GRUMgRGlyZWN0IFBIWSBJUC4="
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_900_ccqah4q" -library "intel_directphy_gts_900" -name IP_COMPONENT_GROUP "SW50ZXJmYWNlIFByb3RvY29scy9UcmFuc2NlaXZlciBQSFk="
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_900_ccqah4q" -library "intel_directphy_gts_900" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL2RvY3MvcHJvZ3JhbW1hYmxlLzgxNzY2MC5odG1s"
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_900_ccqah4q" -library "intel_directphy_gts_900" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL2RvY3MvcHJvZ3JhbW1hYmxlLzgxNzc4Ny5odG1s"
+set_global_assignment -entity "jesd204b_core_intel_jesd204b_gts_phy_intel_directphy_gts_191_x7bynya" -library "intel_jesd204b_gts_phy_191" -name IP_COMPONENT_NAME "amVzZDIwNGJfY29yZV9pbnRlbF9qZXNkMjA0Yl9ndHNfcGh5X2ludGVsX2RpcmVjdHBoeV9ndHNfMTkxX3g3YnlueWE="
+set_global_assignment -entity "jesd204b_core_intel_jesd204b_gts_phy_intel_directphy_gts_191_x7bynya" -library "intel_jesd204b_gts_phy_191" -name IP_COMPONENT_DISPLAY_NAME "amVzZDIwNGJfY29yZV9pbnRlbF9qZXNkMjA0Yl9ndHNfcGh5X2ludGVsX2RpcmVjdHBoeV9ndHNfMTkxX3g3YnlueWE="
+set_global_assignment -entity "jesd204b_core_intel_jesd204b_gts_phy_intel_directphy_gts_191_x7bynya" -library "intel_jesd204b_gts_phy_191" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "jesd204b_core_intel_jesd204b_gts_phy_intel_directphy_gts_191_x7bynya" -library "intel_jesd204b_gts_phy_191" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "jesd204b_core_intel_jesd204b_gts_phy_intel_directphy_gts_191_x7bynya" -library "intel_jesd204b_gts_phy_191" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIENvcnBvcmF0aW9u"
+set_global_assignment -entity "jesd204b_core_intel_jesd204b_gts_phy_intel_directphy_gts_191_x7bynya" -library "intel_jesd204b_gts_phy_191" -name IP_COMPONENT_VERSION "MTkuMQ=="
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_intel_adme_gts_900_5c56gqq" -library "intel_directphy_gts_900" -name IP_COMPONENT_NAME "amVzZDIwNGJfY29yZV9pbnRlbF9kaXJlY3RwaHlfZ3RzX2ludGVsX2FkbWVfZ3RzXzkwMF81YzU2Z3Fx"
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_intel_adme_gts_900_5c56gqq" -library "intel_directphy_gts_900" -name IP_COMPONENT_DISPLAY_NAME "amVzZDIwNGJfY29yZV9pbnRlbF9kaXJlY3RwaHlfZ3RzX2ludGVsX2FkbWVfZ3RzXzkwMF81YzU2Z3Fx"
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_intel_adme_gts_900_5c56gqq" -library "intel_directphy_gts_900" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_intel_adme_gts_900_5c56gqq" -library "intel_directphy_gts_900" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_intel_adme_gts_900_5c56gqq" -library "intel_directphy_gts_900" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIENvcnBvcmF0aW9u"
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_intel_adme_gts_900_5c56gqq" -library "intel_directphy_gts_900" -name IP_COMPONENT_VERSION "OS4wLjA="
+set_global_assignment -entity "jesd204b_core_hal_top_one_lane_hal_2100_c7tzbta" -library "hal_top_2100" -name IP_COMPONENT_NAME "amVzZDIwNGJfY29yZV9oYWxfdG9wX29uZV9sYW5lX2hhbF8yMTAwX2M3dHpidGE="
+set_global_assignment -entity "jesd204b_core_hal_top_one_lane_hal_2100_c7tzbta" -library "hal_top_2100" -name IP_COMPONENT_DISPLAY_NAME "amVzZDIwNGJfY29yZV9oYWxfdG9wX29uZV9sYW5lX2hhbF8yMTAwX2M3dHpidGE="
+set_global_assignment -entity "jesd204b_core_hal_top_one_lane_hal_2100_c7tzbta" -library "hal_top_2100" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "jesd204b_core_hal_top_one_lane_hal_2100_c7tzbta" -library "hal_top_2100" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "jesd204b_core_hal_top_one_lane_hal_2100_c7tzbta" -library "hal_top_2100" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIENvcnBvcmF0aW9u"
+set_global_assignment -entity "jesd204b_core_hal_top_one_lane_hal_2100_c7tzbta" -library "hal_top_2100" -name IP_COMPONENT_VERSION "MjEuMC4w"
+set_global_assignment -entity "jesd204b_core_hal_top_2100_nxxghuq" -library "hal_top_2100" -name IP_COMPONENT_NAME "amVzZDIwNGJfY29yZV9oYWxfdG9wXzIxMDBfbnh4Z2h1cQ=="
+set_global_assignment -entity "jesd204b_core_hal_top_2100_nxxghuq" -library "hal_top_2100" -name IP_COMPONENT_DISPLAY_NAME "U00gRXRoZXJuZXQgSEFMIFRvcCBJbnRlbCBGUEdBIElQ"
+set_global_assignment -entity "jesd204b_core_hal_top_2100_nxxghuq" -library "hal_top_2100" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "jesd204b_core_hal_top_2100_nxxghuq" -library "hal_top_2100" -name IP_COMPONENT_INTERNAL "On"
+set_global_assignment -entity "jesd204b_core_hal_top_2100_nxxghuq" -library "hal_top_2100" -name IP_COMPONENT_AUTHOR "SW50ZWwgQ29ycG9yYXRpb24="
+set_global_assignment -entity "jesd204b_core_hal_top_2100_nxxghuq" -library "hal_top_2100" -name IP_COMPONENT_VERSION "MjEuMC4w"
+set_global_assignment -entity "jesd204b_core_hal_top_2100_nxxghuq" -library "hal_top_2100" -name IP_COMPONENT_DESCRIPTION "SEFM"
+set_global_assignment -entity "jesd204b_core_hal_top_2100_nxxghuq" -library "hal_top_2100" -name IP_COMPONENT_GROUP "SW50ZXJmYWNlIFByb3RvY29scy9FdGhlcm5ldA=="
+set_global_assignment -entity "jesd204b_core_hal_top_2100_nxxghuq" -library "hal_top_2100" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL3Byb2dyYW1tYWJsZS9kb2N1bWVudGF0aW9uL3lrYjE1ODUyNDgxNDYzMTguaHRtbA=="
+set_global_assignment -entity "jesd204b_core_n_channel_superset_hal_top_2100_obpnyoy" -library "n_channel_superset_2100" -name IP_COMPONENT_NAME "amVzZDIwNGJfY29yZV9uX2NoYW5uZWxfc3VwZXJzZXRfaGFsX3RvcF8yMTAwX29icG55b3k="
+set_global_assignment -entity "jesd204b_core_n_channel_superset_hal_top_2100_obpnyoy" -library "n_channel_superset_2100" -name IP_COMPONENT_DISPLAY_NAME "amVzZDIwNGJfY29yZV9uX2NoYW5uZWxfc3VwZXJzZXRfaGFsX3RvcF8yMTAwX29icG55b3k="
+set_global_assignment -entity "jesd204b_core_n_channel_superset_hal_top_2100_obpnyoy" -library "n_channel_superset_2100" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "jesd204b_core_n_channel_superset_hal_top_2100_obpnyoy" -library "n_channel_superset_2100" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "jesd204b_core_n_channel_superset_hal_top_2100_obpnyoy" -library "n_channel_superset_2100" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIENvcnBvcmF0aW9u"
+set_global_assignment -entity "jesd204b_core_n_channel_superset_hal_top_2100_obpnyoy" -library "n_channel_superset_2100" -name IP_COMPONENT_VERSION "MjEuMC4w"
+set_global_assignment -entity "jesd204b_core_n_channel_superset_2100_4jxhtba" -library "n_channel_superset_2100" -name IP_COMPONENT_NAME "amVzZDIwNGJfY29yZV9uX2NoYW5uZWxfc3VwZXJzZXRfMjEwMF80anhodGJh"
+set_global_assignment -entity "jesd204b_core_n_channel_superset_2100_4jxhtba" -library "n_channel_superset_2100" -name IP_COMPONENT_DISPLAY_NAME "U00gTiBDaGFubmVsIFN1cGVyc2V0IEludGVsIEZQR0EgSVA="
+set_global_assignment -entity "jesd204b_core_n_channel_superset_2100_4jxhtba" -library "n_channel_superset_2100" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "jesd204b_core_n_channel_superset_2100_4jxhtba" -library "n_channel_superset_2100" -name IP_COMPONENT_INTERNAL "On"
+set_global_assignment -entity "jesd204b_core_n_channel_superset_2100_4jxhtba" -library "n_channel_superset_2100" -name IP_COMPONENT_AUTHOR "SW50ZWwgQ29ycG9yYXRpb24="
+set_global_assignment -entity "jesd204b_core_n_channel_superset_2100_4jxhtba" -library "n_channel_superset_2100" -name IP_COMPONENT_VERSION "MjEuMC4w"
+set_global_assignment -entity "jesd204b_core_n_channel_superset_2100_4jxhtba" -library "n_channel_superset_2100" -name IP_COMPONENT_DESCRIPTION "SEFM"
+set_global_assignment -entity "jesd204b_core_n_channel_superset_2100_4jxhtba" -library "n_channel_superset_2100" -name IP_COMPONENT_GROUP "SW50ZXJmYWNlIFByb3RvY29scy9FdGhlcm5ldA=="
+set_global_assignment -entity "jesd204b_core_n_channel_superset_2100_4jxhtba" -library "n_channel_superset_2100" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL3Byb2dyYW1tYWJsZS9kb2N1bWVudGF0aW9uL3lrYjE1ODUyNDgxNDYzMTguaHRtbA=="
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_n_channel_superset_900_lxxn6ma" -library "intel_directphy_gts_900" -name IP_COMPONENT_NAME "amVzZDIwNGJfY29yZV9pbnRlbF9kaXJlY3RwaHlfZ3RzX25fY2hhbm5lbF9zdXBlcnNldF85MDBfbHh4bjZtYQ=="
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_n_channel_superset_900_lxxn6ma" -library "intel_directphy_gts_900" -name IP_COMPONENT_DISPLAY_NAME "amVzZDIwNGJfY29yZV9pbnRlbF9kaXJlY3RwaHlfZ3RzX25fY2hhbm5lbF9zdXBlcnNldF85MDBfbHh4bjZtYQ=="
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_n_channel_superset_900_lxxn6ma" -library "intel_directphy_gts_900" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_n_channel_superset_900_lxxn6ma" -library "intel_directphy_gts_900" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_n_channel_superset_900_lxxn6ma" -library "intel_directphy_gts_900" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIENvcnBvcmF0aW9u"
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_n_channel_superset_900_lxxn6ma" -library "intel_directphy_gts_900" -name IP_COMPONENT_VERSION "OS4wLjA="
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_900_6idpasa" -library "intel_directphy_gts_900" -name IP_COMPONENT_NAME "amVzZDIwNGJfY29yZV9pbnRlbF9kaXJlY3RwaHlfZ3RzXzkwMF82aWRwYXNh"
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_900_6idpasa" -library "intel_directphy_gts_900" -name IP_COMPONENT_DISPLAY_NAME "R1RTIFBNQS9GRUMgRGlyZWN0IFBIWSBJUA=="
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_900_6idpasa" -library "intel_directphy_gts_900" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_900_6idpasa" -library "intel_directphy_gts_900" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_900_6idpasa" -library "intel_directphy_gts_900" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIENvcnBvcmF0aW9u"
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_900_6idpasa" -library "intel_directphy_gts_900" -name IP_COMPONENT_VERSION "OS4wLjA="
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_900_6idpasa" -library "intel_directphy_gts_900" -name IP_COMPONENT_DESCRIPTION "R1RTIFBNQS9GRUMgRGlyZWN0IFBIWSBJUC4="
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_900_6idpasa" -library "intel_directphy_gts_900" -name IP_COMPONENT_GROUP "SW50ZXJmYWNlIFByb3RvY29scy9UcmFuc2NlaXZlciBQSFk="
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_900_6idpasa" -library "intel_directphy_gts_900" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL2RvY3MvcHJvZ3JhbW1hYmxlLzgxNzY2MC5odG1s"
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_900_6idpasa" -library "intel_directphy_gts_900" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL2RvY3MvcHJvZ3JhbW1hYmxlLzgxNzc4Ny5odG1s"
+set_global_assignment -entity "jesd204b_core_intel_jesd204b_gts_phy_intel_directphy_gts_191_lvsxkwq" -library "intel_jesd204b_gts_phy_191" -name IP_COMPONENT_NAME "amVzZDIwNGJfY29yZV9pbnRlbF9qZXNkMjA0Yl9ndHNfcGh5X2ludGVsX2RpcmVjdHBoeV9ndHNfMTkxX2x2c3hrd3E="
+set_global_assignment -entity "jesd204b_core_intel_jesd204b_gts_phy_intel_directphy_gts_191_lvsxkwq" -library "intel_jesd204b_gts_phy_191" -name IP_COMPONENT_DISPLAY_NAME "amVzZDIwNGJfY29yZV9pbnRlbF9qZXNkMjA0Yl9ndHNfcGh5X2ludGVsX2RpcmVjdHBoeV9ndHNfMTkxX2x2c3hrd3E="
+set_global_assignment -entity "jesd204b_core_intel_jesd204b_gts_phy_intel_directphy_gts_191_lvsxkwq" -library "intel_jesd204b_gts_phy_191" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "jesd204b_core_intel_jesd204b_gts_phy_intel_directphy_gts_191_lvsxkwq" -library "intel_jesd204b_gts_phy_191" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "jesd204b_core_intel_jesd204b_gts_phy_intel_directphy_gts_191_lvsxkwq" -library "intel_jesd204b_gts_phy_191" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIENvcnBvcmF0aW9u"
+set_global_assignment -entity "jesd204b_core_intel_jesd204b_gts_phy_intel_directphy_gts_191_lvsxkwq" -library "intel_jesd204b_gts_phy_191" -name IP_COMPONENT_VERSION "MTkuMQ=="
+set_global_assignment -entity "jesd204b_core_intel_jesd204b_gts_phy_191_f3hmcmy" -library "intel_jesd204b_gts_phy_191" -name IP_COMPONENT_NAME "amVzZDIwNGJfY29yZV9pbnRlbF9qZXNkMjA0Yl9ndHNfcGh5XzE5MV9mM2htY215"
+set_global_assignment -entity "jesd204b_core_intel_jesd204b_gts_phy_191_f3hmcmy" -library "intel_jesd204b_gts_phy_191" -name IP_COMPONENT_DISPLAY_NAME "aW50ZWxfamVzZDIwNGJfZ3RzX3BoeQ=="
+set_global_assignment -entity "jesd204b_core_intel_jesd204b_gts_phy_191_f3hmcmy" -library "intel_jesd204b_gts_phy_191" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "jesd204b_core_intel_jesd204b_gts_phy_191_f3hmcmy" -library "intel_jesd204b_gts_phy_191" -name IP_COMPONENT_INTERNAL "On"
+set_global_assignment -entity "jesd204b_core_intel_jesd204b_gts_phy_191_f3hmcmy" -library "intel_jesd204b_gts_phy_191" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIENvcnBvcmF0aW9u"
+set_global_assignment -entity "jesd204b_core_intel_jesd204b_gts_phy_191_f3hmcmy" -library "intel_jesd204b_gts_phy_191" -name IP_COMPONENT_VERSION "MTkuMQ=="
+set_global_assignment -entity "j204b_gts_rx_base" -library "intel_jesd204b_gts_rx_191" -name IP_COMPONENT_NAME "ajIwNGJfZ3RzX3J4X2Jhc2U="
+set_global_assignment -entity "j204b_gts_rx_base" -library "intel_jesd204b_gts_rx_191" -name IP_COMPONENT_DISPLAY_NAME "aW50ZWxfamVzZDIwNGJfZ3RzX3J4"
+set_global_assignment -entity "j204b_gts_rx_base" -library "intel_jesd204b_gts_rx_191" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "j204b_gts_rx_base" -library "intel_jesd204b_gts_rx_191" -name IP_COMPONENT_INTERNAL "On"
+set_global_assignment -entity "j204b_gts_rx_base" -library "intel_jesd204b_gts_rx_191" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIENvcnBvcmF0aW9u"
+set_global_assignment -entity "j204b_gts_rx_base" -library "intel_jesd204b_gts_rx_191" -name IP_COMPONENT_VERSION "MTkuMQ=="
+set_global_assignment -entity "intel_jesd204_clock_reset_bridge" -library "intel_jesd204_clock_reset_bridge_191" -name IP_COMPONENT_NAME "aW50ZWxfamVzZDIwNF9jbG9ja19yZXNldF9icmlkZ2U="
+set_global_assignment -entity "intel_jesd204_clock_reset_bridge" -library "intel_jesd204_clock_reset_bridge_191" -name IP_COMPONENT_DISPLAY_NAME "aW50ZWxfamVzZDIwNF9jbG9ja19yZXNldF9icmlkZ2U="
+set_global_assignment -entity "intel_jesd204_clock_reset_bridge" -library "intel_jesd204_clock_reset_bridge_191" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "intel_jesd204_clock_reset_bridge" -library "intel_jesd204_clock_reset_bridge_191" -name IP_COMPONENT_INTERNAL "On"
+set_global_assignment -entity "intel_jesd204_clock_reset_bridge" -library "intel_jesd204_clock_reset_bridge_191" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIENvcnBvcmF0aW9u"
+set_global_assignment -entity "intel_jesd204_clock_reset_bridge" -library "intel_jesd204_clock_reset_bridge_191" -name IP_COMPONENT_VERSION "MTkuMQ=="
+set_global_assignment -entity "jesd204b_core_intel_jesd204b_gts_400_4ahcqsa" -library "intel_jesd204b_gts_400" -name IP_COMPONENT_NAME "amVzZDIwNGJfY29yZV9pbnRlbF9qZXNkMjA0Yl9ndHNfNDAwXzRhaGNxc2E="
+set_global_assignment -entity "jesd204b_core_intel_jesd204b_gts_400_4ahcqsa" -library "intel_jesd204b_gts_400" -name IP_COMPONENT_DISPLAY_NAME "R1RTIEpFU0QyMDRCIElQ"
+set_global_assignment -entity "jesd204b_core_intel_jesd204b_gts_400_4ahcqsa" -library "intel_jesd204b_gts_400" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "jesd204b_core_intel_jesd204b_gts_400_4ahcqsa" -library "intel_jesd204b_gts_400" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "jesd204b_core_intel_jesd204b_gts_400_4ahcqsa" -library "intel_jesd204b_gts_400" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIENvcnBvcmF0aW9u"
+set_global_assignment -entity "jesd204b_core_intel_jesd204b_gts_400_4ahcqsa" -library "intel_jesd204b_gts_400" -name IP_COMPONENT_VERSION "NC4wLjA="
+set_global_assignment -entity "jesd204b_core_intel_jesd204b_gts_400_4ahcqsa" -library "intel_jesd204b_gts_400" -name IP_COMPONENT_DESCRIPTION "R1RTIEpFU0QyMDRCIElQ"
+set_global_assignment -entity "jesd204b_core_intel_jesd204b_gts_400_4ahcqsa" -library "intel_jesd204b_gts_400" -name IP_COMPONENT_GROUP "SW50ZXJmYWNlIFByb3RvY29scy9KRVNE"
+set_global_assignment -entity "jesd204b_core_intel_jesd204b_gts_400_4ahcqsa" -library "intel_jesd204b_gts_400" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL2RvY3MvcHJvZ3JhbW1hYmxlLzgzMjEwMC5odG1s"
+set_global_assignment -entity "jesd204b_core_intel_jesd204b_gts_400_4ahcqsa" -library "intel_jesd204b_gts_400" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL2RvY3MvcHJvZ3JhbW1hYmxlLzgzMjEwMi5odG1s"
+set_global_assignment -entity "jesd204b_core" -library "jesd204b_core" -name IP_COMPONENT_NAME "amVzZDIwNGJfY29yZQ=="
+set_global_assignment -entity "jesd204b_core" -library "jesd204b_core" -name IP_COMPONENT_DISPLAY_NAME "c3lzdGVt"
+set_global_assignment -entity "jesd204b_core" -library "jesd204b_core" -name IP_COMPONENT_REPORT_HIERARCHY "On"
+set_global_assignment -entity "jesd204b_core" -library "jesd204b_core" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "jesd204b_core" -library "jesd204b_core" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIENvcnBvcmF0aW9u"
+set_global_assignment -entity "jesd204b_core" -library "jesd204b_core" -name IP_COMPONENT_VERSION "MS4w"
+
+set_global_assignment -name QHIP_IP_PROPERTY {{"ip_type" : "jesd204b", "ip_direction" : "rx", "fec_used" : "false", "dr_supported" : "false", "tile_ip_sip_instances" : ["intel_jesd204b_gts_0|phy_inst|inst_rx_pipeline","intel_jesd204b_gts_0|phy_inst|inst_rx_rstctrl","intel_jesd204b_gts_0|phy_inst|j204b_gts_rx_mlpcs_inst","intel_jesd204b_gts_0|phy_inst|rst_seq_rx_inst","intel_jesd204b_gts_0|rx_avs_clk_rst_bridge","intel_jesd204b_gts_0|rx_base_inst"]}}
+
+set_global_assignment -library "intel_adme_gts_100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_adme_gts_100/synth/jesd204b_core_intel_adme_gts_100_hlahszy.sv"]
+set_global_assignment -library "intel_adme_gts_100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_adme_gts_100/synth/alt_xcvr_avmm_arb.sv"]
+set_global_assignment -library "intel_adme_gts_100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_adme_gts_100/synth/alt_xcvr_arbiter.sv"]
+set_global_assignment -library "intel_directphy_gts_900" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_directphy_gts_900/synth/jesd204b_core_intel_directphy_gts_intel_adme_gts_900_5c56gqq.v"]
+set_global_assignment -library "pcs_hal_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "pcs_hal_2100/synth/jesd204b_core_pcs_hal_2100_i6srn2q.sv"]
+set_global_assignment -library "pcs_hal_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "pcs_hal_2100/synth/ch4_pcs.sv"]
+set_global_assignment -library "pcs_hal_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "pcs_hal_2100/synth/pcs_hal_coreip.sv"]
+set_global_assignment -library "pcs_hal_2100" -name SOURCE_FILE [file join $::quartus(qip_path) "pcs_hal_2100/synth/pcs_hal_wrapper.sv.terp"]
+set_global_assignment -library "one_lane_hal_2100" -name VERILOG_FILE [file join $::quartus(qip_path) "one_lane_hal_2100/synth/jesd204b_core_one_lane_hal_pcs_hal_2100_ij4zeoi.v"]
+set_global_assignment -library "fec_hal_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "fec_hal_2100/synth/jesd204b_core_fec_hal_2100_lxszoea.sv"]
+set_global_assignment -library "fec_hal_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "fec_hal_2100/synth/ch4_fec.sv"]
+set_global_assignment -library "fec_hal_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "fec_hal_2100/synth/fec_hal_coreip.sv"]
+set_global_assignment -library "fec_hal_2100" -name SOURCE_FILE [file join $::quartus(qip_path) "fec_hal_2100/synth/fec_hal_wrapper.sv.terp"]
+set_global_assignment -library "one_lane_hal_2100" -name VERILOG_FILE [file join $::quartus(qip_path) "one_lane_hal_2100/synth/jesd204b_core_one_lane_hal_fec_hal_2100_hmiwnzy.v"]
+set_global_assignment -library "pldif_hal_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "pldif_hal_2100/synth/jesd204b_core_pldif_hal_2100_4b63owa.sv"]
+set_global_assignment -library "pldif_hal_2100" -name SOURCE_FILE [file join $::quartus(qip_path) "pldif_hal_2100/synth/pldif_hal_wrapper.sv.terp"]
+set_global_assignment -library "pldif_hal_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "pldif_hal_2100/synth/pldif_hal_coreip.sv"]
+set_global_assignment -library "pldif_hal_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "pldif_hal_2100/synth/ch4_pldif.sv"]
+set_global_assignment -library "pldif_hal_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "pldif_hal_2100/synth/ch4_pldif_no_deskew.sv"]
+set_global_assignment -library "pldif_hal_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "pldif_hal_2100/synth/pldif_staticmux.sv"]
+set_global_assignment -library "one_lane_hal_2100" -name VERILOG_FILE [file join $::quartus(qip_path) "one_lane_hal_2100/synth/jesd204b_core_one_lane_hal_pldif_hal_2100_kovldoi.v"]
+set_global_assignment -library "phy_hal_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy_hal_2100/synth/jesd204b_core_phy_hal_2100_anjxnha.sv"]
+set_global_assignment -library "phy_hal_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy_hal_2100/synth/phy_staticmux.sv"]
+set_global_assignment -library "phy_hal_2100" -name SOURCE_FILE [file join $::quartus(qip_path) "phy_hal_2100/synth/phy_hal_wrapper.sv.terp"]
+set_global_assignment -library "phy_hal_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy_hal_2100/synth/phy_hal_coreip.sv"]
+set_global_assignment -library "phy_hal_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "phy_hal_2100/synth/ch4_phy.sv"]
+set_global_assignment -library "one_lane_hal_2100" -name VERILOG_FILE [file join $::quartus(qip_path) "one_lane_hal_2100/synth/jesd204b_core_one_lane_hal_phy_hal_2100_cqvqhza.v"]
+set_global_assignment -library "one_lane_hal_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "one_lane_hal_2100/synth/jesd204b_core_one_lane_hal_2100_35gmzui.sv"]
+set_global_assignment -library "one_lane_hal_2100" -name SOURCE_FILE [file join $::quartus(qip_path) "one_lane_hal_2100/synth/one_lane_hal_top.sv.terp"]
+set_global_assignment -library "hal_top_2100" -name VERILOG_FILE [file join $::quartus(qip_path) "hal_top_2100/synth/jesd204b_core_hal_top_one_lane_hal_2100_c7tzbta.v"]
+set_global_assignment -library "hal_top_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "hal_top_2100/synth/jesd204b_core_hal_top_2100_p4w2ruq.sv"]
+set_global_assignment -library "hal_top_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "hal_top_2100/synth/hip_sip_boundary_p4w2ruq.sv"]
+set_global_assignment -library "hal_top_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "hal_top_2100/synth/shared_ptp.sv"]
+set_global_assignment -library "hal_top_2100" -name SOURCE_FILE [file join $::quartus(qip_path) "hal_top_2100/synth/hal_top_wrapper.sv.terp"]
+set_global_assignment -library "hal_top_2100" -name SOURCE_FILE [file join $::quartus(qip_path) "hal_top_2100/synth/hip_sip_boundary.sv.terp"]
+set_global_assignment -library "hal_top_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "hal_top_2100/synth/mc.sv"]
+set_global_assignment -library "hal_top_2100" -name VERILOG_FILE [file join $::quartus(qip_path) "hal_top_2100/synth/shared_hal_coreip.v"]
+set_global_assignment -library "hal_top_2100" -name SOURCE_FILE [file join $::quartus(qip_path) "hal_top_2100/synth/shared_ptp.sv.terp"]
+set_global_assignment -library "hal_top_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "hal_top_2100/synth/chptp.sv"]
+set_global_assignment -library "n_channel_superset_2100" -name VERILOG_FILE [file join $::quartus(qip_path) "n_channel_superset_2100/synth/jesd204b_core_n_channel_superset_hal_top_2100_mkorooy.v"]
+set_global_assignment -library "n_channel_superset_2100" -name SOURCE_FILE [file join $::quartus(qip_path) "n_channel_superset_2100/synth/SM_SRC_VLIW_MIF.mif"]
+set_global_assignment -library "n_channel_superset_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "n_channel_superset_2100/synth/jesd204b_core_n_channel_superset_2100_h2bmroi.sv"]
+set_global_assignment -library "n_channel_superset_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "n_channel_superset_2100/synth/intel_src_addr_gen.sv"]
+set_global_assignment -library "n_channel_superset_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "n_channel_superset_2100/synth/intel_src_csr.sv"]
+set_global_assignment -library "n_channel_superset_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "n_channel_superset_2100/synth/intel_src_flow_ctrl.sv"]
+set_global_assignment -library "n_channel_superset_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "n_channel_superset_2100/synth/intel_src_lane.sv"]
+set_global_assignment -library "n_channel_superset_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "n_channel_superset_2100/synth/intel_src_lane2lane.sv"]
+set_global_assignment -library "n_channel_superset_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "n_channel_superset_2100/synth/intel_src_lane_rst_sequence_fsm.sv"]
+set_global_assignment -library "n_channel_superset_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "n_channel_superset_2100/synth/intel_src_lane_wrapper.sv"]
+set_global_assignment -library "n_channel_superset_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "n_channel_superset_2100/synth/intel_src_monitor.sv"]
+set_global_assignment -library "n_channel_superset_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "n_channel_superset_2100/synth/intel_src_stagger_block.sv"]
+set_global_assignment -library "n_channel_superset_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "n_channel_superset_2100/synth/intel_src_synchronizers.sv"]
+set_global_assignment -library "n_channel_superset_2100" -name VERILOG_FILE [file join $::quartus(qip_path) "n_channel_superset_2100/synth/sopc_synchronizer.v"]
+set_global_assignment -library "n_channel_superset_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "n_channel_superset_2100/synth/ncss_avmm_decoder.sv"]
+set_global_assignment -library "n_channel_superset_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "n_channel_superset_2100/synth/ncss_common_ptp_top.sv"]
+set_global_assignment -library "n_channel_superset_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "n_channel_superset_2100/synth/tennm_sm_hssi_pld_chnl_dp_sip_atom.sv"]
+set_global_assignment -library "n_channel_superset_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "n_channel_superset_2100/synth/ff_macro_init.sv"]
+set_instance_assignment -entity "tennm_sm_hssi_pld_chnl_dp_sip_atom" -library "n_channel_superset_2100" -name SDC_ENTITY_FILE [file join $::quartus(qip_path) "n_channel_superset_2100/synth/tennm_sm_hssi_pld_chnl_dp_sip_atom.sdc"] -no_sdc_promotion 
+set_global_assignment -library "n_channel_superset_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "n_channel_superset_2100/synth/tennm_sm_hssi_pld_chnl_dp_sip_atom_lavmm_arbiter.sv"]
+set_global_assignment -library "n_channel_superset_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "n_channel_superset_2100/synth/tennm_sm_hssi_pld_chnl_dp_sip_atom_mux_arbiter.sv"]
+set_global_assignment -library "n_channel_superset_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "n_channel_superset_2100/synth/tennm_sm_hssi_pld_chnl_dp_sip_atom_mux_rx.sv"]
+set_global_assignment -library "n_channel_superset_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "n_channel_superset_2100/synth/tennm_sm_hssi_pld_chnl_dp_sip_atom_mux_tx.sv"]
+set_global_assignment -library "n_channel_superset_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "n_channel_superset_2100/synth/tennm_sm_hssi_pld_chnl_dp_sip_atom_mux_tx_rx.sv"]
+set_global_assignment -library "n_channel_superset_2100" -name SOURCE_FILE [file join $::quartus(qip_path) "n_channel_superset_2100/synth/n_channel_superset_top_wrapper.sv.terp"]
+set_global_assignment -library "n_channel_superset_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "n_channel_superset_2100/synth/tennm_sm_hssi.std_func.sv"]
+set_global_assignment -library "intel_directphy_gts_900" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_directphy_gts_900/synth/jesd204b_core_intel_directphy_gts_n_channel_superset_900_qebg4di.v"]
+set_global_assignment -library "intel_directphy_gts_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_directphy_gts_900/synth/sip_async_mapping.sv"]
+set_global_assignment -library "intel_directphy_gts_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_directphy_gts_900/synth/intel_directphy_avmm.sv"]
+set_global_assignment -library "intel_directphy_gts_900" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_directphy_gts_900/synth/intel_directphy_csr_wrap.v"]
+set_global_assignment -library "intel_directphy_gts_900" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_directphy_gts_900/synth/dphy_ccg.v"]
+set_global_assignment -library "intel_directphy_gts_900" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_directphy_gts_900/synth/directphy_gray_cntr_3.v"]
+set_global_assignment -library "intel_directphy_gts_900" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_directphy_gts_900/synth/directphy_gray_cntr_5_sl.v"]
+set_global_assignment -library "intel_directphy_gts_900" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_directphy_gts_900/synth/dphy_gts_std_synchronizer_nocut.v"]
+set_global_assignment -library "intel_directphy_gts_900" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_directphy_gts_900/synth/directphy_eq_5_ena.v"]
+set_global_assignment -library "intel_directphy_gts_900" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_directphy_gts_900/synth/directphy_neq_5_ena.v"]
+set_global_assignment -library "intel_directphy_gts_900" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_directphy_gts_900/synth/directphy_wys_lut.v"]
+set_global_assignment -library "intel_directphy_gts_900" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_directphy_gts_900/synth/intel_directphy_sip_csr.v"]
+set_global_assignment -library "intel_directphy_gts_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_directphy_gts_900/synth/dphy_tx_dsk_gen.sv"]
+set_global_assignment -library "intel_directphy_gts_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_directphy_gts_900/synth/directphy_rx_deskew.sv"]
+set_global_assignment -library "intel_directphy_gts_900" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_directphy_gts_900/synth/directphy_word_delay.v"]
+set_global_assignment -library "intel_directphy_gts_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_directphy_gts_900/synth/directphy_mlab.v"]
+set_global_assignment -library "intel_directphy_gts_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_directphy_gts_900/synth/dphy_gts_xcvr_resync_std.sv"]
+set_global_assignment -library "intel_directphy_gts_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_directphy_gts_900/synth/dphy_gts_data_sync.sv"]
+set_global_assignment -library "intel_directphy_gts_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_directphy_gts_900/synth/alt_xcvr_resync_etile.sv"]
+set_global_assignment -library "intel_directphy_gts_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_directphy_gts_900/synth/altera_std_synchronizer_nocut_etile.v"]
+set_global_assignment -library "intel_directphy_gts_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_directphy_gts_900/synth/jesd204b_core_intel_directphy_gts_900_ccqah4q.sv"]
+set_global_assignment -library "intel_directphy_gts_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_directphy_gts_900/synth/jesd204b_core_intel_directphy_gts_900_ccqah4q_sip.sv"]
+set_instance_assignment -entity "jesd204b_core_intel_directphy_gts_900_ccqah4q_sip" -library "intel_directphy_gts_900" -name SDC_ENTITY_FILE [file join $::quartus(qip_path) "intel_directphy_gts_900/synth/jesd204b_core_intel_directphy_gts_900_ccqah4q_sip.sdc"] -no_sdc_promotion 
+set_instance_assignment -entity "jesd204b_core_intel_directphy_gts_900_ccqah4q_sip" -library "intel_directphy_gts_900" -name TCL_ENTITY_FILE [file join $::quartus(qip_path) "intel_directphy_gts_900/synth/xcvr_sdc_utils.tcl"]
+set_global_assignment -library "intel_jesd204b_gts_phy_191" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_jesd204b_gts_phy_191/synth/jesd204b_core_intel_jesd204b_gts_phy_intel_directphy_gts_191_x7bynya.v"]
+set_global_assignment -library "hal_top_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "hal_top_2100/synth/jesd204b_core_hal_top_2100_nxxghuq.sv"]
+set_global_assignment -library "hal_top_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "hal_top_2100/synth/hip_sip_boundary_nxxghuq.sv"]
+set_global_assignment -library "n_channel_superset_2100" -name VERILOG_FILE [file join $::quartus(qip_path) "n_channel_superset_2100/synth/jesd204b_core_n_channel_superset_hal_top_2100_obpnyoy.v"]
+set_global_assignment -library "n_channel_superset_2100" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "n_channel_superset_2100/synth/jesd204b_core_n_channel_superset_2100_4jxhtba.sv"]
+set_global_assignment -library "intel_directphy_gts_900" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_directphy_gts_900/synth/jesd204b_core_intel_directphy_gts_n_channel_superset_900_lxxn6ma.v"]
+set_global_assignment -library "intel_directphy_gts_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_directphy_gts_900/synth/jesd204b_core_intel_directphy_gts_900_6idpasa.sv"]
+set_global_assignment -library "intel_directphy_gts_900" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_directphy_gts_900/synth/jesd204b_core_intel_directphy_gts_900_6idpasa_sip.sv"]
+set_instance_assignment -entity "jesd204b_core_intel_directphy_gts_900_6idpasa_sip" -library "intel_directphy_gts_900" -name SDC_ENTITY_FILE [file join $::quartus(qip_path) "intel_directphy_gts_900/synth/jesd204b_core_intel_directphy_gts_900_6idpasa_sip.sdc"] -no_sdc_promotion 
+set_global_assignment -library "intel_jesd204b_gts_phy_191" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_jesd204b_gts_phy_191/synth/jesd204b_core_intel_jesd204b_gts_phy_intel_directphy_gts_191_lvsxkwq.v"]
+set_global_assignment -library "intel_jesd204b_gts_phy_191" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_jesd204b_gts_phy_191/synth/j204b_gts_phy_adapter_jesd204b_core_intel_jesd204b_gts_phy_191_f3hmcmy.v"]
+set_global_assignment -library "intel_jesd204b_gts_phy_191" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_jesd204b_gts_phy_191/synth/jesd204b_core_intel_jesd204b_gts_phy_191_f3hmcmy.v"]
+set_global_assignment -library "intel_jesd204b_gts_phy_191" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_jesd204b_gts_phy_191/synth/phy/j204b_gts_8b10b_dec_top.v"]
+set_global_assignment -library "intel_jesd204b_gts_phy_191" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_jesd204b_gts_phy_191/synth/phy/j204b_gts_8b10b_dec.v"]
+set_global_assignment -library "intel_jesd204b_gts_phy_191" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_jesd204b_gts_phy_191/synth/phy/j204b_gts_rx_mlpcs.v"]
+set_global_assignment -library "intel_jesd204b_gts_phy_191" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_jesd204b_gts_phy_191/synth/phy/j204b_gts_rx_pcs.v"]
+set_global_assignment -library "intel_jesd204b_gts_phy_191" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_jesd204b_gts_phy_191/synth/phy/j204b_gts_wa.v"]
+set_global_assignment -library "intel_jesd204b_gts_phy_191" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_jesd204b_gts_phy_191/synth/phy/j204b_gts_xn_8b10b_dec.v"]
+set_global_assignment -library "intel_jesd204b_gts_phy_191" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_jesd204b_gts_phy_191/synth/phy/j204b_gts_sip_rst_seq_rx.v"]
+set_global_assignment -library "intel_jesd204b_gts_phy_191" -name SOURCE_FILE [file join $::quartus(qip_path) "intel_jesd204b_gts_phy_191/synth/phy/j204b_gts_rx_mlpcs.ocp"]
+set_global_assignment -library "intel_jesd204b_gts_phy_191" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_jesd204b_gts_phy_191/synth/common/j204b_gts_wys_lut.v"]
+set_global_assignment -library "intel_jesd204b_gts_phy_191" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_jesd204b_gts_phy_191/synth/common/j204b_gts_bit_synchronizer.v"]
+set_global_assignment -library "intel_jesd204b_gts_phy_191" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_jesd204b_gts_phy_191/synth/common/altera_std_synchronizer_nocut.v"]
+set_global_assignment -library "intel_jesd204b_gts_phy_191" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_jesd204b_gts_phy_191/synth/common/j204b_gts_rstctrl.v"]
+set_global_assignment -library "intel_jesd204b_gts_phy_191" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_jesd204b_gts_phy_191/synth/common/j204b_gts_pipeline.v"]
+set_instance_assignment -entity "jesd204b_core_intel_jesd204b_gts_phy_191_f3hmcmy" -library "intel_jesd204b_gts_phy_191" -name SDC_ENTITY_FILE [file join $::quartus(qip_path) "intel_jesd204b_gts_phy_191/synth/j204b_gts.sdc"] -no_sdc_promotion 
+set_global_assignment -library "intel_jesd204b_gts_rx_191" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_jesd204b_gts_rx_191/synth/rx/j204b_gts_rx_base.v"]
+set_global_assignment -library "intel_jesd204b_gts_rx_191" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_jesd204b_gts_rx_191/synth/rx/j204b_gts_rx_csr.v"]
+set_global_assignment -library "intel_jesd204b_gts_rx_191" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_jesd204b_gts_rx_191/synth/rx/j204b_gts_rx_ctl.v"]
+set_global_assignment -library "intel_jesd204b_gts_rx_191" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_jesd204b_gts_rx_191/synth/rx/j204b_gts_rx_descrambler.v"]
+set_global_assignment -library "intel_jesd204b_gts_rx_191" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_jesd204b_gts_rx_191/synth/rx/j204b_gts_rx_dll_char_val.v"]
+set_global_assignment -library "intel_jesd204b_gts_rx_191" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_jesd204b_gts_rx_191/synth/rx/j204b_gts_rx_dll_cs.v"]
+set_global_assignment -library "intel_jesd204b_gts_rx_191" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_jesd204b_gts_rx_191/synth/rx/j204b_gts_rx_dll_data_store.v"]
+set_global_assignment -library "intel_jesd204b_gts_rx_191" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_jesd204b_gts_rx_191/synth/rx/j204b_gts_rx_dll_ecc_dec.v"]
+set_global_assignment -library "intel_jesd204b_gts_rx_191" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_jesd204b_gts_rx_191/synth/rx/j204b_gts_rx_dll_ecc_enc.v"]
+set_global_assignment -library "intel_jesd204b_gts_rx_191" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_jesd204b_gts_rx_191/synth/rx/j204b_gts_rx_dll_ecc_fifo_hard.v"]
+set_global_assignment -library "intel_jesd204b_gts_rx_191" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_jesd204b_gts_rx_191/synth/rx/j204b_gts_rx_dll_ecc_fifo.v"]
+set_global_assignment -library "intel_jesd204b_gts_rx_191" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_jesd204b_gts_rx_191/synth/rx/j204b_gts_rx_dll_frame_align.v"]
+set_global_assignment -library "intel_jesd204b_gts_rx_191" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_jesd204b_gts_rx_191/synth/rx/j204b_gts_rx_dll_fs_char_replace.v"]
+set_global_assignment -library "intel_jesd204b_gts_rx_191" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_jesd204b_gts_rx_191/synth/rx/j204b_gts_rx_dll_lane_align.v"]
+set_global_assignment -library "intel_jesd204b_gts_rx_191" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_jesd204b_gts_rx_191/synth/rx/j204b_gts_rx_dll_wo_ecc_fifo.v"]
+set_global_assignment -library "intel_jesd204b_gts_rx_191" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_jesd204b_gts_rx_191/synth/rx/j204b_gts_rx_dll.v"]
+set_global_assignment -library "intel_jesd204b_gts_rx_191" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_jesd204b_gts_rx_191/synth/rx/j204b_rx_regmap.v"]
+set_global_assignment -library "intel_jesd204b_gts_rx_191" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_jesd204b_gts_rx_191/synth/common/j204b_gts_pipeline.v"]
+set_global_assignment -library "intel_jesd204b_gts_rx_191" -name SOURCE_FILE [file join $::quartus(qip_path) "intel_jesd204b_gts_rx_191/synth/j204b_gts_rx_base.ocp"]
+set_global_assignment -library "intel_jesd204_clock_reset_bridge_191" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_jesd204_clock_reset_bridge_191/synth/clock_reset_bridge/intel_jesd204_clock_reset_bridge.v"]
+set_global_assignment -library "intel_jesd204b_gts_400" -name VERILOG_FILE [file join $::quartus(qip_path) "intel_jesd204b_gts_400/synth/jesd204b_core_intel_jesd204b_gts_400_4ahcqsa.v"]
+set_global_assignment -library "jesd204b_core" -name VERILOG_FILE [file join $::quartus(qip_path) "synth/jesd204b_core.v"]
+
+
+set_global_assignment -entity "jesd204b_core_intel_jesd204b_gts_400_4ahcqsa" -library "intel_jesd204b_gts_400" -name IP_TOOL_NAME "intel_jesd204b_gts"
+set_global_assignment -entity "jesd204b_core_intel_jesd204b_gts_400_4ahcqsa" -library "intel_jesd204b_gts_400" -name IP_TOOL_VERSION "4.0.0"
+set_global_assignment -entity "jesd204b_core_intel_jesd204b_gts_400_4ahcqsa" -library "intel_jesd204b_gts_400" -name IP_TOOL_ENV "QsysPrimePro"
+set_global_assignment -entity "intel_jesd204_clock_reset_bridge" -library "intel_jesd204_clock_reset_bridge_191" -name IP_TOOL_NAME "intel_jesd204_clock_reset_bridge"
+set_global_assignment -entity "intel_jesd204_clock_reset_bridge" -library "intel_jesd204_clock_reset_bridge_191" -name IP_TOOL_VERSION "19.1"
+set_global_assignment -entity "intel_jesd204_clock_reset_bridge" -library "intel_jesd204_clock_reset_bridge_191" -name IP_TOOL_ENV "QsysPrimePro"
+set_global_assignment -entity "j204b_gts_rx_base" -library "intel_jesd204b_gts_rx_191" -name IP_TOOL_NAME "intel_jesd204b_gts_rx"
+set_global_assignment -entity "j204b_gts_rx_base" -library "intel_jesd204b_gts_rx_191" -name IP_TOOL_VERSION "19.1"
+set_global_assignment -entity "j204b_gts_rx_base" -library "intel_jesd204b_gts_rx_191" -name IP_TOOL_ENV "QsysPrimePro"
+set_global_assignment -entity "jesd204b_core_intel_jesd204b_gts_phy_191_f3hmcmy" -library "intel_jesd204b_gts_phy_191" -name IP_TOOL_NAME "intel_jesd204b_gts_phy"
+set_global_assignment -entity "jesd204b_core_intel_jesd204b_gts_phy_191_f3hmcmy" -library "intel_jesd204b_gts_phy_191" -name IP_TOOL_VERSION "19.1"
+set_global_assignment -entity "jesd204b_core_intel_jesd204b_gts_phy_191_f3hmcmy" -library "intel_jesd204b_gts_phy_191" -name IP_TOOL_ENV "QsysPrimePro"
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_900_6idpasa" -library "intel_directphy_gts_900" -name IP_TOOL_NAME "intel_directphy_gts"
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_900_6idpasa" -library "intel_directphy_gts_900" -name IP_TOOL_VERSION "9.0.0"
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_900_6idpasa" -library "intel_directphy_gts_900" -name IP_TOOL_ENV "QsysPrimePro"
+set_global_assignment -entity "jesd204b_core_n_channel_superset_2100_4jxhtba" -library "n_channel_superset_2100" -name IP_TOOL_NAME "n_channel_superset"
+set_global_assignment -entity "jesd204b_core_n_channel_superset_2100_4jxhtba" -library "n_channel_superset_2100" -name IP_TOOL_VERSION "21.0.0"
+set_global_assignment -entity "jesd204b_core_n_channel_superset_2100_4jxhtba" -library "n_channel_superset_2100" -name IP_TOOL_ENV "QsysPrimePro"
+set_global_assignment -entity "jesd204b_core_hal_top_2100_nxxghuq" -library "hal_top_2100" -name IP_TOOL_NAME "hal_top"
+set_global_assignment -entity "jesd204b_core_hal_top_2100_nxxghuq" -library "hal_top_2100" -name IP_TOOL_VERSION "21.0.0"
+set_global_assignment -entity "jesd204b_core_hal_top_2100_nxxghuq" -library "hal_top_2100" -name IP_TOOL_ENV "QsysPrimePro"
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_900_ccqah4q" -library "intel_directphy_gts_900" -name IP_TOOL_NAME "intel_directphy_gts"
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_900_ccqah4q" -library "intel_directphy_gts_900" -name IP_TOOL_VERSION "9.0.0"
+set_global_assignment -entity "jesd204b_core_intel_directphy_gts_900_ccqah4q" -library "intel_directphy_gts_900" -name IP_TOOL_ENV "QsysPrimePro"
+set_global_assignment -entity "jesd204b_core_n_channel_superset_2100_h2bmroi" -library "n_channel_superset_2100" -name IP_TOOL_NAME "n_channel_superset"
+set_global_assignment -entity "jesd204b_core_n_channel_superset_2100_h2bmroi" -library "n_channel_superset_2100" -name IP_TOOL_VERSION "21.0.0"
+set_global_assignment -entity "jesd204b_core_n_channel_superset_2100_h2bmroi" -library "n_channel_superset_2100" -name IP_TOOL_ENV "QsysPrimePro"
+set_global_assignment -entity "jesd204b_core_hal_top_2100_p4w2ruq" -library "hal_top_2100" -name IP_TOOL_NAME "hal_top"
+set_global_assignment -entity "jesd204b_core_hal_top_2100_p4w2ruq" -library "hal_top_2100" -name IP_TOOL_VERSION "21.0.0"
+set_global_assignment -entity "jesd204b_core_hal_top_2100_p4w2ruq" -library "hal_top_2100" -name IP_TOOL_ENV "QsysPrimePro"
+set_global_assignment -entity "jesd204b_core_one_lane_hal_2100_35gmzui" -library "one_lane_hal_2100" -name IP_TOOL_NAME "one_lane_hal"
+set_global_assignment -entity "jesd204b_core_one_lane_hal_2100_35gmzui" -library "one_lane_hal_2100" -name IP_TOOL_VERSION "21.0.0"
+set_global_assignment -entity "jesd204b_core_one_lane_hal_2100_35gmzui" -library "one_lane_hal_2100" -name IP_TOOL_ENV "QsysPrimePro"
+set_global_assignment -entity "jesd204b_core_phy_hal_2100_anjxnha" -library "phy_hal_2100" -name IP_TOOL_NAME "phy_hal"
+set_global_assignment -entity "jesd204b_core_phy_hal_2100_anjxnha" -library "phy_hal_2100" -name IP_TOOL_VERSION "21.0.0"
+set_global_assignment -entity "jesd204b_core_phy_hal_2100_anjxnha" -library "phy_hal_2100" -name IP_TOOL_ENV "QsysPrimePro"
+set_global_assignment -entity "jesd204b_core_pldif_hal_2100_4b63owa" -library "pldif_hal_2100" -name IP_TOOL_NAME "pldif_hal"
+set_global_assignment -entity "jesd204b_core_pldif_hal_2100_4b63owa" -library "pldif_hal_2100" -name IP_TOOL_VERSION "21.0.0"
+set_global_assignment -entity "jesd204b_core_pldif_hal_2100_4b63owa" -library "pldif_hal_2100" -name IP_TOOL_ENV "QsysPrimePro"
+set_global_assignment -entity "jesd204b_core_fec_hal_2100_lxszoea" -library "fec_hal_2100" -name IP_TOOL_NAME "fec_hal"
+set_global_assignment -entity "jesd204b_core_fec_hal_2100_lxszoea" -library "fec_hal_2100" -name IP_TOOL_VERSION "21.0.0"
+set_global_assignment -entity "jesd204b_core_fec_hal_2100_lxszoea" -library "fec_hal_2100" -name IP_TOOL_ENV "QsysPrimePro"
+set_global_assignment -entity "jesd204b_core_pcs_hal_2100_i6srn2q" -library "pcs_hal_2100" -name IP_TOOL_NAME "pcs_hal"
+set_global_assignment -entity "jesd204b_core_pcs_hal_2100_i6srn2q" -library "pcs_hal_2100" -name IP_TOOL_VERSION "21.0.0"
+set_global_assignment -entity "jesd204b_core_pcs_hal_2100_i6srn2q" -library "pcs_hal_2100" -name IP_TOOL_ENV "QsysPrimePro"
+set_global_assignment -entity "jesd204b_core_intel_adme_gts_100_hlahszy" -library "intel_adme_gts_100" -name IP_TOOL_NAME "intel_adme_gts"
+set_global_assignment -entity "jesd204b_core_intel_adme_gts_100_hlahszy" -library "intel_adme_gts_100" -name IP_TOOL_VERSION "1.0.0"
+set_global_assignment -entity "jesd204b_core_intel_adme_gts_100_hlahszy" -library "intel_adme_gts_100" -name IP_TOOL_ENV "QsysPrimePro"
+

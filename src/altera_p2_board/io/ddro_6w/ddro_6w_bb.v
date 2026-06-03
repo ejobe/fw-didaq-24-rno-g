@@ -1,0 +1,9 @@
+module ddro_6w (
+		input  wire       ck,        //        ck.export,   In input and output paths, this clock feeds a packed register or DDIO. In bidirectional mode, this clock is the unique clock for the input and output paths if you turn off the Separate input/output Clocks parameter.
+		input  wire [5:0] datain_h,  //  datain_h.fragment, TBD
+		input  wire [5:0] datain_l,  //  datain_l.fragment, TBD
+		output wire [5:0] dataout,   //   pad_out.export,   Output signal to the pad.Output signal to the pad.
+		output wire [5:0] pad_out_b  // pad_out_b.export,   Negative node of the differential output signal to the pad. This port is available if you turn on the Use differential buffer option.
+	);
+endmodule
+

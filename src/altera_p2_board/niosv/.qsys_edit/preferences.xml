@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <window width="1304" height="800" x="118" y="92" />
+ <systemtable
+   filter="tectonics_ser_debug_0.avalon_master"
+   showAvalonDomains="1"
+   showClockDomains="0"
+   showResetDomains="0" />
+ <library
+   expandedCategories="Project/Systems,Project/Interface Protocols,Library,Project/Peripheral,Project,Project/Peripherals,Existing IP Variants" />
+ <generation path="" />
+</preferences>
