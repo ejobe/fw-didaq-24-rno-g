@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<internal_error>
+	<sub_system>ERR</sub_system>
+	<callstack>	0x7ffefd4d32dc: CCL_ERR + 0x132dc (?name@ERR_UNWINDER_TESTER@@SAPEBDXZ + 0x22c)
+	0x7ffefdcae880: dni_orch + 0xe880 (?is_developer_debug@ORCH_UTIL@@YA_NXZ + 0x570)
+	0x7ffefdcb14f1: dni_orch + 0x114f1 (?is_developer_debug@ORCH_UTIL@@YA_NXZ + 0x31e1)
+	0x7fff131b107f: vcruntime140_1 + 0x107f
+	0x7fff131b26a4: vcruntime140_1 + 0x26a4 (__NLG_Return2 + 0x1554)
+	0x7fff1ad31cd5: ntdll + 0xa1cd5 (RtlCaptureContext2 + 0x4a5)
+	0x7ffefdcae96d: dni_orch + 0xe96d (?is_developer_debug@ORCH_UTIL@@YA_NXZ + 0x65d)
+	0x7fff1aca9a1c: ntdll + 0x19a1c (RtlActivateActivationContextUnsafeFast + 0x11c)
+	0x7fff1acef1c9: ntdll + 0x5f1c9 (LdrShutdownProcess + 0x229)
+	0x7fff1aceef7c: ntdll + 0x5ef7c (RtlExitUserProcess + 0xac)
+	0x7fff1a86e3ea: KERNEL32 + 0x1e3ea (FatalExit + 0xa)
+	0x7fff183405bb: ucrtbase + 0x205bb (exit + 0x1db)
+	0x7fff1834045e: ucrtbase + 0x2045e (exit + 0x7e)
+	0x7ffd83336d69: jvm + 0x676d69 (?c2v_getArrayType@@YAPEAV_jobject@@PEAUJNIEnv_@@PEAV1@1@Z + 0x227299)
+	0x7ffd834fb11a: jvm + 0x83b11a (?topLevelExceptionFilter@@YAJPEAU_EXCEPTION_POINTERS@@@Z + 0x1beefa)
+	0x7ffd834fbe60: jvm + 0x83be60 (?topLevelExceptionFilter@@YAJPEAU_EXCEPTION_POINTERS@@@Z + 0x1bfc40)
+	0x7ffd834fc37c: jvm + 0x83c37c (?topLevelExceptionFilter@@YAJPEAU_EXCEPTION_POINTERS@@@Z + 0x1c015c)
+	0x7ffd834fc753: jvm + 0x83c753 (?topLevelExceptionFilter@@YAJPEAU_EXCEPTION_POINTERS@@@Z + 0x1c0533)
+	0x7ffd834fc81f: jvm + 0x83c81f (?topLevelExceptionFilter@@YAJPEAU_EXCEPTION_POINTERS@@@Z + 0x1c05ff)
+	0x7ffd834a3fb9: jvm + 0x7e3fb9 (?topLevelExceptionFilter@@YAJPEAU_EXCEPTION_POINTERS@@@Z + 0x167d99)
+	0x7ffd8333c1b4: jvm + 0x67c1b4 (?c2v_getArrayType@@YAPEAV_jobject@@PEAUJNIEnv_@@PEAV1@1@Z + 0x22c6e4)
+	0x7fff18341bb1: ucrtbase + 0x21bb1 (_configthreadlocale + 0x91)
+	0x7fff1a867373: KERNEL32 + 0x17373 (BaseThreadInitThunk + 0x13)
+	0x7fff1acdcc90: ntdll + 0x4cc90 (RtlUserThreadStart + 0x20)
+</callstack>
+	<error>*** Fatal Error: Program termination requested</error>
+	<date>Thu Jun  4 16:54:44 2026
+</date>
+	<version>Version 25.1.1 Build 125 07/31/2025 SC Pro Edition</version>
+</internal_error>

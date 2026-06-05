@@ -1640,12 +1640,12 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:parameter parameterId="gui_duty_cycle1" type="real">
           <ipxact:name>gui_duty_cycle1</ipxact:name>
           <ipxact:displayName>Desired Duty Cycle</ipxact:displayName>
-          <ipxact:value>6.25</ipxact:value>
+          <ipxact:value>12.5</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="gui_duty_cycle2" type="real">
           <ipxact:name>gui_duty_cycle2</ipxact:name>
           <ipxact:displayName>Desired Duty Cycle</ipxact:displayName>
-          <ipxact:value>50.0</ipxact:value>
+          <ipxact:value>12.5</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="gui_duty_cycle3" type="real">
           <ipxact:name>gui_duty_cycle3</ipxact:name>
@@ -1863,6 +1863,7 @@ https://fpgasoftware.intel.com/eula.-->
       </ipxact:parameters>
     </altera:altera_system_parameters>
     <altera:altera_interface_boundary>
+      <altera:interface_mapping altera:name="extclk_out" altera:internal="iopll_0.extclk_out"></altera:interface_mapping>
       <altera:interface_mapping altera:name="locked" altera:internal="iopll_0.locked" altera:type="conduit" altera:dir="end">
         <altera:port_mapping altera:name="locked" altera:internal="locked"></altera:port_mapping>
       </altera:interface_mapping>
@@ -1885,6 +1886,7 @@ https://fpgasoftware.intel.com/eula.-->
       <altera:interface_mapping altera:name="reset" altera:internal="iopll_0.reset" altera:type="reset" altera:dir="end">
         <altera:port_mapping altera:name="rst" altera:internal="rst"></altera:port_mapping>
       </altera:interface_mapping>
+      <altera:interface_mapping altera:name="zdbfbclk" altera:internal="iopll_0.zdbfbclk"></altera:interface_mapping>
     </altera:altera_interface_boundary>
     <altera:altera_has_warnings>false</altera:altera_has_warnings>
     <altera:altera_has_errors>false</altera:altera_has_errors>

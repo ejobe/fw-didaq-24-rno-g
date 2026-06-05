@@ -71,7 +71,7 @@ signal coherent_sums_pipeline : coherent_sum_pipeline_type;
 signal instantaneous_beam_power : instantaneous_power_type;
 signal summed_power_0 : summed_power_type;
 signal summed_power_1 : summed_power_type;
-signal trig_tracker : summed_power_pipeline_type; -- keeps track of the sums-over-threshold 
+signal trig_tracker : summed_power_pipeline_type;  -- keeps track of the sums-over-threshold 
 signal servo_tracker : summed_power_pipeline_type; -- keeps track of the sums-over-threshold
 signal trig_thresh : threshold_array_type;
 signal servo_thresh : threshold_array_type;

@@ -1095,7 +1095,6 @@ inst_ddro_cal_pulse : ddro_1w
    	  pad_out_b(0) => cal_pulse_n  -- to pins on the chip                 
    );
         
-
 -- Solution #3, adjust the phase of the clk_sysref_for_fabric 
 clk_gts_sysref(0) <= clk_sysref_for_fabric;
 clk_gts_sysref(1) <= clk_sysref_for_fabric;

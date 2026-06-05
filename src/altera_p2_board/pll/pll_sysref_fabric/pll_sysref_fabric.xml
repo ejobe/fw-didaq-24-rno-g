@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deploy
- date="2026.04.02.13:40:07"
- outputDirectory="C:/Users/erico/Desktop/projects/terra_terra/didaq_test_subclass0/src/altera_p2_board/pll/pll_sysref_fabric/">
+ date="2026.06.04.16:54:34"
+ outputDirectory="C:/Users/erico/Desktop/projects/terra_terra/fw-didaq-24-rno-g/src/altera_p2_board/pll/pll_sysref_fabric/">
  <perimeter>
   <parameter
      name="AUTO_GENERATION_ID"
@@ -111,17 +111,17 @@
   <parameter name="AUTO_DEVICE_SPEEDGRADE" value="4" />
   <generatedFiles>
    <file
-       path="C:\Users\erico\Desktop\projects\terra_terra\didaq_test_subclass0\src\altera_p2_board\pll\pll_sysref_fabric\synth\pll_sysref_fabric.v"
+       path="C:\Users\erico\Desktop\projects\terra_terra\fw-didaq-24-rno-g\src\altera_p2_board\pll\pll_sysref_fabric\synth\pll_sysref_fabric.v"
        attributes="CONTAINS_INLINE_CONFIGURATION" />
   </generatedFiles>
   <childGeneratedFiles>
    <file
-       path="C:\Users\erico\Desktop\projects\terra_terra\didaq_test_subclass0\src\altera_p2_board\pll\pll_sysref_fabric\synth\pll_sysref_fabric.v"
+       path="C:\Users\erico\Desktop\projects\terra_terra\fw-didaq-24-rno-g\src\altera_p2_board\pll\pll_sysref_fabric\synth\pll_sysref_fabric.v"
        attributes="CONTAINS_INLINE_CONFIGURATION" />
   </childGeneratedFiles>
   <sourceFiles>
    <file
-       path="C:/Users/erico/Desktop/projects/terra_terra/didaq_test_subclass0/src/altera_p2_board/pll/pll_sysref_fabric.ip" />
+       path="C:/Users/erico/Desktop/projects/terra_terra/fw-didaq-24-rno-g/src/altera_p2_board/pll/pll_sysref_fabric.ip" />
   </sourceFiles>
   <childSourceFiles>
    <file
@@ -129,13 +129,13 @@
   </childSourceFiles>
   <messages>
    <message level="Info" culprit="pll_sysref_fabric">"Generating: pll_sysref_fabric"</message>
-   <message level="Info" culprit="pll_sysref_fabric">"Generating: pll_sysref_fabric_altera_iopll_2000_hgdlb3i"</message>
+   <message level="Info" culprit="pll_sysref_fabric">"Generating: pll_sysref_fabric_altera_iopll_2000_yn3jqqi"</message>
   </messages>
  </entity>
  <entity
    kind="altera_iopll"
    version="20.0.0"
-   name="pll_sysref_fabric_altera_iopll_2000_hgdlb3i">
+   name="pll_sysref_fabric_altera_iopll_2000_yn3jqqi">
   <parameter name="set_phase" value="SET_PHASE_NUM_SHIFTS" />
   <parameter name="hp_actual_phase_shift_fp5" value="0.0" />
   <parameter name="hp_actual_phase_shift_fp6" value="0.0" />
@@ -193,9 +193,9 @@
   <parameter name="c_cnt_in_src2" value="c_m_cnt_in_src_ph_mux_clk" />
   <parameter name="gui_en_adv_params" value="false" />
   <parameter name="gui_actual_output_clock_frequency_range12" value="100.0" />
-  <parameter name="gui_duty_cycle2" value="50.0" />
+  <parameter name="gui_duty_cycle2" value="12.5" />
   <parameter name="gui_actual_output_clock_frequency_range11" value="100.0" />
-  <parameter name="gui_duty_cycle1" value="6.25" />
+  <parameter name="gui_duty_cycle1" value="12.5" />
   <parameter name="gui_actual_output_clock_frequency_range14" value="100.0" />
   <parameter name="gui_duty_cycle4" value="50.0" />
   <parameter name="gui_actual_output_clock_frequency_range13" value="100.0" />
@@ -226,13 +226,13 @@
   <parameter name="gui_phase_shift10" value="0.0" />
   <parameter name="gui_actual_output_clock_frequency17" value="100.0" />
   <parameter name="gui_actual_duty_cycle0" value="50.0" />
-  <parameter name="gui_actual_duty_cycle1" value="6.25" />
+  <parameter name="gui_actual_duty_cycle1" value="12.5" />
   <parameter name="gui_actual_duty_cycle6" value="50.0" />
   <parameter name="gui_actual_duty_cycle7" value="50.0" />
   <parameter name="gui_actual_duty_cycle8" value="50.0" />
   <parameter name="out_clk_5_phase_shifts" value="0" />
   <parameter name="gui_actual_duty_cycle9" value="50.0" />
-  <parameter name="gui_actual_duty_cycle2" value="50.0" />
+  <parameter name="gui_actual_duty_cycle2" value="12.5" />
   <parameter name="gui_actual_duty_cycle3" value="50.0" />
   <parameter name="gui_actual_duty_cycle4" value="50.0" />
   <parameter name="gui_actual_duty_cycle5" value="50.0" />
@@ -288,8 +288,8 @@
   <parameter name="duty_cycle3" value="50" />
   <parameter name="duty_cycle4" value="50" />
   <parameter name="clock_to_compensate" value="0" />
-  <parameter name="duty_cycle1" value="6" />
-  <parameter name="duty_cycle2" value="50" />
+  <parameter name="duty_cycle1" value="13" />
+  <parameter name="duty_cycle2" value="13" />
   <parameter name="duty_cycle0" value="50" />
   <parameter name="gui_actual_phase_shift9" value="0.0" />
   <parameter name="gui_actual_phase_shift8" value="0.0" />
@@ -499,7 +499,7 @@
   <parameter name="pll_vco_freq_band_0" value="pll_freq_clk0_band18" />
   <parameter
      name="parameterTable_values"
-     value="15,2,750.0 MHz,3,240,240,1,1,1,1,1,1,true,8,7,true,false,1,1,false,false,2,15,120,256,256,256,256,1,1,1,225,120,256,256,256,256,1,1,true,false,false,false,false,false,false,false,false,false,false,false,true,true,true,true,true,true,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,pll_cp_setting14,pll_bw_res_setting3" />
+     value="15,2,750.0 MHz,3,240,240,1,1,1,1,1,1,true,8,7,true,false,1,1,false,false,2,30,30,256,256,256,256,1,1,1,210,210,256,256,256,256,1,1,true,false,false,false,false,false,false,false,false,false,false,false,true,true,true,true,true,true,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,pll_cp_setting14,pll_bw_res_setting3" />
   <parameter name="gui_duty_cycle11" value="50.0" />
   <parameter name="gui_duty_cycle10" value="50.0" />
   <parameter name="gui_duty_cycle13" value="50.0" />
@@ -514,7 +514,7 @@
   <parameter name="hp_actual_duty_cycle_fp0" value="50.0" />
   <parameter name="gui_actual_phase_shift17" value="0.0" />
   <parameter name="include_iossm" value="false" />
-  <parameter name="hp_actual_duty_cycle_fp1" value="6.25" />
+  <parameter name="hp_actual_duty_cycle_fp1" value="12.5" />
   <parameter name="gui_actual_phase_shift14" value="0.0" />
   <parameter name="gui_actual_phase_shift15" value="0.0" />
   <parameter name="gui_actual_phase_shift12" value="0.0" />
@@ -530,7 +530,7 @@
   <parameter name="hp_actual_duty_cycle_fp4" value="50.0" />
   <parameter name="pll_extclk_1_cnt_src" value="pll_extclk_cnt_src_vss" />
   <parameter name="hp_actual_duty_cycle_fp5" value="50.0" />
-  <parameter name="hp_actual_duty_cycle_fp2" value="50.0" />
+  <parameter name="hp_actual_duty_cycle_fp2" value="12.5" />
   <parameter name="hp_actual_duty_cycle_fp3" value="50.0" />
   <parameter name="out_clk_5_freq" value="1000000000" />
   <parameter name="out_clk_5_dutycycle_num" value="1" />
@@ -549,14 +549,14 @@
   <parameter name="out_clk_3_dutycycle_num" value="1" />
   <parameter
      name="gui_actual_duty_cycle_range2"
-     value="49.38,49.58,49.79,50.0,50.21,50.42" />
+     value="11.88,12.08,12.29,12.5,12.71,12.92" />
   <parameter name="gui_actual_duty_cycle_range3" value="50.0" />
   <parameter
      name="gui_actual_duty_cycle_range0"
      value="37.5,40.0,41.67,50.0,58.33,60.0" />
   <parameter
      name="gui_actual_duty_cycle_range1"
-     value="5.63,5.83,6.04,6.25,6.46,6.67" />
+     value="11.88,12.08,12.29,12.5,12.71,12.92" />
   <parameter name="hp_qsys_scripting_mode" value="false" />
   <parameter name="gui_actual_duty_cycle_range6" value="50.0" />
   <parameter name="gui_actual_duty_cycle_range7" value="50.0" />
@@ -891,8 +891,8 @@
   <parameter name="out_clk_0_phase_shifts" value="0" />
   <parameter name="c_cnt_hi_div0" value="2" />
   <parameter name="clock_name_global_0" value="false" />
-  <parameter name="c_cnt_hi_div1" value="15" />
-  <parameter name="c_cnt_hi_div2" value="120" />
+  <parameter name="c_cnt_hi_div1" value="30" />
+  <parameter name="c_cnt_hi_div2" value="30" />
   <parameter name="c_cnt_hi_div3" value="256" />
   <parameter name="c_cnt_hi_div4" value="256" />
   <parameter name="clock_name_global_5" value="false" />
@@ -956,8 +956,8 @@
   <parameter name="hp_actual_phase_shift_fp16" value="0.0" />
   <parameter name="c_cnt_lo_div4" value="256" />
   <parameter name="hp_actual_phase_shift_fp17" value="0.0" />
-  <parameter name="c_cnt_lo_div1" value="225" />
-  <parameter name="c_cnt_lo_div2" value="120" />
+  <parameter name="c_cnt_lo_div1" value="210" />
+  <parameter name="c_cnt_lo_div2" value="210" />
   <parameter name="c_cnt_lo_div0" value="1" />
   <parameter name="hp_actual_phase_shift_fp10" value="0.0" />
   <parameter name="hp_actual_phase_shift_fp11" value="0.0" />
@@ -1002,36 +1002,36 @@
   <parameter name="output_clock_frequency2" value="3.125 MHz" />
   <generatedFiles>
    <file
-       path="C:\Users\erico\Desktop\projects\terra_terra\didaq_test_subclass0\src\altera_p2_board\pll\pll_sysref_fabric\altera_iopll_2000\synth\pll_sysref_fabric_altera_iopll_2000_hgdlb3i.v"
+       path="C:\Users\erico\Desktop\projects\terra_terra\fw-didaq-24-rno-g\src\altera_p2_board\pll\pll_sysref_fabric\altera_iopll_2000\synth\pll_sysref_fabric_altera_iopll_2000_yn3jqqi.v"
        attributes="" />
    <file
-       path="C:\Users\erico\Desktop\projects\terra_terra\didaq_test_subclass0\src\altera_p2_board\pll\pll_sysref_fabric\altera_iopll_2000\synth\pll_sysref_fabric_altera_iopll_2000_hgdlb3i_all_ip_params.tcl"
+       path="C:\Users\erico\Desktop\projects\terra_terra\fw-didaq-24-rno-g\src\altera_p2_board\pll\pll_sysref_fabric\altera_iopll_2000\synth\pll_sysref_fabric_altera_iopll_2000_yn3jqqi_all_ip_params.tcl"
        attributes="" />
    <file
-       path="C:\Users\erico\Desktop\projects\terra_terra\didaq_test_subclass0\src\altera_p2_board\pll\pll_sysref_fabric\altera_iopll_2000\synth\pll_sysref_fabric_altera_iopll_2000_hgdlb3i_parameters.tcl"
+       path="C:\Users\erico\Desktop\projects\terra_terra\fw-didaq-24-rno-g\src\altera_p2_board\pll\pll_sysref_fabric\altera_iopll_2000\synth\pll_sysref_fabric_altera_iopll_2000_yn3jqqi_parameters.tcl"
        attributes="" />
    <file
-       path="C:\Users\erico\Desktop\projects\terra_terra\didaq_test_subclass0\src\altera_p2_board\pll\pll_sysref_fabric\altera_iopll_2000\synth\pll_sysref_fabric_altera_iopll_2000_hgdlb3i.sdc"
+       path="C:\Users\erico\Desktop\projects\terra_terra\fw-didaq-24-rno-g\src\altera_p2_board\pll\pll_sysref_fabric\altera_iopll_2000\synth\pll_sysref_fabric_altera_iopll_2000_yn3jqqi.sdc"
        attributes="NO_AUTO_INSTANCE_DISCOVERY NO_SDC_PROMOTION READ_DURING_POST_SYN_AND_POST_FIT_TIMING_ANALYSIS" />
    <file
-       path="C:\Users\erico\Desktop\projects\terra_terra\didaq_test_subclass0\src\altera_p2_board\pll\pll_sysref_fabric\altera_iopll_2000\synth\pll_sysref_fabric_altera_iopll_2000_hgdlb3i_pin_map.tcl"
+       path="C:\Users\erico\Desktop\projects\terra_terra\fw-didaq-24-rno-g\src\altera_p2_board\pll\pll_sysref_fabric\altera_iopll_2000\synth\pll_sysref_fabric_altera_iopll_2000_yn3jqqi_pin_map.tcl"
        attributes="" />
   </generatedFiles>
   <childGeneratedFiles>
    <file
-       path="C:\Users\erico\Desktop\projects\terra_terra\didaq_test_subclass0\src\altera_p2_board\pll\pll_sysref_fabric\altera_iopll_2000\synth\pll_sysref_fabric_altera_iopll_2000_hgdlb3i.v"
+       path="C:\Users\erico\Desktop\projects\terra_terra\fw-didaq-24-rno-g\src\altera_p2_board\pll\pll_sysref_fabric\altera_iopll_2000\synth\pll_sysref_fabric_altera_iopll_2000_yn3jqqi.v"
        attributes="" />
    <file
-       path="C:\Users\erico\Desktop\projects\terra_terra\didaq_test_subclass0\src\altera_p2_board\pll\pll_sysref_fabric\altera_iopll_2000\synth\pll_sysref_fabric_altera_iopll_2000_hgdlb3i_all_ip_params.tcl"
+       path="C:\Users\erico\Desktop\projects\terra_terra\fw-didaq-24-rno-g\src\altera_p2_board\pll\pll_sysref_fabric\altera_iopll_2000\synth\pll_sysref_fabric_altera_iopll_2000_yn3jqqi_all_ip_params.tcl"
        attributes="" />
    <file
-       path="C:\Users\erico\Desktop\projects\terra_terra\didaq_test_subclass0\src\altera_p2_board\pll\pll_sysref_fabric\altera_iopll_2000\synth\pll_sysref_fabric_altera_iopll_2000_hgdlb3i_parameters.tcl"
+       path="C:\Users\erico\Desktop\projects\terra_terra\fw-didaq-24-rno-g\src\altera_p2_board\pll\pll_sysref_fabric\altera_iopll_2000\synth\pll_sysref_fabric_altera_iopll_2000_yn3jqqi_parameters.tcl"
        attributes="" />
    <file
-       path="C:\Users\erico\Desktop\projects\terra_terra\didaq_test_subclass0\src\altera_p2_board\pll\pll_sysref_fabric\altera_iopll_2000\synth\pll_sysref_fabric_altera_iopll_2000_hgdlb3i.sdc"
+       path="C:\Users\erico\Desktop\projects\terra_terra\fw-didaq-24-rno-g\src\altera_p2_board\pll\pll_sysref_fabric\altera_iopll_2000\synth\pll_sysref_fabric_altera_iopll_2000_yn3jqqi.sdc"
        attributes="NO_AUTO_INSTANCE_DISCOVERY NO_SDC_PROMOTION READ_DURING_POST_SYN_AND_POST_FIT_TIMING_ANALYSIS" />
    <file
-       path="C:\Users\erico\Desktop\projects\terra_terra\didaq_test_subclass0\src\altera_p2_board\pll\pll_sysref_fabric\altera_iopll_2000\synth\pll_sysref_fabric_altera_iopll_2000_hgdlb3i_pin_map.tcl"
+       path="C:\Users\erico\Desktop\projects\terra_terra\fw-didaq-24-rno-g\src\altera_p2_board\pll\pll_sysref_fabric\altera_iopll_2000\synth\pll_sysref_fabric_altera_iopll_2000_yn3jqqi_pin_map.tcl"
        attributes="" />
   </childGeneratedFiles>
   <sourceFiles>
@@ -1041,7 +1041,7 @@
   <childSourceFiles/>
   <instantiator instantiator="pll_sysref_fabric" as="iopll_0" />
   <messages>
-   <message level="Info" culprit="pll_sysref_fabric">"Generating: pll_sysref_fabric_altera_iopll_2000_hgdlb3i"</message>
+   <message level="Info" culprit="pll_sysref_fabric">"Generating: pll_sysref_fabric_altera_iopll_2000_yn3jqqi"</message>
   </messages>
  </entity>
 </deploy>

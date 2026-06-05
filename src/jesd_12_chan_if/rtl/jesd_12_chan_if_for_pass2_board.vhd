@@ -576,7 +576,6 @@ end generate gen_out_fifos;
 
 -- Always read if not empty.        
 fifo_rd_en <= not fifo_rd_empty;
-
   
 -- Connect up to ports
 -- Four octets are packed into a 32-bit data  
@@ -587,8 +586,6 @@ fifo_rd_en <= not fifo_rd_empty;
 -- data. If more than one lane is instantiated, lane 1 is 
 -- located at bit[63:32], with the first octet position at
 -- bit[63:56].                                            
-
-
           
 adc_0_wide_data        <= fifo_rd_data(0)(31 downto 0); 
 adc_0_wide_data_valid  <= not fifo_rd_empty(0);
@@ -625,9 +622,6 @@ adc_10_wide_data_valid <= not fifo_rd_empty(5);
                                                         
 adc_11_wide_data       <= fifo_rd_data(5)(63 downto 32);
 adc_11_wide_data_valid <= not fifo_rd_empty(5);             
-
-
-
                                                
 end rtl;                                                         
                                                             
