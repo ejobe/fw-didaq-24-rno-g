@@ -1640,12 +1640,12 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:parameter parameterId="gui_duty_cycle1" type="real">
           <ipxact:name>gui_duty_cycle1</ipxact:name>
           <ipxact:displayName>Desired Duty Cycle</ipxact:displayName>
-          <ipxact:value>12.5</ipxact:value>
+          <ipxact:value>6.25</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="gui_duty_cycle2" type="real">
           <ipxact:name>gui_duty_cycle2</ipxact:name>
           <ipxact:displayName>Desired Duty Cycle</ipxact:displayName>
-          <ipxact:value>12.5</ipxact:value>
+          <ipxact:value>50.0</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="gui_duty_cycle3" type="real">
           <ipxact:name>gui_duty_cycle3</ipxact:name>

@@ -12,7 +12,7 @@ module pll_sysref_fabric (
 		output wire  outclk_2  // outclk2.clk,    Output clock Channel 2 from I/O PLL.
 	);
 
-	pll_sysref_fabric_altera_iopll_2000_yn3jqqi iopll_0 (
+	pll_sysref_fabric_altera_iopll_2000_hgdlb3i iopll_0 (
 		.refclk   (refclk),   //   input,  width = 1,  refclk.clk
 		.locked   (locked),   //  output,  width = 1,  locked.export
 		.rst      (rst),      //   input,  width = 1,   reset.reset
