@@ -24,6 +24,7 @@ entity coinc_trig is
 		data11		 : in	  std_logic_Vector(63 downto 0);	
 		--//following are assumed to be already registered on input clk domain to this module
 		trig_en		 : in	  std_logic_vector(1 downto 0);
+		trig_mode	 : in	  std_logic; -- sets if coinc made over 12 channels, or within 4-channel quad
 		trig_mask	 : in	  std_logic_vector(11 downto 0);
 		trig_hit_rq	 : in	  std_logic_vector(2 downto 0);
 		trig_window	 : in	  std_logic_vector(3 downto 0);
@@ -224,15 +225,31 @@ begin
 															coinc_trig_stack_reg(1)(0) & coinc_trig_stack_reg(0)(0);
 
 				internal_coinc_trig <= '0';
-				if (to_integer(unsigned(coinc_trig_stack_reg(0))) + to_integer(unsigned(coinc_trig_stack_reg(1))) + 
+				---------------------------------------------
+				--coincidence made over 12 available channel
+				if trig_mode = '0' and 
+					((to_integer(unsigned(coinc_trig_stack_reg(0))) + to_integer(unsigned(coinc_trig_stack_reg(1))) + 
 					to_integer(unsigned(coinc_trig_stack_reg(2))) + to_integer(unsigned(coinc_trig_stack_reg(3))) +
 					to_integer(unsigned(coinc_trig_stack_reg(4))) + to_integer(unsigned(coinc_trig_stack_reg(5))) +
 					to_integer(unsigned(coinc_trig_stack_reg(6))) + to_integer(unsigned(coinc_trig_stack_reg(7))) +
 					to_integer(unsigned(coinc_trig_stack_reg(8))) + to_integer(unsigned(coinc_trig_stack_reg(9))) +
-					to_integer(unsigned(coinc_trig_stack_reg(10))) + to_integer(unsigned(coinc_trig_stack_reg(11)))) > to_integer(unsigned(trig_hit_rq)) then
+					to_integer(unsigned(coinc_trig_stack_reg(10))) + to_integer(unsigned(coinc_trig_stack_reg(11)))) > to_integer(unsigned(trig_hit_rq))) then
 					----------------------------------
 					coinc_trig_sum_reg <= "01";
+				---------------------------------------------
+				--coincidence made per quad
+				elsif trig_mode = '1' and 
+					(((to_integer(unsigned(coinc_trig_stack_reg(0))) + to_integer(unsigned(coinc_trig_stack_reg(1))) + 
+					to_integer(unsigned(coinc_trig_stack_reg(2))) + to_integer(unsigned(coinc_trig_stack_reg(3)))) > to_integer(unsigned(trig_hit_rq))) or
+					((to_integer(unsigned(coinc_trig_stack_reg(4))) + to_integer(unsigned(coinc_trig_stack_reg(5))) + 
+					to_integer(unsigned(coinc_trig_stack_reg(6))) + to_integer(unsigned(coinc_trig_stack_reg(7)))) > to_integer(unsigned(trig_hit_rq))) or
+					((to_integer(unsigned(coinc_trig_stack_reg(8))) + to_integer(unsigned(coinc_trig_stack_reg(9))) + 
+					to_integer(unsigned(coinc_trig_stack_reg(10))) + to_integer(unsigned(coinc_trig_stack_reg(11)))) > to_integer(unsigned(trig_hit_rq)))) then
+					----------------------------------
+					coinc_trig_sum_reg <= "01";
+				---------------------------------------------
 				else
+					----------------------------------
 					coinc_trig_sum_reg <= "00";
 				end if;
 			when "01" =>
