@@ -77,7 +77,7 @@ use ieee.std_logic_unsigned.all;
 
 entity artic_daq_fpga_top is
    generic(
-      g_chip_rev             : std_logic_vector(31 downto 0) := X"E3000028";
+      g_chip_rev             : std_logic_vector(31 downto 0) := X"E3000029";
       g_sample_width         : natural := 8;  -- Set to 8 or 9
       g_ser_debug_mult_sim   : natural := 1   -- will use faster baud rate by this factor
    );   
@@ -96,7 +96,7 @@ entity artic_daq_fpga_top is
       clk_fpga1_100m         : in    std_logic;   -- schematic clk1p/n differential, persistent 100, not used currently 
       clk_fpga2_100m         : in    std_logic;   -- schematic clk2p/n dfrom the ADC clock source for use in adc_sysref gen
                                                         
-      clk_in_sel             : out   std_logic;   -- USed to select the source to the TCXO. Might not be implemented in teh FPGA, just conenct to a register  
+      clk_in_sel             : out   std_logic;   -- USed to select the source to the TCXO. Might not be implemented in the FPGA, just connect to a register  
 	 
 	                       
       rx_adc_ser_data_p      : in    std_logic_vector(23 downto 0); -- ADC0 (3:0) map to (3:0)
