@@ -282,7 +282,7 @@ begin
 				beam_trigs(i) <= '0';
 			end if;
 			---
-			if trig_tracker(i)(3 downto 2) = "11" or trig_tracker(i)(2 downto 1) = "11" then
+			if servo_tracker(i)(3 downto 2) = "11" or servo_tracker(i)(2 downto 1) = "11" then
 				beam_servos(i) <= '1';
 			else
 				beam_servos(i) <= '0';
