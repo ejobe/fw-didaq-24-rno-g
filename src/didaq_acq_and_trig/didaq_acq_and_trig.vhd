@@ -134,7 +134,7 @@ end component;
 ---------------------
 ---------------------
 constant invert_mask	: std_logic_vector(23 downto 0) := x"CCCCCC"; --sign invert chs 0,1 on each ADC
-constant pre_trig_depth : integer := 256;
+constant pre_trig_depth : integer := 192;
 ---------------------                                   
 type wfm_data_type is array (0 to 23) of std_logic_vector(31 downto 0);   
 type pre_trig_wfm_data_type is array(0 to 23, 0 to pre_trig_depth-1) of std_logic_vector(31 downto 0);

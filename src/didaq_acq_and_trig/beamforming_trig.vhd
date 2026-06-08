@@ -88,6 +88,9 @@ signal beam_servos_to_output 	: std_logic_Vector(0 to num_beams-1);
 signal internal_beam_mask : std_logic_Vector(0 to num_beams-1);
 signal trig_beam_pattern : std_logic_Vector(0 to num_beams-1);
 signal trig_beam_pattern_pipe : std_logic_Vector(0 to num_beams-1);
+signal holdoff_beam_trigs : std_logic_Vector(0 to num_beams-1); --don't allow other beams to trig in small hold-off period (2 clk cycles)
+signal holdoff_beam_servos : std_logic_Vector(0 to num_beams-1); 
+
 ---------------------------------------------------------------------------
 begin
 process(arstn, clk)
@@ -369,6 +372,9 @@ begin
 		internal_beam_mask <= (others=>'0');
 		beam_trig_state_reg <= (others=>(others=>'0'));
 		beam_servo_state_reg <= (others=>(others=>'0'));
+		holdoff_beam_trigs <= (others=>'0'); --these prevent one beam from triggering within ~2 clk cycles of another beam triggering
+		holdoff_beam_servos <= (others=>'0');
+		
 
 	elsif clk'event and clk = '1' then
 
@@ -377,56 +383,68 @@ begin
 		
 		if trig_beam_pattern > 0 and beamform_en(1) = '1' then
 			trig_o <= '1';
-			last_trigger_hit_pattern_o <= trig_beam_pattern_pipe;
+			last_trigger_hit_pattern_o <= trig_beam_pattern; --trig_beam_pattern_pipe;
 		else
 			trig_o <= '0';
 		end if;
 		------------------------
 		for i in 0 to num_beams-1 loop
 			------------------------
-			trig_beam_pattern(i) <= beam_trigs_to_output(i) and internal_beam_mask(i);
+			trig_beam_pattern(i) <= beam_trigs_to_output(i); -- and internal_beam_mask(i);
+			------------------------
+			-- NOTE: apply beam mask within, so that masked beam isn't constantly re-triggering
 			------------------------
 			case beam_trig_state_reg(i) is
 				when "00" => 
 					beam_trigs_to_output(i) <= '0';
-					if beam_trigs(i) = '1' then
+					holdoff_beam_trigs(i) <= '0';
+					if beam_trigs(i) = '1' and holdoff_beam_trigs < 1 and internal_beam_mask(i) = '1' then
 						beam_trig_state_reg(i) <= "01";
 					else
 						beam_trig_state_reg(i) <= "00";
 					end if;
 				when "01" =>
 					beam_trigs_to_output(i) <= '1'; --pulse trig for one clk cycle
+					holdoff_beam_trigs(i) <= '1';
 					beam_trig_state_reg(i) <= "10";
 				when "10" => --small holdoff
 					beam_trigs_to_output(i) <= '0';
+					holdoff_beam_trigs(i) <= '1';
 					beam_trig_state_reg(i) <= "11";
 				when "11" => --small holdoff (2), total of 2x clk_trig cycles
 					beam_trigs_to_output(i) <= '0';
+					holdoff_beam_trigs(i) <= '1';
 					beam_trig_state_reg(i) <= "00";
 				when others=>
 					beam_trigs_to_output(i) <= '0';
+					holdoff_beam_trigs(i) <= '0';
 					beam_trig_state_reg(i) <= "00";
 			end case;
 			------------------------
 			case beam_servo_state_reg(i) is
 				when "00" => 
 					beam_servos_to_output(i) <= '0';
-					if beam_servos(i) = '1' then
+					holdoff_beam_servos(i) <= '0';
+					if beam_servos(i) = '1' and holdoff_beam_servos < 1 then
 						beam_servo_state_reg(i) <= "01";
 					else
 						beam_servo_state_reg(i) <= "00";
 					end if;
 				when "01" =>
 					beam_servos_to_output(i) <= '1'; --pulse trig for one clk cycle
+					holdoff_beam_servos(i) <= '1';
 					beam_servo_state_reg(i) <= "10";
 				when "10" => --small holdoff
 					beam_servos_to_output(i) <= '0';
+					holdoff_beam_servos(i) <= '1';
 					beam_servo_state_reg(i) <= "11";
 				when "11" => --small holdoff (2), total of 2x clk_trig cycles
 					beam_servos_to_output(i) <= '0';
+					holdoff_beam_servos(i) <= '1';
 					beam_servo_state_reg(i) <= "00";
 				when others=>
 					beam_servos_to_output(i) <= '0';
+					holdoff_beam_servos(i) <= '0';
 					beam_servo_state_reg(i) <= "00";
 			end case;			
 			
