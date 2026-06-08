@@ -148,9 +148,10 @@ component scalers_top is
 end component;
 ---------------------
 constant invert_mask	: std_logic_vector(23 downto 0) := x"CCCCCC"; --sign invert chs 0,1 on each ADC
+constant pre_trig_depth : integer := 256;
 ---------------------                                   
 type wfm_data_type is array (0 to 23) of std_logic_vector(31 downto 0);   
-type pre_trig_wfm_data_type is array(0 to 23, 0 to 127) of std_logic_vector(31 downto 0);
+type pre_trig_wfm_data_type is array(0 to 23, 0 to pre_trig_depth-1) of std_logic_vector(31 downto 0);
 type trig_data_type is array (0 to 23) of std_logic_vector(63 downto 0);  
 type coinc_threshold_type is array(0 to 23) of std_logic_vector(7 downto 0);
 type beam_threshold_type is array(0 to 9) of std_logic_vector(15 downto 0);                 
@@ -165,7 +166,7 @@ signal internal_ram_wr_data_3   : wfm_data_type; --pipeline
 signal internal_pretrig_data	  : pre_trig_wfm_data_type;
 
 signal internal_trig_data	  		: trig_data_type; --to trigger
-signal internal_trig_data_mf	  		: trig_data_type; --to trigger
+signal internal_trig_data_mf	  	: trig_data_type; --to trigger
 
 signal internal_ram_rd_data	  : wfm_data_type;
 signal internal_ram_wr_adr		  : std_logic_vector(9 downto 0); 
@@ -636,7 +637,7 @@ begin
 		end if;
 		--------------------------------------------------
 		for i in 0 to 23 loop
-			for j in 1 to 127 loop
+			for j in 1 to pre_trig_depth-1 loop
 				internal_pretrig_data(i,j) <= internal_pretrig_data(i,j-1); --//pre-trigger buffer to RAM
 			end loop;
 			internal_pretrig_data(i,0) <= internal_ram_wr_data_3(i);
@@ -833,6 +834,8 @@ inst_beam_trig : entity work.beamforming_trig
 		data3			 => internal_trig_data(3),	
 		beamform_en	 => ptrigger_ctrl_trig_domain(1 downto 0),
 		beam_mask	 => ptrigger_ctrl_trig_domain(27 downto 16),
+		gain_ctrl_sel=> ptrigger_ctrl_trig_domain(8),
+		pow_width_sel=> ptrigger_ctrl_trig_domain(4),
 		thresh0	 	 => beam_servo_threshold(0) & beam_trig_threshold(0),
 		thresh1	 	 => beam_servo_threshold(1) & beam_trig_threshold(1),
 		thresh2	 	 => beam_servo_threshold(2) & beam_trig_threshold(2),

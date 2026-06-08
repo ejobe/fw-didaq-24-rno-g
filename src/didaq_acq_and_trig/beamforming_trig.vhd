@@ -25,6 +25,8 @@ entity beamforming_trig is
 		--//following are assumed to be already registered on input clk domain to this module
 		beamform_en	 : in	  std_logic_vector(1 downto 0);
 		beam_mask	 : in	  std_logic_vector(11 downto 0);
+		gain_ctrl_sel: in	  std_logic;
+		pow_width_sel: in	  std_logic;	 
 		thresh0	 	 : in	  std_logic_vector(31 downto 0); --combine servo and trigger thresholds into same port
 		thresh1	 	 : in	  std_logic_vector(31 downto 0);
 		thresh2	 	 : in	  std_logic_vector(31 downto 0);
@@ -131,6 +133,7 @@ begin   		--//streaming data vector has 32 samples, or ~32 ns width
 		
 	elsif clk'event and clk = '1' then
 		for i in 0 to 3 loop
+			--------------------
 			-->> pipelining: input 8 samples/clock, streaming_data buffer has 32 samples to access per clock--> 
 			streaming_data(i)(383 downto 320) <= streaming_data(i)(319 downto 256); --oldest data (access to DELAY)
 			streaming_data(i)(319 downto 256) <= streaming_data(i)(255 downto 192); 
@@ -139,15 +142,29 @@ begin   		--//streaming data vector has 32 samples, or ~32 ns width
 			streaming_data(i)(127 downto 64)  <= streaming_data(i)(63 downto 0); 
 			streaming_data(i)(63 downto 0)    <= limited_bit_data(i); --newest data (access to ADVANCE)
 			--------------------
-			for j in 0 to 7 loop			
-				if input_data(i)((j+1)*native_bits-1 downto j*native_bits) < 112 then
-					limited_bit_data(i)((j+1)*native_bits-1 downto j*native_bits) <= "01110000";
-				elsif input_data(i)((j+1)*native_bits-1 downto j*native_bits) > 143 then
-					limited_bit_data(i)((j+1)*native_bits-1 downto j*native_bits) <= "10001111";
-				else 
-					limited_bit_data(i)((j+1)*native_bits-1 downto j*native_bits) <= input_data(i)((j+1)*native_bits-1 downto j*native_bits);
-				end if;
-			end loop;	
+			--slice off lower 5 bits [4..0]
+			if gain_ctrl_sel = '0' then
+				for j in 0 to 7 loop			
+					if input_data(i)((j+1)*native_bits-1 downto j*native_bits) < 112 then
+						limited_bit_data(i)((j+1)*native_bits-1 downto j*native_bits) <= "01110000";
+					elsif input_data(i)((j+1)*native_bits-1 downto j*native_bits) > 143 then
+						limited_bit_data(i)((j+1)*native_bits-1 downto j*native_bits) <= "10001111";
+					else 
+						limited_bit_data(i)((j+1)*native_bits-1 downto j*native_bits) <= input_data(i)((j+1)*native_bits-1 downto j*native_bits);
+					end if;
+				end loop;	
+			--slice off [5..1] bits
+			else
+				for j in 0 to 7 loop			
+					if '0' & input_data(i)((j+1)*native_bits-1 downto j*native_bits+1) < 48 then
+						limited_bit_data(i)((j+1)*native_bits-1 downto j*native_bits) <= "00110000";
+					elsif '0' & input_data(i)((j+1)*native_bits-1 downto j*native_bits+1) > 79 then
+						limited_bit_data(i)((j+1)*native_bits-1 downto j*native_bits) <= "01001111";
+					else 
+						limited_bit_data(i)((j+1)*native_bits-1 downto j*native_bits) <= '0' & input_data(i)((j+1)*native_bits-1 downto j*native_bits+1);
+					end if;
+				end loop;
+			end if;
 		end loop;
 		----------------------------------
 		-- reorder data based on mapping into ADC chip, maybe make this mux-able in the future //|| double check generic set in didaq_acq_and_trig ||
@@ -276,13 +293,20 @@ begin
 			--------------------- 
 			--generate trigger outputs for trigger state machine, if trigger conditions are met in successive 4ns windows
 			---------------------
-			if trig_tracker(i)(3 downto 2) = "11" or trig_tracker(i)(2 downto 1) = "11" then
+			--require two consecutive 4ns windows above threshold (+ overlap to next clock cycle to avoid misses)
+			if pow_width_sel = '1' and (trig_tracker(i)(3 downto 2) = "11" or trig_tracker(i)(2 downto 1) > "11") then	
+				beam_trigs(i) <= '1';
+			--simply require a single 4ns bin above threshold (no need for overlap)
+			elsif pow_width_sel = '0' and trig_tracker(i)(3 downto 2) > 0 then
 				beam_trigs(i) <= '1';
 			else
 				beam_trigs(i) <= '0';
 			end if;
 			---
-			if servo_tracker(i)(3 downto 2) = "11" or servo_tracker(i)(2 downto 1) = "11" then
+			--same as above for servos
+			if pow_width_sel = '1' and (servo_tracker(i)(3 downto 2) = "11" or servo_tracker(i)(2 downto 1) = "11") then
+				beam_servos(i) <= '1';
+			elsif pow_width_sel = '0' and servo_tracker(i)(3 downto 2) > 0 then
 				beam_servos(i) <= '1';
 			else
 				beam_servos(i) <= '0';
