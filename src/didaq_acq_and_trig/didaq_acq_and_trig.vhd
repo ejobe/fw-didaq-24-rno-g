@@ -132,20 +132,6 @@ component ring_buffer
 		q				: out	std_logic_vector(31 downto 0));
 end component;
 ---------------------
-component scalers_top is
-	port(
-		arst_i			:		in		std_logic;
-		clk_i				:		in 	std_logic;
-		rdclk_i			:		in 	std_logic;
-		gate_i			:		in		std_logic; --pps
-		coinc_trig_singles 	: in   std_logic_vector(23 downto 0);
-		coinc_trigs				: in 	std_logic_Vector(1 downto 0);
-		beam_trigs  			: in std_logic_vector(9 downto 0);
-		beam_trig_servos 		: in std_logic_Vector(9 downto 0);
-		clkcounts_per_pps_i  : in	std_logic_Vector(31 downto 0);
-		scaler_sel_reg_i	:   in	std_logic_Vector(31 downto 0);
-		scaler_to_read_o  :   out	std_logic_vector(31 downto 0));
-end component;
 ---------------------
 constant invert_mask	: std_logic_vector(23 downto 0) := x"CCCCCC"; --sign invert chs 0,1 on each ADC
 constant pre_trig_depth : integer := 256;
@@ -852,7 +838,7 @@ inst_beam_trig : entity work.beamforming_trig
 		beamservos_o => beam_servos_for_scalers,
 		trig_o		 => internal_phased_trig );
 --------------------------------------		
-inst_scalers : scalers_top
+inst_scalers : entity work.scalers_top
 	port map(
 		arst_i					=> not arstn, --//rst is active high on this module
 		clk_i						=> clk_trig,
@@ -862,6 +848,7 @@ inst_scalers : scalers_top
 		coinc_trigs				=> internal_coinc_trig_mf,
 		beam_trigs  			=> beam_trigs_for_scalers,
 		beam_trig_servos 		=> beam_servos_for_scalers,
+		total_beam_trig		=> internal_phased_trig,
 		clkcounts_per_pps_i  => internal_clock_per_pps_counter_latched,
 		scaler_sel_reg_i		=> scaler_sel_reg_i,
 		scaler_to_read_o  	=> scaler_read_reg_o);

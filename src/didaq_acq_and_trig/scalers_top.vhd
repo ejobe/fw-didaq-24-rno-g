@@ -30,6 +30,7 @@ entity scalers_top is
 		coinc_trigs			: in 	std_logic_Vector(1 downto 0);
 		beam_trigs  : in std_logic_vector(9 downto 0);
 		beam_trig_servos : in std_logic_Vector(9 downto 0);
+		total_beam_trig : in std_logic; --phased trig total
 		clkcounts_per_pps_i : std_logic_Vector(31 downto 0);
 		
 		scaler_sel_reg_i	:   in	std_logic_Vector(31 downto 0);
@@ -148,6 +149,27 @@ BeamServo1Hz : for i in 0 to 9 generate
 		scaler_o => internal_scaler_array(i+72));
 end generate;
 --------------------------------------------- 82
+TotalBeamTrig100mHz : scaler
+	port map(
+		rst_i => arst_i,
+		clk_i => clk_i,
+		refresh_i => refresh_clk_100mHz,
+		count_i => total_beam_trig,
+		scaler_o => internal_scaler_array(84));
+TotalBeamTrig100mHzGated : scaler
+	port map(
+		rst_i => arst_i,
+		clk_i => clk_i,
+		refresh_i => refresh_clk_100mHz,
+		count_i => total_beam_trig and gate_i,
+		scaler_o => internal_scaler_array(85));
+TotalBeamTrig1Hz : scaler
+	port map(
+		rst_i => arst_i,
+		clk_i => clk_i,
+		refresh_i => refresh_clk_1Hz,
+		count_i => total_beam_trig,
+		scaler_o => internal_scaler_array(86));
 
 -------------------------------------		
 proc_save_scalers : process(arst_i, rdclk_i)
@@ -209,7 +231,10 @@ begin
 				when x"26" => scaler_to_read_o <= latched_scaler_array(77) & latched_scaler_array(76);		
 				when x"27" => scaler_to_read_o <= latched_scaler_array(79) & latched_scaler_array(78);		
 				when x"28" => scaler_to_read_o <= latched_scaler_array(81) & latched_scaler_array(80);		
-				when x"29" => scaler_to_read_o <= latched_scaler_array(83) & latched_scaler_array(82);		
+				when x"29" => scaler_to_read_o <= latched_scaler_array(83) & latched_scaler_array(82);	
+				when x"2A" => scaler_to_read_o <= latched_scaler_array(85) & latched_scaler_array(84);		
+				when x"2B" => scaler_to_read_o <= latched_scaler_array(87) & latched_scaler_array(86);		
+
 				when x"2F" => scaler_to_read_o <= clkcounts_per_pps_i;		
 
 				when others =>
