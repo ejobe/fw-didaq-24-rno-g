@@ -820,6 +820,7 @@ inst_beam_trig : entity work.beamforming_trig
 		data3			 => internal_trig_data(3),	
 		beamform_en	 => ptrigger_ctrl_trig_domain(1 downto 0),
 		beam_mask	 => ptrigger_ctrl_trig_domain(27 downto 16),
+		chan_mask	 => ptrigger_ctrl_trig_domain(15 downto 12),
 		gain_ctrl_sel=> ptrigger_ctrl_trig_domain(8),
 		pow_width_sel=> ptrigger_ctrl_trig_domain(4),
 		thresh0	 	 => beam_servo_threshold(0) & beam_trig_threshold(0),

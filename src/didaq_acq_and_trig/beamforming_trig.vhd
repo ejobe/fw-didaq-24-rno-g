@@ -24,6 +24,7 @@ entity beamforming_trig is
 		data3			 : in	  std_logic_Vector(63 downto 0);	
 		--//following are assumed to be already registered on input clk domain to this module
 		beamform_en	 : in	  std_logic_vector(1 downto 0);
+		chan_mask	 : in	  std_logic_vector(3 downto 0);
 		beam_mask	 : in	  std_logic_vector(11 downto 0);
 		gain_ctrl_sel: in	  std_logic;
 		pow_width_sel: in	  std_logic;	 
@@ -54,6 +55,7 @@ constant coh_sum_bits	: integer := 7;
 constant slice_offset : integer := 128; 
 constant samples_per_clock : integer := 8;
 constant num_beams : integer := 10;
+constant masked_data : std_logic_Vector(63 downto 0) := x"8080808080808080";
 -----
 type streaming_data_type is array(0 to 3) of std_logic_vector(48*native_bits-1 downto 0); --8 bit sample width, but info limited to 5 bits/sample
 type input_data_type is array(0 to 3) of std_logic_vector(63 downto 0);
@@ -156,7 +158,7 @@ begin   		--//streaming data vector has 32 samples, or ~32 ns width
 						limited_bit_data(i)((j+1)*native_bits-1 downto j*native_bits) <= input_data(i)((j+1)*native_bits-1 downto j*native_bits);
 					end if;
 				end loop;	
-			--slice off [5..1] bits
+			--slice off [5..1] bits [divide-by-two]
 			else
 				for j in 0 to 7 loop			
 					if '0' & input_data(i)((j+1)*native_bits-1 downto j*native_bits+1) < 48 then
@@ -172,10 +174,30 @@ begin   		--//streaming data vector has 32 samples, or ~32 ns width
 		----------------------------------
 		-- reorder data based on mapping into ADC chip, maybe make this mux-able in the future //|| double check generic set in didaq_acq_and_trig ||
 		----------------------------------
-		input_data(0) <= data1;   --bottom antenna
-		input_data(1) <= data0; 
-		input_data(2) <= data3; 
-		input_data(3) <= data2;	  --top antenna
+		if chan_mask(1) = '1' then
+			input_data(0) <= data1;		--bottom antenna
+		else
+			input_data(0) <= masked_data;
+		end if;
+		---
+		if chan_mask(0) = '1' then
+			input_data(1) <= data0;		
+		else
+			input_data(1) <= masked_data;
+		end if;		
+		---
+		if chan_mask(3) = '1' then
+			input_data(2) <= data3;		
+		else
+			input_data(2) <= masked_data;
+		end if;	
+		---
+		if chan_mask(2) = '1' then
+			input_data(3) <= data2;	  --top antenna	
+		else
+			input_data(3) <= masked_data;
+		end if;	
+		---
 	end if;
 end process;
 ---------------------
@@ -314,10 +336,10 @@ begin
 			else
 				beam_servos(i) <= '0';
 			end if;
-			---------------------
+			--------------------------------------------------------------------------
 			trig_tracker(i)(3 downto 2)  <= trig_tracker(i)(1 downto 0); 
 			servo_tracker(i)(3 downto 2) <= servo_tracker(i)(1 downto 0); 
-			---------------------
+			--------------------------------------------------------------------------
 			if summed_power_0(i) > trig_thresh(i) then
 				trig_tracker(i)(0) <= '1';
 			else
@@ -341,15 +363,15 @@ begin
 			else
 				servo_tracker(i)(1) <= '0';
 			end if;
-			-------------------------------------
+			--------------------------------------------------------------------------
 			--summed power in 4 samples, first and last in 8-sample / clk
-			-------------------------------------
+			--------------------------------------------------------------------------
 			summed_power_1(i) <= std_logic_vector(resize(unsigned(instantaneous_beam_power(i,7)), 16)) + std_logic_vector(resize(unsigned(instantaneous_beam_power(i,6)), 16)) +
 										std_logic_vector(resize(unsigned(instantaneous_beam_power(i,5)), 16)) + std_logic_vector(resize(unsigned(instantaneous_beam_power(i,4)), 16));
 										
 			summed_power_0(i) <= std_logic_vector(resize(unsigned(instantaneous_beam_power(i,3)), 16)) + std_logic_vector(resize(unsigned(instantaneous_beam_power(i,2)), 16)) +
 										std_logic_vector(resize(unsigned(instantaneous_beam_power(i,1)), 16)) + std_logic_vector(resize(unsigned(instantaneous_beam_power(i,0)), 16));
-			-------------------------------------
+			--------------------------------------------------------------------------
 			for j in 0 to 7 loop
 				instantaneous_beam_power(i,j) <= --//this is 14 bits (2*coh_sum_bits)
 					std_logic_vector(to_unsigned(lut_power(to_integer(signed(coherent_sums_pipeline(i)(coh_sum_bits*(j+1)-1 downto coh_sum_bits*j)))),2*coh_sum_bits));
@@ -375,7 +397,6 @@ begin
 		holdoff_beam_trigs <= (others=>'0'); --these prevent one beam from triggering within ~2 clk cycles of another beam triggering
 		holdoff_beam_servos <= (others=>'0');
 		
-
 	elsif clk'event and clk = '1' then
 
 		internal_beam_mask <= beam_mask(num_beams-1 downto 0);
