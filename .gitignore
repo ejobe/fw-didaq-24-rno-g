@@ -40,3 +40,5 @@ src/altera_p2_board/niosv/ip/*
 
 par_p2_board/artic_daq_fpga_top.qptc
 par_p2_board/output_file_jic.map
+par_p2_board/output_file.rpd
+par_p2_board/artic_daq_fpga_top.qws

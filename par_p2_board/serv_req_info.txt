@@ -1,33 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <internal_error>
 	<sub_system>ERR</sub_system>
-	<callstack>	0x7ffefd4d32dc: CCL_ERR + 0x132dc (?name@ERR_UNWINDER_TESTER@@SAPEBDXZ + 0x22c)
-	0x7ffefdcae880: dni_orch + 0xe880 (?is_developer_debug@ORCH_UTIL@@YA_NXZ + 0x570)
-	0x7ffefdcb14f1: dni_orch + 0x114f1 (?is_developer_debug@ORCH_UTIL@@YA_NXZ + 0x31e1)
-	0x7fff1184107f: vcruntime140_1 + 0x107f
-	0x7fff118426a4: vcruntime140_1 + 0x26a4 (__NLG_Return2 + 0x1554)
-	0x7fff1ad31cd5: ntdll + 0xa1cd5 (RtlCaptureContext2 + 0x4a5)
+	<callstack>	0x7ffefdcb18a0: dni_orch + 0x118a0 (?is_developer_debug@ORCH_UTIL@@YA_NXZ + 0x3590)
+	0x7fff183342d5: ucrtbase + 0x142d5 (_execute_onexit_table + 0x155)
+	0x7fff183341fa: ucrtbase + 0x141fa (_execute_onexit_table + 0x7a)
+	0x7fff183341b3: ucrtbase + 0x141b3 (_execute_onexit_table + 0x33)
+	0x7ffefdcaf5a0: dni_orch + 0xf5a0 (?is_developer_debug@ORCH_UTIL@@YA_NXZ + 0x1290)
+	0x7ffefdcae68d: dni_orch + 0xe68d (?is_developer_debug@ORCH_UTIL@@YA_NXZ + 0x37d)
 	0x7ffefdcae96d: dni_orch + 0xe96d (?is_developer_debug@ORCH_UTIL@@YA_NXZ + 0x65d)
 	0x7fff1aca9a1c: ntdll + 0x19a1c (RtlActivateActivationContextUnsafeFast + 0x11c)
-	0x7fff1acef1c9: ntdll + 0x5f1c9 (LdrShutdownProcess + 0x229)
-	0x7fff1aceef7c: ntdll + 0x5ef7c (RtlExitUserProcess + 0xac)
-	0x7fff1a86e3ea: KERNEL32 + 0x1e3ea (FatalExit + 0xa)
-	0x7fff183405bb: ucrtbase + 0x205bb (exit + 0x1db)
-	0x7fff1834045e: ucrtbase + 0x2045e (exit + 0x7e)
-	0x7ffd83336d69: jvm + 0x676d69 (?c2v_getArrayType@@YAPEAV_jobject@@PEAUJNIEnv_@@PEAV1@1@Z + 0x227299)
-	0x7ffd834fb11a: jvm + 0x83b11a (?topLevelExceptionFilter@@YAJPEAU_EXCEPTION_POINTERS@@@Z + 0x1beefa)
-	0x7ffd834fbe60: jvm + 0x83be60 (?topLevelExceptionFilter@@YAJPEAU_EXCEPTION_POINTERS@@@Z + 0x1bfc40)
-	0x7ffd834fc37c: jvm + 0x83c37c (?topLevelExceptionFilter@@YAJPEAU_EXCEPTION_POINTERS@@@Z + 0x1c015c)
-	0x7ffd834fc753: jvm + 0x83c753 (?topLevelExceptionFilter@@YAJPEAU_EXCEPTION_POINTERS@@@Z + 0x1c0533)
-	0x7ffd834fc81f: jvm + 0x83c81f (?topLevelExceptionFilter@@YAJPEAU_EXCEPTION_POINTERS@@@Z + 0x1c05ff)
-	0x7ffd834a3fb9: jvm + 0x7e3fb9 (?topLevelExceptionFilter@@YAJPEAU_EXCEPTION_POINTERS@@@Z + 0x167d99)
-	0x7ffd8333c1b4: jvm + 0x67c1b4 (?c2v_getArrayType@@YAPEAV_jobject@@PEAUJNIEnv_@@PEAV1@1@Z + 0x22c6e4)
-	0x7fff18341bb1: ucrtbase + 0x21bb1 (_configthreadlocale + 0x91)
-	0x7fff1a867373: KERNEL32 + 0x17373 (BaseThreadInitThunk + 0x13)
-	0x7fff1acdcc90: ntdll + 0x4cc90 (RtlUserThreadStart + 0x20)
+	0x7fff1acfbada: ntdll + 0x6bada (LdrUnloadAlternateResourceModuleEx + 0x2fa)
+	0x7fff1acfb536: ntdll + 0x6b536 (RtlPushFrame + 0x86)
+	0x7fff1acfb787: ntdll + 0x6b787 (RtlPushFrame + 0x2d7)
+	0x7fff1acfb787: ntdll + 0x6b787 (RtlPushFrame + 0x2d7)
+	0x7fff1acfb787: ntdll + 0x6b787 (RtlPushFrame + 0x2d7)
+	0x7fff1acfb787: ntdll + 0x6b787 (RtlPushFrame + 0x2d7)
+	0x7fff1acfb787: ntdll + 0x6b787 (RtlPushFrame + 0x2d7)
+	0x7fff1acfb787: ntdll + 0x6b787 (RtlPushFrame + 0x2d7)
+	0x7fff1ac9fd09: ntdll + 0xfd09 (LdrUnloadDll + 0x119)
+	0x7fff1ac9fc83: ntdll + 0xfc83 (LdrUnloadDll + 0x93)
+	0x7fff184f32dd: KERNELBASE + 0x232dd (FreeLibrary + 0x1d)
+	0x7fff02dc1fc8: mega_qsysipc_jni_stub + 0x1fc8 (Java_com_altera_qsys_ipc_QsysIPCNativeInterface_nativeShutDownJNIModule + 0x6c8)
+	0x7fff02dc1908: mega_qsysipc_jni_stub + 0x1908 (Java_com_altera_qsys_ipc_QsysIPCNativeInterface_nativeShutDownJNIModule + 0x8)
+	0x22ce7c2d620:
+	0x22cc971d2cf:
+	0x22ccabf48cf:
+	0x22bffffffff:
+	0x22ce7c294fd:
+	0x61c40655f:
+	0x22ce7c2d2f5:
+	0x44ad2fefaf:
+	0x22cc971d2cf:
+	0x44ad2ff017:
+	0x22cc972011f:
 </callstack>
-	<error>*** Fatal Error: Program termination requested</error>
-	<date>Fri Jun  5 13:23:21 2026
+	<error>*** Fatal Error: Access Violation at 00007FFEFDCB18A1</error>
+	<date>Thu Jun 25 12:15:41 2026
 </date>
 	<version>Version 25.1.1 Build 125 07/31/2025 SC Pro Edition</version>
 </internal_error>

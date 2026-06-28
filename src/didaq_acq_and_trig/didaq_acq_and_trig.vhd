@@ -483,7 +483,7 @@ inst_ring_buffer : ring_buffer
 		rden			=> adc_fifo_rd_ack(i),
       rdaddress	=> internal_ram_rd_adr(i),
       wraddress	=> internal_ram_wr_adr,
-		data			=> internal_pretrig_data(i,127), --internal_ram_wr_data_2(i),
+		data			=> internal_pretrig_data(i,191), --internal_ram_wr_data_2(i),
 		q				=> internal_ram_rd_data(i));
 end generate;
 ----------------------------------------------------------------

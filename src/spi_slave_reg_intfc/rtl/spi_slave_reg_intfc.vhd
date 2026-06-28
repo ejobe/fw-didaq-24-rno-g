@@ -115,7 +115,12 @@
 --*                                    Removed:
 --*                                    clk_pll_status_0                   : in  std_logic;
 --*                                    clk_pll_status_1                   : in  std_logic;
---*   
+--* 
+--*
+--*    2026-- 	       EJO/CHICAGO		updates for didaq system
+--*
+--*
+--*  
 --*----------------------------------------------------------------------------
 --*   References: None
 --*   

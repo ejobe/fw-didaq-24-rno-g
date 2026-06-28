@@ -139,7 +139,7 @@ begin   		--//streaming data vector has 32 samples, or ~32 ns width
 	elsif clk'event and clk = '1' then
 		for i in 0 to 3 loop
 			--------------------
-			-->> pipelining: input 8 samples/clock, streaming_data buffer has 32 samples to access per clock--> 
+			-->> pipelining: input 8 samples/clock, streaming_data buffer has 48 samples to access per clock--> 
 			streaming_data(i)(383 downto 320) <= streaming_data(i)(319 downto 256); --oldest data (access to DELAY)
 			streaming_data(i)(319 downto 256) <= streaming_data(i)(255 downto 192); 
 			streaming_data(i)(255 downto 192) <= streaming_data(i)(191 downto 128); 
