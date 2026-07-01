@@ -118,7 +118,7 @@
 --* 
 --*
 --*    2026-- 	       EJO/CHICAGO		updates for didaq system
---*
+--*    2026.6.30								make sw trigger bit self-clearing     
 --*
 --*  
 --*----------------------------------------------------------------------------
